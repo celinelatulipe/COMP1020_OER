@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Chapter Title</title>
+  <title>Chapter 3: Objects Intro</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> Let's practice working with objects</p>
   </introduction>
 
-  <!-- include sections 
-  <xi:include href="sec-section-name.ptx" />-->
+  <section>
+    <p> Exercise 3.1 </p>
+    <program label="ac2_4_1" interactive="activecode" language="java">
+      <input>
+public class Person {
+  public String name;
+  public int age;
+}
+
+public static void main {
+  person1 = new Person();
+  person1.name = "Jasmine"
+  person1.age = 27
+}
+          </input>
+    <tests>
+    </tests>
+    </program>
+  </section>
 
 </chapter>
