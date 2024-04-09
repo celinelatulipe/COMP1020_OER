@@ -4,10 +4,10 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="OER-Book">
-    <title>Comp1020 OER Activity Book</title>
-    <subtitle>:)</subtitle>
-
+  <book xml:id="JavaWorkbook">
+    <title>Java Active Learning WorkBook</title>
+    <subtitle>Scaffolded programming activities for students in a second programming course.</subtitle>
+    
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
@@ -19,6 +19,12 @@
     <xi:include href="./Text/Chapter4/chapter4.ptx" />
     <xi:include href="./Text/Chapter5/chapter5.ptx" />
     <xi:include href="./Text/Chapter6/chapter6.ptx" />
+    <xi:include href="./Text/Chapter7/chapter7.ptx" />
+    <xi:include href="./Text/Chapter8/chapter8.ptx" />
+    <xi:include href="./Text/Chapter9/chapter9.ptx" />
+    <xi:include href="./Text/Chapter10/chapter10.ptx" />
+    <xi:include href="./Text/Chapter11/chapter11.ptx" />
+    <xi:include href="./Text/Chapter12/chapter12.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
