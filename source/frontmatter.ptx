@@ -6,9 +6,9 @@
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
   <titlepage>
     <author>
-      <personname>You</personname>
-      <department>Your department</department>
-      <institution>Your institution</institution>
+      <personname>Celine Latulipe</personname>
+      <department>Department of Computer Science</department>
+      <institution>University of Manitoba</institution>
     </author>
     <date>
       <today />
@@ -18,12 +18,12 @@
   <colophon>
 
     <website>
-      <url href="https://pretextbook.org">My Website</url>
+      <url href="https://celinelatulipe.net">My Website</url>
     </website>
 
     <copyright>
       <year>2020<ndash />2023</year>
-      <holder>You</holder>
+      <holder>Celine Latulipe</holder>
       <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
       </shortlicense>
     </copyright>
