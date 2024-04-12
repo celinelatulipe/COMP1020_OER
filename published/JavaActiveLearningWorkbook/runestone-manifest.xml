@@ -4,8 +4,7 @@
   <library-metadata publisher="pretext">
     <title>Java Active Learning WorkBook</title>
     <subtitle>Scaffolded programming activities beyond the basics.</subtitle>
-    <document-id edition="">JavaActiveLearningWorkbook
-  </document-id>
+    <document-id edition="">JavaActiveLearningWorkbook</document-id>
     <shelf>CS Java</shelf>
     <blurb> Scaffolded programming problems for a second course in Java, assumes knowledge of Java basics. </blurb>
   </library-metadata>
@@ -35,8 +34,8 @@
         <htmlsrc>
           <div class="ptx-runestone-container">
             <div class="runestone explainer ac_section ">
-              <div data-component="activecode" id="JavaActiveLearningWorkbook&#10;  __ch3-starter-1">
-                <textarea data-lang="java" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="JavaActiveLearningWorkbook&#10;  __ch3-starter-1_editor" data-question_label="" data-codelens="true">public class Person {
+              <div data-component="activecode" id="JavaActiveLearningWorkbook__ch3-starter-1">
+                <textarea data-lang="java" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="JavaActiveLearningWorkbook__ch3-starter-1_editor" data-question_label="" data-codelens="true">public class Person {
   public String firstName;
   public String lastName;
   public int age;
@@ -63,8 +62,8 @@ public static void main {
         <htmlsrc>
           <div class="ptx-runestone-container">
             <div class="runestone explainer ac_section ">
-              <div data-component="activecode" id="JavaActiveLearningWorkbook&#10;  __ch3-growth-1">
-                <textarea data-lang="java" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="JavaActiveLearningWorkbook&#10;  __ch3-growth-1_editor" data-question_label="" data-codelens="true">public class Person {
+              <div data-component="activecode" id="JavaActiveLearningWorkbook__ch3-growth-1">
+                <textarea data-lang="java" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="JavaActiveLearningWorkbook__ch3-growth-1_editor" data-question_label="" data-codelens="true">public class Person {
   public String name;
   public int age;
 }
@@ -90,8 +89,8 @@ public static void main {
         <htmlsrc>
           <div class="ptx-runestone-container">
             <div class="runestone explainer ac_section ">
-              <div data-component="activecode" id="JavaActiveLearningWorkbook&#10;  __ch3-stretch-1">
-                <textarea data-lang="java" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="JavaActiveLearningWorkbook&#10;  __ch3-stretch-1_editor" data-question_label="" data-codelens="true">public class Person {
+              <div data-component="activecode" id="JavaActiveLearningWorkbook__ch3-stretch-1">
+                <textarea data-lang="java" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="JavaActiveLearningWorkbook__ch3-stretch-1_editor" data-question_label="" data-codelens="true">public class Person {
   public String name;
   public int age;
 }
