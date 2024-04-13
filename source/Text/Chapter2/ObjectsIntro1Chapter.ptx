@@ -7,36 +7,47 @@
 		</p>
 	</introduction>
 
-	<section xml:id="ch3-starter">
+	<section xml:id="ch2-starter">
 		<title>Starter Level</title>
-		<exercises xml:id="exercises-ch3-starter">
+		<exercises xml:id="exercises-ch2-starter">
 		<p>
 			The code below provides a very simple class.
 			Jasmine's last name, 'Singh', is missing.
 			Add a line of code to fix this.
 		</p>
-
-
-		<program xml:id="ch3-starter-1" interactive="activecode" language="java">
+		<program xml:id="ch2-starter-1-person-class" interactive="activecode" language="java" sourcecode="Person.java">
 			<input>
+
 public class Person {
-  public String firstName;
-  public String lastName;
-  public int age;
+	public String firstName;
+	public String lastName;
+	public int age;
 }
-public static void main {
-  person1 = new Person();
-  person1.firstName = "Jasmine"
-  person1.age = 27
+
+	
+			</input>
+			<!-- 			<tests>
+			</tests> -->
+		</program>
+
+		<program xml:id="ch2-starter-1" interactive="activecode" language="java" sourcecode="StarterExercise1.java" include="ch2-starter-1-person-class">
+			<input>
+public class StarterExercise1 {
+
+	public static void main {
+		person1 = new Person();
+		person1.firstName = "Jasmine";
+		person1.age = 27;
+	}
 }
 			</input>
-<!-- 			<tests>
+			<!-- 			<tests>
 			</tests> -->
 		</program>
 		</exercises>
 	</section>
 
-	<section xml:id="ch3-growth">
+	<section xml:id="ch2-growth">
 		<title>Growth Level</title>
 		<exercises>
 		<p>
@@ -44,25 +55,25 @@ public static void main {
 		</p>
 
 
-		<program label="ch3-growth-1" interactive="activecode" language="java">
+		<program label="ch2-growth-1" interactive="activecode" language="java">
 			<input>
 public class Person {
   public String name;
   public int age;
 }
-public static void main {
+public static void main(String args[]) {
   person1 = new Person();
-  person1.name = "Jasmine"
-  person1.age = 27
+  person1.name = "Jasmine";
+  person1.age = 27;
 }
 			</input>
-<!-- 			<tests>
+			<!-- 			<tests>
 			</tests> -->
 		</program>
 		</exercises>
 	</section>
 
-	<section xml:id="ch3-stretch">
+	<section xml:id="ch2-stretch">
 		<title>Stretch Level</title>
 		<exercises xml:id="exercises-">
 		<p>
@@ -76,10 +87,10 @@ public class Person {
   public String name;
   public int age;
 }
-public static void main {
+public static void main(String args[]) {
   person1 = new Person();
-  person1.name = "Jasmine"
-  person1.age = 27
+  person1.name = "Jasmine";
+  person1.age = 27;
 }
 			</input>
 			<!-- <tests>
