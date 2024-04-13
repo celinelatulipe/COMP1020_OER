@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-objects-intro-part2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Objects Intro Part 2</title>
+
+  <introduction>
+    <p> This chapters gives you more practice with objects. </p>
+  </introduction>
+
+  <section xml:id="ch4-starter">
+		<title>Starter Level</title>
+		<exercises xml:id="exercises-ch4-starter">
+		<p>
+			The code below provides a very simple class.
+			Jasmine's last name, 'Singh', is missing.
+			Add a line of code to fix this.
+		</p>
+
+
+		<program xml:id="ch4-starter-1" interactive="activecode" language="java">
+			<input>
+public class Person {
+  public String firstName;
+  public String lastName;
+  public int age;
+}
+public static void main {
+  person1 = new Person();
+  person1.firstName = "Jasmine"
+  person1.age = 27
+}
+			</input>
+<!-- 			<tests>
+			</tests> -->
+		</program>
+		</exercises>
+	</section>
+
+	<section xml:id="ch4-growth">
+		<title>Growth Level</title>
+		<exercises>
+		<p>
+			Growth Exercise 1
+		</p>
+
+
+		<program label="ch4-growth-1" interactive="activecode" language="java">
+			<input>
+public class Person {
+  public String name;
+  public int age;
+}
+public static void main {
+  person1 = new Person();
+  person1.name = "Jasmine"
+  person1.age = 27
+}
+			</input>
+<!-- 			<tests>
+			</tests> -->
+		</program>
+		</exercises>
+	</section>
+
+	<section xml:id="ch3-stretch">
+		<title>Stretch Level</title>
+		<exercises xml:id="exercises-">
+		<p>
+			Stretch Exercise 1
+		</p>
+
+
+		<program label="ch3-stretch-1" interactive="activecode" language="java">
+			<input>
+public class Person {
+  public String name;
+  public int age;
+}
+public static void main {
+  person1 = new Person();
+  person1.name = "Jasmine"
+  person1.age = 27
+}
+			</input>
+			<!-- <tests>
+			</tests> -->
+		</program>
+		</exercises>
+	</section>
+
+</chapter>

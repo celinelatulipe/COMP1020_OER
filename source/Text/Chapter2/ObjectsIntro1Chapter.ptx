@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
-	<title>Chapter 3: Objects Intro Part 1</title>
+<chapter xml:id="ch-objects-intro-part1" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Objects Intro Part 1</title>
 	<introduction>
 		<p>
 			Let's practice working with objects
 		</p>
 	</introduction>
 
-	<section xml:id="ch3-starter" label="Objects Intro Starter Exercises">
+	<section xml:id="ch3-starter">
 		<title>Starter Level</title>
 		<exercises xml:id="exercises-ch3-starter">
 		<p>
@@ -30,13 +30,13 @@ public static void main {
   person1.age = 27
 }
 			</input>
-			<tests>
-			</tests>
+<!-- 			<tests>
+			</tests> -->
 		</program>
 		</exercises>
 	</section>
 
-	<section xml:id="ch3-growth" label="Objects Intro Growth Exercises">
+	<section xml:id="ch3-growth">
 		<title>Growth Level</title>
 		<exercises>
 		<p>
@@ -56,13 +56,13 @@ public static void main {
   person1.age = 27
 }
 			</input>
-			<tests>
-			</tests>
+<!-- 			<tests>
+			</tests> -->
 		</program>
 		</exercises>
 	</section>
 
-	<section xml:id="ch3-stretch" label="Objects Intro Stetch Exercises">
+	<section xml:id="ch3-stretch">
 		<title>Stretch Level</title>
 		<exercises xml:id="exercises-">
 		<p>
@@ -82,8 +82,8 @@ public static void main {
   person1.age = 27
 }
 			</input>
-			<tests>
-			</tests>
+			<!-- <tests>
+			</tests> -->
 		</program>
 		</exercises>
 	</section>

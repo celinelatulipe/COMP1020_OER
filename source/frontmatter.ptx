@@ -10,6 +10,16 @@
       <department>Department of Computer Science</department>
       <institution>University of Manitoba</institution>
     </author>
+    <author>
+      <personname>Devon Blewett</personname>
+      <department>Department of Computer Science</department>
+      <institution>University of Manitoba</institution>
+    </author>
+    <author>
+      <personname>Lara De Leon</personname>
+      <department>Department of Computer Science</department>
+      <institution>University of Manitoba</institution>
+    </author>
     <date>
       <today />
     </date>
@@ -18,7 +28,7 @@
   <colophon>
 
     <website>
-      <url href="https://celinelatulipe.net">My Website</url>
+      <url href="https://celinelatulipe.net">Celine Latulipe</url>
     </website>
 
     <copyright>
