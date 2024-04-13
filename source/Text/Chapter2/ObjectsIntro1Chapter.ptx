@@ -35,7 +35,7 @@
 			<input>
 public class StarterExercise1 {
 
-	public static void main {
+	public static void main(String args[]) {
 		person1 = new Person();
 		person1.firstName = "Jasmine";
 		person1.age = 27;
