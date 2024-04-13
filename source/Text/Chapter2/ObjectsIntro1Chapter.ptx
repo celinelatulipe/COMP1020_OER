@@ -10,27 +10,28 @@
 	<section xml:id="ch2-starter">
 		<title>Starter Level</title>
 		<exercises xml:id="exercises-ch2-starter">
+			<program xml:id="ch2-starter-1-person-class" interactive="activecode" language="java" sourcefile="Person.java">
+				<input>
+	
+	public class Person {
+		public String firstName;
+		public String lastName;
+		public int age;
+	}
+	
+		
+				</input>
+				<!-- 			<tests>
+				</tests> -->
+			</program>
 		<p>
 			The code below provides a very simple class.
 			Jasmine's last name, 'Singh', is missing.
 			Add a line of code to fix this.
 		</p>
-		<program xml:id="ch2-starter-1-person-class" interactive="activecode" language="java" sourcecode="Person.java">
-			<input>
+		
 
-public class Person {
-	public String firstName;
-	public String lastName;
-	public int age;
-}
-
-	
-			</input>
-			<!-- 			<tests>
-			</tests> -->
-		</program>
-
-		<program xml:id="ch2-starter-1" interactive="activecode" language="java" sourcecode="StarterExercise1.java" include="ch2-starter-1-person-class">
+		<program xml:id="ch2-starter-1" interactive="activecode" language="java" sourcefile="StarterExercise1.java" include="ch2-starter-1-person-class">
 			<input>
 public class StarterExercise1 {
 
