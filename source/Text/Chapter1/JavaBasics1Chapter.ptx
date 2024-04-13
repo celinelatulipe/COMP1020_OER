@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Chapter 7: Searching and Sorting</title>
+<chapter xml:id="ch-java-basics-part1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Java Basics Part 1</title>
 
   <introduction>
     <p> Text before the first section. </p>

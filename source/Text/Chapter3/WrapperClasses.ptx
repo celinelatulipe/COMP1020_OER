@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-wrapper-classes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Wrapper Classes</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections 
+  <xi:include href="sec-section-name.ptx" />-->
+  <section xml:id="chapter5-short-exercises">
+    <title>Short Exercises</title>
+    <exercises xml:id="short-exercises">
+
+      <!-- Q1: True/False -->
+      <exercise xml:id="true-false-one" label="array-list-elements">
+        <title>True/False</title>
+        <statement correct="no">
+          <p>
+            ArrayLists can store objects and primitives such as <c>int</c>, <c>double</c>, <c>boolean</c>.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            ArrayLists cannot store the following: int, double, boolean, char, float, long, byte, short.
+            A workaround is to use Wrapper classes.
+          </p>
+        </feedback>
+      </exercise>
+
+      <!-- Q2: Multiple Choice -->
+      <exercise xml:id="multiple-choice-one" label="multiple-choice-not-randomized">
+        <title>Accessing Elements in an ArrayList</title>
+        <statement>
+          <p>
+            How would we access the first element in the ArrayList <c>list</c>?
+          </p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                <c>list.item(0)</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: ArrayList does not have a <c>.item()</c> method.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                <c>list.get(0)</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct: In ArrayLists, we use the <c>.get(i)</c> method to access the element at index <c>i</c>.
+              </p>
+            </feedback>
+            </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>list[0]</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: Square brackets are used for accessing elements in an array, not an ArrayList.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>list.set(0, element)</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: The <c>.set(index, element)</c> method is used to replace the element at the specified <c>index</c> 
+                with the specified <c>element</c>. It is not used for accessing elements.
+              </p>
+            </feedback>
+            </choice>
+        </choices>
+      </exercise>
+
+      <!-- Q3: Select all that apply -->
+      <exercise label="multiple-choice-multiple-answers">
+        <title>Select all that apply</title>
+        <statement>
+          <p>
+            Which of the following are true about ArrayLists? (Select all that apply)
+          </p>
+        </statement>
+        <choices>
+          <choice correct="yes">
+            <statement>
+              <p>
+                ArrayLists have a dynamic size.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct: Unlike partially-filled arrays, ArrayLists automatically resize themselves when an element is added or removed.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                ArrayLists have a fixed size.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: ArrayLists resize automatically when an element is added or removed while 
+                partially-filled arrays require manual resizing if you have reached capacity and are trying to add an element.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                ArrayLists use the <c>.length()</c> method to get the number of elements in the list.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: ArrayLists use <c>.size()</c> while arrays use <c>.length()</c>.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                ArrayLists cannot be instantiated without importing from the Java Library.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct: To use ArrayLists, you must import the java.util.ArrayList package first.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+    </exercises>
+  </section>
+
+  <!-- Level 1 Programming Exercise-->
+  <section xml:id="chapter-5-level-1-exercise">
+    <title>Level 1</title>
+    <!-- Objectives for Level 1 Exercise-->
+    <objectives >
+      <ul>
+        <li> Instantiate an <c>ArrayList</c></li>
+        <li> Add items and iterate through the <c>ArrayList</c> </li>
+      </ul>
+      </objectives>
+      <p>
+       Convert this program that originally uses arrays to use ArrayLists. 
+      </p>
+      <!-- Code-->
+      <program xml:id="chapter-5-level-1" interactive="activecode" language="java">
+        <input>
+          import java.util.ArrayList;
+
+          public class BookCatalog(String[] args) {
+            public static void main(String[] args) {
+            }
+
+          }
+
+         
+        </input>
+      </program>
+    
+  </section>
+
+  <!-- Level 2 Programming Exercise-->
+  <section xml:id="chapter-5-level-2-exercise">
+    <title>Level 2</title>
+    <!-- Objectives for Level 2 Exercise-->
+    <objectives >
+      <ul>
+        <li> Objective 1</li>
+        <li> Objective 2</li>
+      </ul>
+      </objectives>
+      <p>
+        [QUESTION INFO HERE]
+      </p>
+      <!-- Code-->
+      <program xml:id="chapter-5-level-2" interactive="activecode" language="java">
+        <input>
+          import java.util.ArrayList;
+          public class Main(String[] args) {
+            public static void main(String[] args) {
+            }
+          }
+        </input>
+      </program>
+  </section>
+
+  <!-- Level 3 Programming Exercise-->
+  <section xml:id="chapter-5-level-3-exercise">
+    <title>Level 3</title>
+    <!-- Objectives for Level 3 Exercise-->
+    <objectives >
+      <ul>
+        <li> Objective 1</li>
+        <li> Objective 2</li>
+      </ul>
+      </objectives>
+      <p>
+        [QUESTION INFO HERE]
+      </p>
+      <!-- Code-->
+      <program xml:id="chapter-5-level-3" interactive="activecode" language="java">
+        <input>
+          import java.util.ArrayList;
+          public class Main(String[] args) {
+            public static void main(String[] args) {
+            }
+          }
+        </input>
+      </program>
+  </section>
+</chapter>
+

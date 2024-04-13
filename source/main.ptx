@@ -13,18 +13,23 @@
 
 
     <!-- Include chapters -->
-    <xi:include href="./Text/Chapter1/chapter1.ptx" />
-    <xi:include href="./Text/Chapter2/chapter2.ptx" />
-    <xi:include href="./Text/Chapter3/chapter3.ptx" />
-    <xi:include href="./Text/Chapter4/chapter4.ptx" />
-    <xi:include href="./Text/Chapter5/chapter5.ptx" />
-    <xi:include href="./Text/Chapter6/chapter6.ptx" />
-    <xi:include href="./Text/Chapter7/chapter7.ptx" />
-    <xi:include href="./Text/Chapter8/chapter8.ptx" />
-    <xi:include href="./Text/Chapter9/chapter9.ptx" />
-    <xi:include href="./Text/Chapter10/chapter10.ptx" />
-    <xi:include href="./Text/Chapter11/chapter11.ptx" />
-    <xi:include href="./Text/Chapter12/chapter12.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics1Chapter.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics2Chapter.ptx" />
+    <xi:include href="./Text/Chapter2/ObjectsIntro1Chapter.ptx" />
+    <xi:include href="./Text/Chapter2/ObjectsIntro2Chapter.ptx" />
+    <xi:include href="./Text/Chapter3/ArrayListsChapter.ptx" />
+    <xi:include href="./Text/Chapter3/WrapperClasses.ptx" />
+    <xi:include href="./Text/Chapter4/StringsChapter.ptx" />
+    <xi:include href="./Text/Chapter4/ExceptionsChapter.ptx" />
+    <xi:include href="./Text/Chapter4/FileIOChapter.ptx" />
+    <xi:include href="./Text/Chapter5/SearchingChapter.ptx" />
+    <xi:include href="./Text/Chapter5/SortingChapter.ptx" />
+    <xi:include href="./Text/Chapter6/RecursionIntroChapter.ptx" />
+    <xi:include href="./Text/Chapter6/RecursionAdvancedChapter.ptx" />
+    <xi:include href="./Text/Chapter7/MultidimensionalArraysChapter.ptx" />
+    <xi:include href="./Text/Chapter8/LinkedListsChapter.ptx" />
+    <xi:include href="./Text/Chapter9/InterfacesChapter.ptx" />
+    <xi:include href="./Text/Chapter10/ADTsChapter.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Chapter 2: Java Refresher Part 2</title>
+<chapter xml:id="ch-java-basics-part2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Java Basics Part 2</title>
 
   <introduction>
     <p> Text before the first section. </p>
