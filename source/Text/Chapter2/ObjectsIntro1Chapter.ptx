@@ -10,7 +10,7 @@
 	<section xml:id="ch2-starter">
 		<title>Starter Level</title>
 		<exercises xml:id="exercises-ch2-starter">
-			<program xml:id="ch2-starter-1-person-class" interactive="activecode" language="java" sourcefile="Person.java">
+			<program xml:id="ch2-starter-1-person-class" label="ch2-starter-1-person-class" interactive="activecode" language="java" sourcefile="Person.java">
 				<input>
 	
 	public class Person {
@@ -31,7 +31,7 @@
 		</p>
 		
 
-		<program xml:id="ch2-starter-1" interactive="activecode" language="java" sourcefile="StarterExercise1.java" include="ch2-starter-1-person-class">
+		<program xml:id="ch2-starter-1" label="ch2-starter-1" interactive="activecode" language="java" sourcefile="StarterExercise1.java" include="ch2-starter-1-person-class">
 			<input>
 public class StarterExercise1 {
 
