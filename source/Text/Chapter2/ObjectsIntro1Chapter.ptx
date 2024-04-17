@@ -83,27 +83,27 @@ public class Employee {
 		</program>
 
 		<program xml:id="OBJ_INTRO_1-growth-2" label="OBJ_INTRO_1-growth-2" interactive="activecode" language="java">
-			public class GrowthExercise2 {
+public class GrowthExercise2 {
 
-				public static void main(String args[]) {
-					Person person1 = new Person("Jasmine", "Singh", 27);
-					Person person2 = new Person("Trey", "Letrec", 21);
-				}
-			}
-			
-			class Person {
-				public String firstName;
-				public String lastName;
-				public int age;
-			
-				public Person(String f, String l, int a) {
-					firstName = f;
-					lastName = l;
-					age = a;
-				}
-			
-				
-			}
+	public static void main(String args[]) {
+		Person person1 = new Person("Jasmine", "Singh", 27);
+		Person person2 = new Person("Trey", "Letrec", 21);
+	}
+}
+
+class Person {
+	public String firstName;
+	public String lastName;
+	public int age;
+
+	public Person(String f, String l, int a) {
+		firstName = f;
+		lastName = l;
+		age = a;
+	}
+
+	
+}
 		</program>
 		</exercises>
 	</section>
