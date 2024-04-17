@@ -84,17 +84,22 @@ public static void main(String args[]) {
 
 		<program xml:id="OBJ_INTRO_1-stretch-ex1" label="OBJ_INTRO_1-stretch-ex1" interactive="activecode" language="java">
 			<input>
-public class Person {
+public class Student {
   	public String name;
   	public int age;
+	public int id;
+
+	public Student() {
+		name = "No Name";
+	} // default constructor
 
 	public static void main(String args[]) {
-  		person1 = new Person();
-  		person1.name = "Jasmine";
-  		person1.age = 27;
-		person2 = new Person();
-		person2.name = "Trey"
-		person2.age = 20;
+  		student1 = new Student();
+  		student1.name = "Jasmine";
+  		student1.age = 27;
+		student2 = new Student();
+		student2.name = "Trey";
+		student2.age = 20;
 
 	}
 }
