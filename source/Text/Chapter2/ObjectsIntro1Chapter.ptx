@@ -17,6 +17,8 @@
 		public String firstName;
 		public String lastName;
 		public int age;
+
+		public Person() {}
 	}
 	
 		
@@ -31,12 +33,12 @@
 		</p>
 		
 
-		<program xml:id="OBJ_INTRO_1-starter-1" label="OBJ_INTRO_1-starter-1" interactive="activecode" language="java" sourcefile="StarterExercise1.java" include="OBJ_INTRO_1-starter-person-class">
+		<program xml:id="OBJ_INTRO_1-starter-1" label="OBJ_INTRO_1-starter-1" interactive="activecode" language="java" include="OBJ_INTRO_1-starter-person-class" sourcefile="StarterExercise1.java" >
 			<input>
 public class StarterExercise1 {
 
 	public static void main(String args[]) {
-		person1 = new Person();
+		Person person1 = new Person();
 		person1.firstName = "Jasmine";
 		person1.age = 27;
 	}
@@ -58,14 +60,16 @@ public class StarterExercise1 {
 
 		<program label="OBJ_INTRO_1-growth-1" interactive="activecode" language="java">
 			<input>
-public class Person {
+public class Employee {
   public String name;
   public int age;
+
+  public Employee() {}
 }
 public static void main(String args[]) {
-  person1 = new Person();
-  person1.name = "Jasmine";
-  person1.age = 27;
+  Employee emp1 = new Employee();
+  emp1.name = "Jasmine";
+  emp1.age = 27;
 }
 			</input>
 			<!-- 			<tests>
@@ -94,10 +98,10 @@ public class Student {
 	} // default constructor
 
 	public static void main(String args[]) {
-  		student1 = new Student();
+  		Student student1 = new Student();
   		student1.name = "Jasmine";
   		student1.age = 27;
-		student2 = new Student();
+		Student student2 = new Student();
 		student2.name = "Trey";
 		student2.age = 20;
 
