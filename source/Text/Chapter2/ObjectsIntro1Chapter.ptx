@@ -82,7 +82,7 @@ public static void main(String args[]) {
 		</p>
 
 
-		<program xml:id="OBJ_INTRO_1-stretch-ex1" label="OBJ_INTRO_1-stretch-ex1" interactive="activecode" language="java">
+		<program xml:id="OBJ_INTRO_1-stretch-ex1" label="OBJ_INTRO_1-stretch-ex1" interactive="activecode" language="java" sourcefile="Student.java">
 			<input>
 public class Student {
   	public String name;
