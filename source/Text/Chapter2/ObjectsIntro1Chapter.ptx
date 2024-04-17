@@ -32,8 +32,8 @@
 	
 		
 				</input>
-				<tests>
-				</tests>
+				<!--<tests>
+				</tests>-->
 			</program>
 		<p>
 			Add code below to create another person, with a name and age of your choosing.
