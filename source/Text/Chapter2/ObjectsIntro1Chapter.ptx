@@ -23,11 +23,11 @@
 
 		public Person(String f, String l, int a) {
 			firstName = f;
-			lastName = l
+			lastName = l;
 			age = a;
 		}
 
-		public static void main(String args[]) {}
+		// public static void main(String args[]) {} 
 	}
 	
 		
@@ -70,16 +70,40 @@ public class Employee {
   public String name;
   public int age;
 
-  public Employee() {}
+  public static void main(String args[]) {
+	Employee emp1 = new Employee();
+	emp1.name = "Jasmine";
+	emp1.age = 27;
+  }
 }
-public static void main(String args[]) {
-  Employee emp1 = new Employee();
-  emp1.name = "Jasmine";
-  emp1.age = 27;
-}
+
 			</input>
 			<!-- 			<tests>
 			</tests> -->
+		</program>
+
+		<program xml:id="OBJ_INTRO_1-growth-2" label="OBJ_INTRO_1-growth-2" interactive="activecode" language="java">
+			public class GrowthExercise2 {
+
+				public static void main(String args[]) {
+					Person person1 = new Person("Jasmine", "Singh", 27);
+					Person person2 = new Person("Trey", "Letrec", 21);
+				}
+			}
+			
+			class Person {
+				public String firstName;
+				public String lastName;
+				public int age;
+			
+				public Person(String f, String l, int a) {
+					firstName = f;
+					lastName = l;
+					age = a;
+				}
+			
+				
+			}
 		</program>
 		</exercises>
 	</section>
