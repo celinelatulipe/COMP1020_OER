@@ -31,7 +31,7 @@
 		</p>
 		
 
-		<program xml:id="OBJ_INTRO_1-starter-1" label="OBJ_INTRO_1-starter-starter-1" interactive="activecode" language="java" sourcefile="StarterExercise1.java" include="OBJ_INTRO_1-starter-person-class">
+		<program xml:id="OBJ_INTRO_1-starter-1" label="OBJ_INTRO_1-starter-1" interactive="activecode" language="java" sourcefile="StarterExercise1.java" include="OBJ_INTRO_1-starter-person-class">
 			<input>
 public class StarterExercise1 {
 
@@ -48,15 +48,15 @@ public class StarterExercise1 {
 		</exercises>
 	</section>
 
-	<section xml:id="ch2-growth">
+	<section xml:id="OBJ_INTRO_1-growth">
 		<title>Growth Level</title>
-		<exercises>
+		<exercises xml:id="OBJ_INTRO_1-growth-exercises">
 		<p>
 			Growth Exercise 1
 		</p>
 
 
-		<program label="ch2-growth-1" interactive="activecode" language="java">
+		<program label="OBJ_INTRO_1-growth-1" interactive="activecode" language="java">
 			<input>
 public class Person {
   public String name;
@@ -74,24 +74,29 @@ public static void main(String args[]) {
 		</exercises>
 	</section>
 
-	<section xml:id="ch2-stretch">
+	<section xml:id="OBJ_INTRO_1-stretch">
 		<title>Stretch Level</title>
-		<exercises xml:id="exercises-">
+		<exercises xml:id="OBJ_INTRO_1-stretch-exercises">
 		<p>
 			Stretch Exercise 1
 		</p>
 
 
-		<program label="ch3-stretch-1" interactive="activecode" language="java">
+		<program xml:id="OBJ_INTRO_1-stretch-ex1" label="OBJ_INTRO_1-stretch-ex1" interactive="activecode" language="java">
 			<input>
 public class Person {
-  public String name;
-  public int age;
-}
-public static void main(String args[]) {
-  person1 = new Person();
-  person1.name = "Jasmine";
-  person1.age = 27;
+  	public String name;
+  	public int age;
+
+	public static void main(String args[]) {
+  		person1 = new Person();
+  		person1.name = "Jasmine";
+  		person1.age = 27;
+		person2 = new Person();
+		person2.name = "Trey"
+		person2.age = 20;
+
+	}
 }
 			</input>
 			<!-- <tests>
