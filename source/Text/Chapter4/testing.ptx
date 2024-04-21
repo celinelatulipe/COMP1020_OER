@@ -13,7 +13,7 @@
 			<p>
 				The code below defines a Person class, with a first and last name and age as the properties.
 			</p>
-			<datafile label="person-datafile" filename="Person-datafile.java">
+		
 			<program xml:id="starter-person-class" label="starter-person-class" filename="Person.java"  interactive="activecode" language="java" >
 				<input>
 	
@@ -39,7 +39,7 @@
 				<!--<tests>
 				</tests>-->
 			</program>
-		</datafile>
+
 		<p>
 			Add code below to create another person, with a name and age of your choosing.
 		</p>
