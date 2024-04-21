@@ -13,19 +13,36 @@
 			<p>
 				The code below defines a Person class, with a first and last name and age as the properties.
 			</p>
-			<program xml:id="OBJ_INTRO_1-starter-person-class" label="OBJ_INTRO_1-starter-person-class" interactive="activecode" language="java" datafile="Person.java">
+			<datafile label="person-datafile" filename="Person.java">
+			<program xml:id="OBJ_INTRO_1-starter-person-class" label="OBJ_INTRO_1-starter-person-class"  interactive="activecode" language="java" >
 				<input>
+	
+	public class Person {
+		public String firstName;
+		public String lastName;
+		public int age;
+
+		public Person(String f, String l, int a) {
+			firstName = f;
+			lastName = l;
+			age = a;
+		}
+
+		// public static void main(String args[]) {} 
+	}
+	
 		
 				</input>
 				<!--<tests>
 				</tests>-->
 			</program>
+		</datafile>
 		<p>
 			Add code below to create another person, with a name and age of your choosing.
 		</p>
 		
 
-		<program xml:id="OBJ_INTRO_1-starter-1" label="OBJ_INTRO_1-starter-1" interactive="activecode" language="java" include="OBJ_INTRO_1-starter-person-class" >
+		<program xml:id="OBJ_INTRO_1-starter-1" label="OBJ_INTRO_1-starter-1" interactive="activecode" language="java" datafile="Person.java" >
 			<input>
 public class StarterExercise1 {
 
