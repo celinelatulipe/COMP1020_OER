@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="ch-OBJ_INTRO_1" xmlns:xi="http://www.w3.org/2001/XInclude">
-	<title>Objects Intro Part 1</title>
+<chapter xml:id="javatesting" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Devon testing things</title>
 	<introduction>
 		<p>
 			Let's figure out how java includes work (pain)
