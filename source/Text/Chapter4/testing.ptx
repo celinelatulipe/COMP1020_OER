@@ -3,7 +3,7 @@
 	<title>Objects Intro Part 1</title>
 	<introduction>
 		<p>
-			Let's practice working with objects
+			Let's figure out how java includes work (pain)
 		</p>
 	</introduction>
 
@@ -13,11 +13,8 @@
 			<p>
 				The code below defines a Person class, with a first and last name and age as the properties.
 			</p>
-			<program xml:id="OBJ_INTRO_1-starter-person-class" label="OBJ_INTRO_1-starter-person-class" interactive="activecode" language="java" sourcefile="Person.java">
+			<program xml:id="OBJ_INTRO_1-starter-person-class" label="OBJ_INTRO_1-starter-person-class" interactive="activecode" language="java" datafile="Person.java">
 				<input>
-	
-
-	
 		
 				</input>
 				<!--<tests>
