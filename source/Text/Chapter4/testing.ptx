@@ -45,13 +45,14 @@
 		</p>
 		
 
-		<program xml:id="starter-1" label="starter-1" interactive="activecode" language="java" datafile="Person.java" >
+		<program xml:id="ch2-person-run" label="ch2-starter-person-run" interactive="activecode" language="java" datafile="Person.java"  include="start-person-class">
 			<input>
 public class StarterExercise1 {
 
 	public static void main(String args[]) {
-		Person person1 = new Person("Jasmine", "Singh", 27);
-		Person person2 = new Person("Trey", "Letrec", 21);
+		person1 = new Person();
+		person1.firstName = "Jasmine";
+		person1.age = 27;
 	}
 }
 			</input>
