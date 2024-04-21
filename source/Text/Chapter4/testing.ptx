@@ -27,7 +27,10 @@
 			lastName = l;
 			age = a;
 		}
-
+		@Override
+		public String toString() {
+		  return firstName;
+		}
 		// public static void main(String args[]) {} 
 	}
 	
