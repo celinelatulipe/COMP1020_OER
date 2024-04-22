@@ -13,7 +13,22 @@
 			<p>
 				The code below defines a Person class, with a first and last name and age as the properties.
 			</p>
-		
+	<datafile label="persondatafile" filename="persondatafile" editable="yes" hide="no">
+		public class Person {
+			public String firstName;
+			public String lastName;
+			public int age;
+	
+			public Person(String f, String l, int a) {
+				firstName = f;
+				lastName = l;
+				age = a;
+			}
+			@Override
+			public String toString() {
+			  return firstName;
+			}
+	</datafile>
 <program xml:id="starter-person-class" label="starter-person-class" filename="Person.java"  editable="yes" language="java">
 			
 	<input>
@@ -71,7 +86,43 @@ public class StarterExercise2 {
 			</input>
 			<!-- 			<tests>
 			</tests> -->
-		</program>
+	
+	</program>
+
+	<p>
+		Add code below to create another person, with a name and age of your choosing.
+	</p>
+	
+
+	<program xml:id="ch2-person-run3" label="ch2-starter-person-run3" interactive="activecode" language="java" datafile="persondatafile">
+		<input>
+public class StarterExercise3 {
+
+public static void main(String args[]) {
+	person1 = new Person();
+	person1.firstName = "Jasmine";
+	person1.age = 27;
+}
+}
+		</input>
+		<!-- 			<tests>
+		</tests> -->
+	</program>
+
+	<program xml:id="ch2-person-run24" label="ch2-starter-person-run24" interactive="activecode" language="java" include="persondatafile">
+		<input>
+public class StarterExercise4 {
+
+public static void main(String args[]) {
+	person1 = new Person();
+	person1.firstName = "Jasmine";
+	person1.age = 27;
+}
+}
+		</input>
+		<!-- 			<tests>
+		</tests> -->
+	</program>
 		</exercises>
 	</section>
 
