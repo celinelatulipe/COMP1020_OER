@@ -10,7 +10,7 @@
   <!-- include sections 
   <xi:include href="sec-section-name.ptx" />-->
   <section xml:id="chapter5-short-exercises">
-    <title>Short Exercises</title>
+    <title>Check Your Understanding</title>
     <exercises xml:id="short-exercises">
 
       <!-- Q1: True/False -->
@@ -155,62 +155,227 @@
 
   <!-- Level 1 Programming Exercise-->
   <section xml:id="chapter-5-level-1-exercise">
-    <title>Level 1</title>
+    <title>Starter Level</title>
     <!-- Objectives for Level 1 Exercise-->
-    <objectives >
+    <objectives>
       <ul>
         <li> Instantiate an <c>ArrayList</c></li>
-        <li> Add items and iterate through the <c>ArrayList</c> </li>
+        <li> Use <c>add()</c>, <c>get()</c>, <c>set()</c>, <c>remove()</c>, and <c>size()</c></li>
+        <li> Iterate through an ArrayList using a for loop </li>
       </ul>
-      </objectives>
-      <p>
-       Convert this program that originally uses arrays to use ArrayLists. 
-      </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-1" interactive="activecode" language="java">
-        <input>
-          import java.util.ArrayList;
+    </objectives>
 
-          public class BookCatalog(String[] args) {
-            public static void main(String[] args) {
-            }
+    <subsection>
+      <title>Instructions</title>
+      <ol>
+        <li>
+          <p>
+            Initialize an ArrayList and add the following elements: "Butter", "Milk", "Cookies", "Chips", "Carrots".
+          </p>
+        </li>
+        <li>
+          <p>
+            Remove the third item from the list.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace the second item in the list with "Pancakes"
+          </p>
+        </li>
+        <li>
+          <p>
+            Remove the last item from the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Add "Apples" to the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the size of the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the contents of the list using a for-loop.
+          </p>
+        </li>   
+      </ol>
+    </subsection>
+
+
+    <!-- Code-->
+    <program xml:id="chapter-5-level-1" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class GroceryList(String[] args) {
+          public static void main(String[] args) {
+
+            // Initialize an ArrayList
+            
+
+            // Adding elements to the list
+
+    
+            // Removing Cookies from the list
+    
+
+            // Replacing Chips with Pancakes
+
+
+            // Removing last item from list
+
+
+            // Displaying list size
+
+    
+            // Printing the contents of the list using a for-loop
+
 
           }
 
-         
-        </input>
-      </program>
-    
+        }
+      </input>
+    </program>
+
+    <p>
+      The expected output is:
+    </p>
+
+    <program xml:id="grocerylist-output-static" interactive="no">
+      <input>
+        Size of the list: 3
+        Contents of the list:
+        Butter
+        Milk
+        Chips
+        Apples
+      </input>
+    </program>
+
   </section>
 
   <!-- Level 2 Programming Exercise-->
   <section xml:id="chapter-5-level-2-exercise">
-    <title>Level 2</title>
+    <title>Growth Level</title>
     <!-- Objectives for Level 2 Exercise-->
     <objectives >
       <ul>
-        <li> Objective 1</li>
-        <li> Objective 2</li>
+        <li>Iterating through ArrayLists with a for-loop</li>
       </ul>
       </objectives>
       <p>
-        [QUESTION INFO HERE]
+        The following program requires you to write a method to locate duplicates within an ArrayList containing <c>Animal</c> objects.
+        A "duplicate" refers to an <c>Animal</c> with the same name as another <c>Animal</c> that is already in the list. That is, if an <c>Animal</c> 
+        with a particular name already exists in the ArrayList, any subsequent <c>Animal</c> with the exact same name is considered a duplicate.
       </p>
+
+      <!-- Animal Class Code, Non-Interactive -->
+      <program xml:id="animal-class-static" interactive="no" language="java">
+        <input>
+
+          public class Animal {
+            //**TO-DO: Initialize a static ArrayList here called allAnimals**
+            String name;
+            String type;
+
+            public Animal(String name, String type){
+                this.name = name;
+                this.type = type;
+                allAnimals.add(this);
+            }
+
+            public String toString(){
+                return name + " (" + type + ")";
+            }
+
+            //**TO-DO: Write method that checks if an animal in the list**
+            public static boolean isDuplicate(String nameToCheck){
+            
+            }
+          }
+        </input>
+      </program>
+  
+      <p>
+        The program contains a class named <c>Animal</c>, where each instance represents an individual animal that is characterized by a <c>name</c> and a <c>type</c>.
+        Each animal that is created is added to a static ArrayList <c>allAnimals</c>. You may assume that all names begin with a capital letter.
+      </p>
+
       <!-- Code-->
       <program xml:id="chapter-5-level-2" interactive="activecode" language="java">
         <input>
           import java.util.ArrayList;
-          public class Main(String[] args) {
-            public static void main(String[] args) {
-            }
+          public class Animal {
+
+              //**TO-DO: Initialize a static ArrayList here called allAnimals**
+              String name;
+              String type;
+
+              public Animal(String name, String type){
+                  this.name = name;
+                  this.type = type;
+                  allAnimals.add(this);
+              }
+
+              public String toString(){
+                  return name + " (" + type + ")";
+              }
+
+              //**TO-DO: Write method that checks if an animal in the list**
+              public static boolean isDuplicate(String nameToCheck){
+              
+              }
+
+              public static void main(String[] args){
+
+                  // ----- DO NOT CHANGE -----
+
+                  //Creating animals..
+                  Animal greg = new Animal("Greg", "giraffe");
+                  Animal alice = new Animal("Alice", "aardvark");
+                  Animal reggie = new Animal("Reggie", "raccoon");
+                  Animal orville = new Animal("Orville", "ostrich");
+                  Animal paul = new Animal("Paul", "piranha");
+                  Animal harry = new Animal("Harry", "hippo");
+
+                  //Testing method..
+                  Animal.isDuplicate("Alice");
+                  Animal.isDuplicate("George");
+                  Animal.isDuplicate("Timothy");
+                  Animal.isDuplicate("Paul");
+                  Animal.isDuplicate("Orville");
+                  Animal.isDuplicate("Oliver");
+
+                  // ----- DO NOT CHANGE -----
+              }
           }
+        </input>
+      </program>
+
+      <p>
+        The expected output is:
+      </p>
+
+      <program xml:id="animal-output-static" interactive="no">
+        <input>
+          DUPLICATE: There is already an animal with the name "Alice" in the list: Alice (aardvark)
+          UNIQUE: The name George is unique.
+          UNIQUE: The name Timothy is unique.
+          DUPLICATE: There is already an animal with the name "Paul" in the list: Paul (piranha)
+          DUPLICATE: There is already an animal with the name "Orville" in the list: Orville (ostrich)
+          UNIQUE: The name Oliver is unique.
         </input>
       </program>
   </section>
 
   <!-- Level 3 Programming Exercise-->
   <section xml:id="chapter-5-level-3-exercise">
-    <title>Level 3</title>
+    <title>Stretch Level</title>
     <!-- Objectives for Level 3 Exercise-->
     <objectives >
       <ul>
@@ -224,11 +389,7 @@
       <!-- Code-->
       <program xml:id="chapter-5-level-3" interactive="activecode" language="java">
         <input>
-          import java.util.ArrayList;
-          public class Main(String[] args) {
-            public static void main(String[] args) {
-            }
-          }
+       
         </input>
       </program>
   </section>
