@@ -14,9 +14,9 @@
 				The code below defines a Person class, with a first and last name and age as the properties.
 			</p>
 		
-<program xml:id="starter-person-class" label="starter-person-class" filename="Person.java"  interactive="activecode" language="java">
+<program xml:id="starter-person-class" label="starter-person-class" filename="Person.java"  editable="yes" language="java">
 			
-	
+	<input>
 	public class Person {
 		public String firstName;
 		public String lastName;
@@ -34,7 +34,7 @@
 		// public static void main(String args[]) {} 
 	}
 	
-		
+</input>
 		
 </program>
 
@@ -43,9 +43,24 @@
 		</p>
 		
 
-		<program xml:id="ch2-person-run" label="ch2-starter-person-run" interactive="activecode" language="java" datafile="Person.java"  include="start-person-class">
+		<program xml:id="ch2-person-run" label="ch2-starter-person-run" interactive="activecode" language="java" datafile="Person.java">
 			<input>
 public class StarterExercise1 {
+
+	public static void main(String args[]) {
+		person1 = new Person();
+		person1.firstName = "Jasmine";
+		person1.age = 27;
+	}
+}
+			</input>
+			<!-- 			<tests>
+			</tests> -->
+		</program>
+
+		<program xml:id="ch2-person-run2" label="ch2-starter-person-run2" interactive="activecode" language="java" include="Person.java">
+			<input>
+public class StarterExercise2 {
 
 	public static void main(String args[]) {
 		person1 = new Person();
