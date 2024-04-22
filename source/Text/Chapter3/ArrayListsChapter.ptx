@@ -10,7 +10,7 @@
   <!-- include sections 
   <xi:include href="sec-section-name.ptx" />-->
   <section xml:id="chapter5-short-exercises">
-    <title>Short Exercises</title>
+    <title>Check Your Understanding</title>
     <exercises xml:id="short-exercises">
 
       <!-- Q1: True/False -->
@@ -154,83 +154,498 @@
   </section>
 
   <!-- Level 1 Programming Exercise-->
-  <section xml:id="chapter-5-level-1-exercise">
-    <title>Level 1</title>
+  <section xml:id="arraylist-level-1-exercise">
+    <title>Starter Level</title>
     <!-- Objectives for Level 1 Exercise-->
-    <objectives >
+    <objectives>
       <ul>
         <li> Instantiate an <c>ArrayList</c></li>
-        <li> Add items and iterate through the <c>ArrayList</c> </li>
+        <li> Use <c>add()</c>, <c>get()</c>, <c>set()</c>, <c>remove()</c>, and <c>size()</c></li>
+        <li> Iterate through an ArrayList using a for loop </li>
       </ul>
-      </objectives>
-      <p>
-       Convert this program that originally uses arrays to use ArrayLists. 
-      </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-1" interactive="activecode" language="java">
-        <input>
-          import java.util.ArrayList;
+    </objectives>
 
-          public class BookCatalog(String[] args) {
-            public static void main(String[] args) {
-            }
+    <subsection>
+      <title>Instructions</title>
+      <ol>
+        <li>
+          <p>
+            Initialize an ArrayList and add the following elements: "Butter", "Milk", "Cookies", "Chips", "Carrots".
+          </p>
+        </li>
+        <li>
+          <p>
+            Remove the third item from the list.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace the second item in the list with "Pancakes"
+          </p>
+        </li>
+        <li>
+          <p>
+            Remove the last item from the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Add "Apples" to the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the size of the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the contents of the list using a for-loop.
+          </p>
+        </li>   
+      </ol>
+    </subsection>
+
+
+    <!-- Code-->
+    <program xml:id="grocery-list-exercise" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class GroceryList(String[] args) {
+          public static void main(String[] args) {
+
+            // Initialize an ArrayList
+            
+
+            // Adding elements to the list
+
+    
+            // Removing Cookies from the list
+    
+
+            // Replacing Chips with Pancakes
+
+
+            // Removing last item from list
+
+
+            // Displaying list size
+
+    
+            // Printing the contents of the list using a for-loop
+
 
           }
 
-         
-        </input>
-      </program>
-    
+        }
+      </input>
+    </program>
+
+    <p>
+      The expected output is:
+    </p>
+
+    <program xml:id="grocery-list-output-static" interactive="no">
+      <input>
+        Size of the list: 3
+        Contents of the list:
+        Butter
+        Milk
+        Chips
+        Apples
+      </input>
+    </program>
+
   </section>
 
   <!-- Level 2 Programming Exercise-->
-  <section xml:id="chapter-5-level-2-exercise">
-    <title>Level 2</title>
+  <section xml:id="arraylist-level-2-exercise">
+    <title>Growth Level</title>
     <!-- Objectives for Level 2 Exercise-->
     <objectives >
       <ul>
-        <li> Objective 1</li>
-        <li> Objective 2</li>
+        <li>Accessing data in ArrayLists with a for-loop</li>
       </ul>
       </objectives>
-      <p>
-        [QUESTION INFO HERE]
-      </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-2" interactive="activecode" language="java">
+
+      <subsection>
+        <title>Instructions</title>
+          <p>
+            The following program requires you to write a method to locate duplicates within an ArrayList containing <c>Animal</c> objects.
+            A "duplicate" refers to an <c>Animal</c> with the same name as another <c>Animal</c> that is already in the list. That is, if an <c>Animal</c> 
+            with a particular name already exists in the ArrayList, any subsequent <c>Animal</c> with the exact same name is considered a duplicate.
+          </p>
+      </subsection>
+  
+      <!-- Animal Class Code, Non-Interactive -->
+      <program xml:id="animal-class-static" interactive="no">
         <input>
-          import java.util.ArrayList;
-          public class Main(String[] args) {
-            public static void main(String[] args) {
+          public class Animal {
+            //**TO-DO: Initialize a static ArrayList here called allAnimals**
+            String name;
+            String type;
+
+            public Animal(String name, String type){
+                this.name = name;
+                this.type = type;
+                allAnimals.add(this);
+            }
+
+            public String toString(){
+                return name + " (" + type + ")";
+            }
+
+            //**TO-DO: Write method that checks if an animal in the list**
+            public static boolean isDuplicate(String nameToCheck){
+            
             }
           }
+        </input>
+      </program>
+  
+      <p>
+        The program contains a class named <c>Animal</c>, where each instance represents an individual animal that is characterized by a <c>name</c> and a <c>type</c>.
+        Each animal that is created is added to a static ArrayList <c>allAnimals</c>. You may assume that all names begin with a capital letter.
+      </p>
+
+      <!-- Code-->
+      <program xml:id="animal-exercise" interactive="activecode" language="java">
+        <input>
+          import java.util.ArrayList;
+          public class Animal {
+
+              //**TO-DO: Initialize a static ArrayList here called allAnimals**
+              String name;
+              String type;
+
+              public Animal(String name, String type){
+                  this.name = name;
+                  this.type = type;
+                  allAnimals.add(this);
+              }
+
+              public String toString(){
+                  return name + " (" + type + ")";
+              }
+
+              //**TO-DO: Write method that checks if an animal in the list**
+              public static boolean isDuplicate(String nameToCheck){
+              
+              }
+
+              public static void main(String[] args){
+
+                  // ----- DO NOT CHANGE -----
+
+                  //Creating animals..
+                  Animal greg = new Animal("Greg", "giraffe");
+                  Animal alice = new Animal("Alice", "aardvark");
+                  Animal reggie = new Animal("Reggie", "raccoon");
+                  Animal orville = new Animal("Orville", "ostrich");
+                  Animal paul = new Animal("Paul", "piranha");
+                  Animal harry = new Animal("Harry", "hippo");
+
+                  //Testing method..
+                  Animal.isDuplicate("Alice");
+                  Animal.isDuplicate("George");
+                  Animal.isDuplicate("Timothy");
+                  Animal.isDuplicate("Paul");
+                  Animal.isDuplicate("Orville");
+                  Animal.isDuplicate("Oliver");
+
+                  // ----- DO NOT CHANGE -----
+              }
+          }
+        </input>
+      </program>
+
+      <p>
+        The expected output is:
+      </p>
+
+      <program xml:id="animal-output-static" interactive="no">
+        <input>
+          DUPLICATE: There is already an animal with the name "Alice" in the list: Alice (aardvark)
+          UNIQUE: The name George is unique.
+          UNIQUE: The name Timothy is unique.
+          DUPLICATE: There is already an animal with the name "Paul" in the list: Paul (piranha)
+          DUPLICATE: There is already an animal with the name "Orville" in the list: Orville (ostrich)
+          UNIQUE: The name Oliver is unique.
         </input>
       </program>
   </section>
 
+  
   <!-- Level 3 Programming Exercise-->
-  <section xml:id="chapter-5-level-3-exercise">
-    <title>Level 3</title>
+  <section xml:id="arraylist-level-3-exercise">
+    <title>Stretch Level</title>
     <!-- Objectives for Level 3 Exercise-->
     <objectives >
       <ul>
-        <li> Objective 1</li>
-        <li> Objective 2</li>
+        <li> Accessing and manipulating data stored in ArrayLists</li>
       </ul>
       </objectives>
+
       <p>
-        [QUESTION INFO HERE]
+        This Java program analyzes the temperatures recorded in Winnipeg, Manitoba from April 1, 2024 to April 10, 2024 
+        and it contains methods that perform various temperature-related calculations.
       </p>
+
+      <em>(Source: https://climate.weather.gc.ca/climate_data/daily_data_e.html?StationID=27174)</em>
+      
+      <!-- DayTemperature Template-->
+      <program xml:id="day-temperature-template" interactive="no">
+        <input>
+          class DayTemperature{
+
+            String day;
+            double minTemp;
+            double maxTemp;
+        
+            public DayTemperature(String day, double maxTemp, double minTemp){
+                this.day = day;
+                this.minTemp = minTemp;
+                this.maxTemp = maxTemp;
+            }
+        
+            public String toString(){
+        
+            }
+        
+            public double getAverageTemp(){
+        
+            }
+        }
+        </input>
+      </program>
+
+      <p>
+        The <c>DayTemperature</c> class represents a single day's temperature data. This includes:
+        <ul>
+          <li>
+            <p>
+              <c>day (String)</c> to store the day of the temperature record (e.g., "April 1, 2024") 
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>minTemp (double)</c> to store the minimum temperature recorded for the day.
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>maxTemp (double)</c>to store the maximum temperature recorded for the day.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <!-- TemperatureAnalysis Template-->
+      <program xml:id="temp-analysis-template" interactive="no">
+        <input>
+          public class TemperatureAnalysis{
+            //TO-DO: Initialize static ArrayList titled weekTemp that holds instances of DayTemperature
+
+            public static void main(String[] args){
+                printWeekTemp();
+                printAverageWeeklyTemp();
+                printHighestTemp();
+                printLowestTemp();
+            }
+        
+            public static void printWeekTemp(){
+              
+            }
+        
+            public static void printMedianTemp(){
+        
+            }
+        
+            public static void printAverageWeeklyTemp(){
+             
+            }
+        
+            public static void printHighestTemp(){
+           
+            }
+        
+            public static void printLowestTemp(){
+        
+            }
+        </input>
+      </program>
+
+      <p>
+        The <c>TemperatureAnalysis</c> class manages the recorded weather data by performing calculations such as calculating averages and extreme temperatures.
+      </p>
+
+      <subsection>
+          <title>Instructions</title>
+          <ol>
+            <li>
+              <p>
+                Implement the <c>toString()</c> method in <c>DayTemperature</c>
+                <ul>
+                  <li>
+                    <p>
+                      E.g., April 1, 2003 -- Min: -7.8°C, Max: 6.2°C
+                    </p>
+                  </li>
+                </ul>
+                
+              </p>
+            </li>
+            <li>
+              <p>
+                Implement the <c>getAverageTemp()</c> method in <c>DayTemperature</c> which calculates and returns the average temperature for the day (average of max and min temperatures)
+              </p>
+            </li>
+            <li>
+              <p>
+                Define a static <c>ArrayList</c> named weekTemp inside the <c>TemperatureAnalysis</c> class to store instances of <c>DayTemperature</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                Implement the following methods inside <c>TemperatureAnalysis</c>:
+                <ul>
+                  <li>
+                    <p>
+                      <c>printWeekTemp()</c>method prints the temperatures recorded for each day of the week
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <c>printAverageWeeklyTemp()</c> calculates and prints the average temperature for the entire week by calculating the daily averages, summing it up and dividing by the total number of days
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <c>printHighestTemp()</c> locates and prints the day with the highest temperature recorded for the week
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <c>printLowestTemp()</c> locates and prints the day with the lowest temperature recorded for the week
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Bonus</term>: Implement a <c>printMedianTemp()</c> method that calculates and prints the median temperature of the week
+              </p>
+            </li>
+          </ol>
+      </subsection>
+
       <!-- Code-->
-      <program xml:id="chapter-5-level-3" interactive="activecode" language="java">
+      <program xml:id="weather-exercise" interactive="activecode" language="java">
         <input>
           import java.util.ArrayList;
-          public class Main(String[] args) {
-            public static void main(String[] args) {
-            }
+          //import java.util.Collections; // to sort the ArrayList if implementing printMedianTemp()
+
+          class DayTemperature{
+
+              String day;
+              double minTemp;
+              double maxTemp;
+
+              public DayTemperature(String day, double maxTemp, double minTemp){
+                  this.day = day; //Ex. Monday
+                  this.minTemp = minTemp;
+                  this.maxTemp = maxTemp;
+              }
+
+              public String toString(){
+                  return "";
+              }
+
+              //Get average of max and min
+              public double getAverageTemp(){
+                  return 0;
+
+              }
+          }
+
+          public class TemperatureAnalysis{
+              //**TO-DO: Initialize static ArrayList here titled weekTemp that holds instanced of DayTemperature
+
+              public static void main(String[] args){
+                  initializeTemp();
+                  printWeekTemp();
+                  printAverageWeeklyTemp();
+                  printHighestTemp();
+                  printLowestTemp();
+                  // printMedianTemp();
+              }
+
+              public static void initializeTemp(){
+                  // -- DO NOT CHANGE -- 
+                  weekTemp.add(new DayTemperature("April 1, 2024", 6.2, -7.8));
+                  weekTemp.add(new DayTemperature("April 2, 2024", 2.0, -2.0));
+                  weekTemp.add(new DayTemperature("April 3, 2024", 7.9, -4.3));
+                  weekTemp.add(new DayTemperature("April 4, 2024", 10.1, -3.3));
+                  weekTemp.add(new DayTemperature("April 5, 2024", 12.5, -2.1));
+                  weekTemp.add(new DayTemperature("April 6, 2024", 14.1, 3.0));
+                  weekTemp.add(new DayTemperature("April 7, 2024", 15.6, 1.6));
+                  weekTemp.add(new DayTemperature("April 8, 2024", 11.0, 0.4));
+                  weekTemp.add(new DayTemperature("April 9, 2024", 13.8, -2.1));
+                  weekTemp.add(new DayTemperature("April 10, 2024", 16.2, -0.2));
+                  // -- DO NOT CHANGE -- 
+              }
+
+              public static void printWeekTemp(){
+                
+              }
+
+              public static void printMedianTemp(){
+
+              }
+
+              public static void printAverageWeeklyTemp(){
+              
+              }
+
+              public static void printHighestTemp(){
+            
+              }
+
+              public static void printLowestTemp(){
+
+              }
           }
         </input>
       </program>
+
+      <p>
+        The expected output is:
+      </p>
+
+      <program xml:id="weather-output-static" interactive="no">
+        <input>
+          Daily Temperatures for the Week:
+          April 1, 2024 -- Min: -7.8°C, Max: 6.2°C
+          April 2, 2024 -- Min: -2.0°C, Max: 2.0°C
+          April 3, 2024 -- Min: -4.3°C, Max: 7.9°C
+          April 4, 2024 -- Min: -3.3°C, Max: 10.1°C
+          April 5, 2024 -- Min: -2.1°C, Max: 12.5°C
+          April 6, 2024 -- Min: 3.0°C, Max: 14.1°C
+          April 7, 2024 -- Min: 1.6°C, Max: 15.6°C
+          April 8, 2024 -- Min: 0.4°C, Max: 11.0°C
+          April 9, 2024 -- Min: -2.1°C, Max: 13.8°C
+          April 10, 2024 -- Min: -0.2°C, Max: 16.2°C
+          Average Temperature: 4.630000000000001°C
+          The median temperature is: 5.45°C
+          The day with the highest temperature is: April 10, 2024 -- Min: -0.2°C, Max: 16.2°C
+          The day with the lowest temperature is: April 1, 2024 -- Min: -7.8°C, Max: 6.2°C
+        </input>
+      </program>
+
+      
+
   </section>
 </chapter>
 
