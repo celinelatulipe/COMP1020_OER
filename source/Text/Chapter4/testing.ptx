@@ -1,344 +1,153 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-<!--********************************************************************
-Copyright 2016 Robert A. Beezer
-
-This file is part of MathBook XML.
-
-MathBook XML is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 or version 3 of the
-License (at your option).
-
-MathBook XML is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
-*********************************************************************-->
-<!-- This file was originally part of the book     -->
-<!-- (as copied on 2016/03/25)                     -->
-<!--                                               -->
-<!--   Abstract Algebra: Theory and Applications   -->
-<!--                                               -->
-<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
-
-<!-- permid is for testing friendlier HTML ids for instructors to see -->
-<chapter xml:id="rune" permid="aBc" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Runestone Testing</title>
-
-    <introduction>
-        <p>We collect Runestone interactive items for testing here, in sections of their own.</p>
-    </introduction>
-
-    <section xml:id="activecode">
-        <title>ActiveCode</title>
-
-
-
-        <p>A Java program will only be interactive if hosted on a Runestone server.</p>
-
-        <listing xml:id="program-activecode-java">
-            <title>Informal Java <q>Hello, World</q></title>
-            <caption>A Java program, interactive on a <pubtitle>Runestone</pubtitle> server</caption>
-            <program xml:id="java-hello-world" interactive='activecode' language="java">
-                <title>"hi" in Java</title>
-                <input>
-                import javax.swing.JFrame;  //Importing class JFrame
-                import javax.swing.JLabel;  //Importing class JLabel
-                public class HelloWorld {
-                    public static void main(String[] args) {
-                        JFrame frame = new JFrame();           //Creating frame
-                        frame.setTitle("Hi!");                 //Setting title frame
-                        frame.add(new JLabel("Hello, world!"));//Adding text to frame
-                        frame.pack();                          //Setting size to smallest
-                        frame.setLocationRelativeTo(null);     //Centering frame
-                        frame.setVisible(true);                //Showing frame
-                    }
-                }
-                </input>
-            </program>
-        </listing>
-
-
-        <p>A <tag>program</tag> is not interactive, by default, no matter where it is hosted.</p>
-
-        <listing xml:id="program-static-java">
-            <caption>A static Java program</caption>
-            <program xml:id="java-static" interactive='no' language="java">
-                <input>
-                import javax.swing.JFrame;  //Importing class JFrame
-                import javax.swing.JLabel;  //Importing class JLabel
-                public class HelloWorld {
-                    public static void main(String[] args) {
-                        JFrame frame = new JFrame();           //Creating frame
-                        frame.setTitle("Hi!");                 //Setting title frame
-                        frame.add(new JLabel("Hello, world!"));//Adding text to frame
-                        frame.pack();                          //Setting size to smallest
-                        frame.setLocationRelativeTo(null);     //Centering frame
-                        frame.setVisible(true);                //Showing frame
-                    }
-                }
-                </input>
-            </program>
-        </listing>
-
-       
-
-        <p>The following Python program is in a <tag>listing</tag> since we will want to reference it shortly.  The program does not do very much, it just defines four variables whose values are lists of statistics.  It should run, and there will be no syntax errors, but it is a bit boring since there is no output.</p>
-
-        <listing xml:id="listing-python-included">
-            <caption>A Python program that defines some statistics</caption>
-            <program xml:id="python-statistics" interactive='activecode' language="python" label="statistics">
-                <input>
-                loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0]
-
-                country_name = ['Azerbaijan', 'El Salvador', 'Bolivia', 'Paraguay', 'El Salvador', 'Philippines', 'Philippines', 'Nicaragua', 'Guatemala', 'Philippines', 'Paraguay', 'Philippines', 'Bolivia', 'Philippines', 'Philippines', 'Madagascar', 'Georgia', 'Uganda', 'Kenya', 'Tajikistan', 'Jordan', 'Kenya', 'Philippines', 'Ecuador', 'Kenya']
-
-                time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 773599.0, 116181.0, 2288095.0, 51668.0, 26717.0, 48030.0, 1839190.0, 71117.0, 580401.0, 800427.0, 1156218.0, 1166045.0, 2924705.0, 470622.0, 24078.0, 260044.0, 445938.0, 201408.0, 2370450.0]
-
-                num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]
-                </input>
-            </program>
-        </listing>
-
-        <p>Now a programming exercise.  The program upcoming is going to <term>include</term> all the code of the program preceding.  This is accomplished with an <attr>include</attr> attribute on the <em>including</em> program whose value is the <attr>xml:id</attr> of the <em>included</em> program.  So by running the next program, it should pass all of its three tests (for example another example using unit tests, see <xref ref="unit-test-example"/>).  Now reload the page, do not run the program in the listing, and then see that the program in the exercise still runs correctly.</p>
-
-        <p>You'll see nothing that tells the reader that the one chunk of code is prefacing the other.  And in static formats it might be even less obvious.  So you will want to say <em>something</em> to alert the reader.  Here it is easy: <xref ref="exercise-python-including"/> includes all the code from <xref ref="listing-python-included"/>.</p>
-
-        <exercise xml:id="exercise-python-including">
-            <title>A Python program, including another</title>
-            <statement>
-                <p>Compute the total amount of money loaned and store it in the variable <c>loan_total</c>.</p>
-            </statement>
-            <program xml:id="python-summation" interactive='activecode' language="python" label="python-sum-total" include="python-statistics">
-                <input>
-                loan_total = 0
-                for loan in loan_amount:
-                    loan_total += loan
-                print(loan_total)
-                </input>
-                <tests>
-                from unittest.gui import TestCaseGui
-
-                class MyTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
-                        self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
-                        self.assertFalse('sum(' in self.getEditorText(), "you may not use sum()")
-
-                MyTests().main()
-                </tests>
-            </program>
-        </exercise>
-
-        <p>Exact same exercise again, but now we include <em>two</em> programs.  We first get the simple <q>Hello, world!</q> program at <xref ref="program-activecode-python"/> and then the same program defining the variables with lists of statistics at <xref ref="listing-python-included"/>.  So the output just includes the extra result from the <c>print()</c> statement.</p>
-
-        <exercise xml:id="exercise-python-including-two">
-            <title>A Python program, including two others</title>
-            <statement>
-                <p>Compute the total amount of money loaned and store it in the variable <c>loan_total</c>.</p>
-            </statement>
-            <program xml:id="python-summation-two" interactive='activecode' language="python" label="python-sum-total-two" include=" python-hello-world python-statistics ">
-                <input>
-                loan_total = 0
-                for loan in loan_amount:
-                    loan_total += loan
-                print(loan_total)
-                </input>
-                <tests>
-                from unittest.gui import TestCaseGui
-
-                class MyTests(TestCaseGui):
-
-                    def testOne(self):
-                        self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
-                        self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
-                        self.assertFalse('sum(' in self.getEditorText(), "you may not use sum")
-
-                MyTests().main()
-                </tests>
-            </program>
-        </exercise>
-        
-       
-
-    </section>
-
-    <section xml:id="code-lens">
-        <title>Code Lens</title>
-
-        <p>CodeLens is an interactive tool for following program execution, much like a debugger, without the ability to influence flow control or variable values.  For use without a server, traces must be computed beforehand.  First, we have some trivial programs, to provide minimal testing.</p>
-
-     
-
-     
-
-        <listing xml:id="program-codelens-java">
-            <caption>A Java program, stepable with CodeLens</caption>
-            <program xml:id="java-hello-world-code-lens" interactive="codelens" language="java">
-                <input>
-                public class HelloWorld {
-                    public static void main(String[] args) {
-                        System.out.println("Hello, World!");
-                    }
-                }
-                </input>
-            </program>
-        </listing>
-
-        
-
-      
-
-        <listing xml:id="sieve-java">
-            <caption><url href="https://www.tutorialspoint.com/Sieve-of-Eratosthenes-in-java" visual="www.tutorialspoint.com/Sieve-of-Eratosthenes-in-java">Sieve of Eratosthenes</url>, Java</caption>
-            <program xml:id="sieve-codelens-java" interactive="codelens" language="java">
-                <input><![CDATA[
-                public class SievePrimeFactors  {
-                   public static void main(String args[]) {
-                      int num = 20;
-                      boolean[] bool = new boolean[num];
-
-                      for (int i = 0; i< bool.length; i++) {
-                         bool[i] = true;
-                      }
-                      for (int i = 2; i < Math.sqrt(num); i++) {
-                         if(bool[i] == true) {
-                            for(int j = (i*i); j < num; j = j+i) {
-                               bool[j] = false;
-                            }
-                         }
-                      }
-                      System.out.println("List of prime numbers: ");
-                      for (int i = 2; i< bool.length; i++) {
-                         if(bool[i]==true) {
-                            System.out.println(i);
-                         }
-                      }
-                   }
-                }
-                ]]>
-                </input>
-            </program>
-        </listing>
-    </section>
-
-    <section xml:id="coding-exercises">
-        <title>Coding Exercises</title>
-
-        <p>Program listings can be more that just live demonstrations, they can be exercises.  The first two also occur in the sample article where they just get a static rendering, if at all.</p>
-
-        <exercise label="coding-exercise-blank">
-            <title>Inline Coding Exercise, No Help</title>
-
-            <statement>
-                <p>An exercise might ask a reader to write a computer program, that would go here in the <tag>statement</tag>.  But you can also add a <tag>program</tag> element after a <tag>statement</tag>.  Here we place no code at all, but we do say we want it to be interactive.  The purpose is to make it a live coding environment for a version of your output that allows the reader to perhaps submit a solution.  The <tag>program</tag> element is necessary so you can specify a programming language.</p>
-
-                <p>In interactive formats, try creating and running a Python program below.  Use CodeLens to step through the program.</p>
-            </statement>
-            <program interactive="activecode" language="python"/>
-            <hint><p>We didn't really ask you to do anything.</p></hint>
-        </exercise>
-
-        <exercise label="coding-exercise-partial-one">
-            <title>Inline Coding Exercise, Partial</title>
-
-            <statement>
-                <p>Similar to above, but we provide a starting point for the exercise.</p>
-            </statement>
-            <program interactive="activecode" language="c">
-                <input>
-                #include &lt;stdio.h&gt;
-
-                int main(void)
-                </input>
-            </program>
-            <answer>
-                <p>We're not really sure.  But it would begin as follows:</p>
-                <program language="c">
-                    <input>
-                    #include &lt;stdio.h&gt;
-
-                    int main(void)
-                    </input>
-                </program>
-            </answer>
-        </exercise>
-
-        <activity xml:id="coding-exercise-partial-two">
-            <title>Activity Coding Exercise</title>
-
-            <statement>
-                <p>Similar to above, but now as a complete Python program inside an <tag>activity</tag>.  This demonstrates the possibility to use any <q>project-like</q> block (<tag>project</tag>, <tag>activity</tag>, <tag>exploration</tag>, <tag>investigation</tag>), but not in the case when structured with <tag>task</tag>.  (There is an empty <tag>tests</tag> element here, designed to test relief for an error this will cause on a Runestone server.)</p>
-            </statement>
-            <program label="activity-program" interactive="activecode" language="python">
-                <input>
-                for i in range(10):
-                    print(i)
-                </input>
-                <tests>
-
-                </tests>
-            </program>
-            <answer><p>We're still not really sure.</p></answer>
-        </activity>
-
-        <exercise>
-            <title>An Exercise with a Static Program</title>
-
-            <statement>
-                <p>Similar to above, again, but we place the <tag>program</tag> element <em>inside</em> the <tag>statement</tag>, not after it as a peer.  This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.</p>
-                <program xml:id="coding-exercise-static" language="c" interactive="no">
-                    <input>
-                    #include &lt;stdio.h&gt;
-
-                    int main(void)
-                    </input>
-                </program>
-            </statement>
-            <solution><p>We're not really sure. Still.</p></solution>
-        </exercise>
-
-        <exercise xml:id="unit-test-example" label="coding-exercise-python-unit-test">
-            <title>Coding Exercise, with Unit Tests</title>
-
-            <statement>
-                <p>Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]</p>
-            </statement>
-            <program interactive="activecode" language="python">
-                <input>
-                def add(a,b):
-                    return 4
-                </input>
-                <tests>
-                from unittest.gui import TestCaseGui
-
-                class myTests(TestCaseGui):
-
-                   def testOne(self):
-                       self.assertEqual(add(2,2), 4, "Adding two identical integers")
-                       self.assertEqual(add(7,13), 20, "Adding two different integers")
-                       self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, "Adding two decimal numbers")
-
-                myTests().main()
-                </tests>
-            </program>
-            <answer>
-                <p>We're not really sure.  But it would begin as follows:</p>
-                <program language="c">
-                    <input>
-                    #include &lt;stdio.h&gt;
-
-                    int main(void)
-                    </input>
-                </program>
-            </answer>
-        </exercise>
-    </section>
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="javatesting" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Devon testing things</title>
+	<introduction>
+		<p>
+			Let's figure out how java includes work (pain)
+		</p>
+	</introduction>
+
+	<section xml:id="starter">
+		<title>Starter Level</title>
+		<exercises xml:id="starter-exercises">
+			<p>
+				The code below defines a Person class, with a first and last name and age as the properties.
+			</p>
+		
+<program xml:id="starter-person-class" label="starter-person-class" filename="Person.java"  interactive="activecode" language="java">
+			
+	
+	public class Person {
+		public String firstName;
+		public String lastName;
+		public int age;
+
+		public Person(String f, String l, int a) {
+			firstName = f;
+			lastName = l;
+			age = a;
+		}
+		@Override
+		public String toString() {
+		  return firstName;
+		}
+		// public static void main(String args[]) {} 
+	}
+	
+		
+		
+</program>
+
+		<p>
+			Add code below to create another person, with a name and age of your choosing.
+		</p>
+		
+
+		<program xml:id="ch2-person-run" label="ch2-starter-person-run" interactive="activecode" language="java" datafile="Person.java"  include="start-person-class">
+			<input>
+public class StarterExercise1 {
+
+	public static void main(String args[]) {
+		person1 = new Person();
+		person1.firstName = "Jasmine";
+		person1.age = 27;
+	}
+}
+			</input>
+			<!-- 			<tests>
+			</tests> -->
+		</program>
+		</exercises>
+	</section>
+
+	<section xml:id="OBJ_INTRO_1-growth">
+		<title>Growth Level</title>
+		<exercises xml:id="OBJ_INTRO_1-growth-exercises">
+		<p>
+			Growth Exercise 1
+		</p>
+
+
+		<program label="OBJ_INTRO_1-growth-1" interactive="activecode" language="java">
+			<input>
+public class Employee {
+  public String name;
+  public int age;
+
+  public static void main(String args[]) {
+	Employee emp1 = new Employee();
+	emp1.name = "Jasmine";
+	emp1.age = 27;
+  }
+}
+
+			</input>
+			<!-- 			<tests>
+			</tests> -->
+		</program>
+
+		<program xml:id="OBJ_INTRO_1-growth-2" label="OBJ_INTRO_1-growth-2" interactive="activecode" language="java">
+			<input>
+public class GrowthExercise2 {
+
+	public static void main(String args[]) {
+		Person person1 = new Person("Jasmine", "Singh", 27);
+		Person person2 = new Person("Trey", "Letrec", 21);
+	}
+}
+
+class Person {
+	public String firstName;
+	public String lastName;
+	public int age;
+
+	public Person(String f, String l, int a) {
+		firstName = f;
+		lastName = l;
+		age = a;
+	}
+
+	
+}
+</input>
+<!--<tests></tests>-->
+		</program>
+		</exercises>
+	</section>
+
+	<section xml:id="OBJ_INTRO_1-stretch">
+		<title>Stretch Level</title>
+		<exercises xml:id="OBJ_INTRO_1-stretch-exercises">
+		<p>
+			Stretch Exercise 1
+		</p>
+
+
+		<program xml:id="OBJ_INTRO_1-stretch-ex1" label="OBJ_INTRO_1-stretch-ex1" interactive="activecode" language="java" sourcefile="Student.java">
+			<input>
+public class Student {
+  	public String name;
+  	public int age;
+	public int id;
+
+	public Student() {
+		name = "No Name";
+	} // default constructor
+
+	public static void main(String args[]) {
+  		Student student1 = new Student();
+  		student1.name = "Jasmine";
+  		student1.age = 27;
+		Student student2 = new Student();
+		student2.name = "Trey";
+		student2.age = 20;
+
+	}
+}
+			</input>
+			<!-- <tests>
+			</tests> -->
+		</program>
+		</exercises>
+	</section>
 </chapter>
