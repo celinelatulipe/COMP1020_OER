@@ -212,7 +212,7 @@
       <input>
         import java.util.ArrayList;
 
-        public class GroceryList(String[] args) {
+        public class GroceryList{
           public static void main(String[] args) {
 
             // Initialize an ArrayList
@@ -571,7 +571,7 @@
           }
 
           public class TemperatureAnalysis{
-              //**TO-DO: Initialize static ArrayList here titled weekTemp that holds instanced of DayTemperature
+              //**TO-DO: Initialize static ArrayList here titled weekTemp that holds instances of DayTemperature
 
               public static void main(String[] args){
                   initializeTemp();
@@ -645,7 +645,6 @@
       </program>
 
       
-
   </section>
 </chapter>
 
