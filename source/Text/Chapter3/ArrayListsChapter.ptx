@@ -516,7 +516,7 @@
                   </li>
                   <li>
                     <p>
-                      <c>printAverageWeeklyTemp()</c> calculates and prints the average temperature for the entire week by calculating the daily averages, summing it up and dividing by the total number of days
+                      <c>printAverageWeeklyTemp()</c> calculates and prints the average temperature for the entire week by summing up the daily averages (Hint: use <c>getAverageTemp()</c>) and dividing by the total number of days.
                     </p>
                   </li>
                   <li>
@@ -536,6 +536,25 @@
               <p>
                 <term>Bonus</term>: Implement a <c>printMedianTemp()</c> method that calculates and prints the median temperature of the week
               </p>
+              <ul>
+                <li>
+                  <p>
+                    Hint: Create a new <c>ArrayList</c> that stores <c>Double</c> in the method to store all individual temperatures (both min and max from each day). This approach simplifies finding the median as you can just sort this list and then pick the middle value. Remember to handle both even and odd numbers of elements differently: 
+                    <ul>
+                      <li>
+                        <p>
+                          For even numbers, average the two middle values
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          For odd numbers, take the middle value directly
+                        </p>
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+              </ul>
             </li>
           </ol>
       </subsection>
@@ -636,7 +655,7 @@
           April 9, 2024 -- Min: -2.1°C, Max: 13.8°C
           April 10, 2024 -- Min: -0.2°C, Max: 16.2°C
           Average Temperature: 4.630000000000001°C
-          The median temperature is: 5.45°C
+          The median temperature is: 2.5°C
           The day with the highest temperature is: April 10, 2024 -- Min: -0.2°C, Max: 16.2°C
           The day with the lowest temperature is: April 1, 2024 -- Min: -7.8°C, Max: 6.2°C
         </input>
