@@ -211,11 +211,11 @@
     <!-- Objectives-->
     <objectives>
       <ul>
-        <li> Compare and contrast the differences and benefits of using an <c>ArrayList</c> of <c>Integer</c> over an <c>int[]</c></li>
+        <li> Compare and contrast an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> </li>
       </ul>
     </objectives>
 
-    <!-- Overview -->
+    <!-- Overview of Program -->
     <subsection>
       <title>Overview</title>
       <p>
@@ -228,12 +228,12 @@
           </li>
           <li>
             <p>
-              To add a new course to <c>registeredCourses</c> it copies the elements from the current array into a new, larger array, <c>updatedCourses</c> and adds the course to this new array
+              To add a new course, it copies the elements from <c>registeredCourses</c> into a new, larger array, <c>updatedCourses</c>, and adds the course to this new array
             </p>
           </li>
           <li>
             <p>
-              Prints out <c>updatedCourses</c>, the array that contains the newly-added course
+              Prints the contents of <c>updatedCourses</c>, the array that contains the newly-added course
             </p>
           </li>
           <li>
@@ -252,25 +252,20 @@
         
                 int[] registeredCourses = {1010, 1020, 2080, 2140, 2150, 2160};
         
-                // Printing all elements of the array
                 System.out.print("Originally registered for: ");
                 for(int course : registeredCourses){
                     System.out.print(course + ", ");
                 }
         
-                // Adding a new course to the array
-                // Since arrays have a fixed size, we will have to create a new array with a new size to be able to store an extra element
                 int[] updatedCourses = new int [registeredCourses.length + 1];
                 System.arraycopy(registeredCourses, 0, updatedCourses, 0, registeredCourses.length);
                 updatedCourses[registeredCourses.length] = 2280;
         
-                // Printing updated array of courses 
                 System.out.print("\nUpdated courses: ");
                 for(int course : updatedCourses){
                     System.out.print(course + ", ");
                 }
         
-                // Checking if we are registered for a specific course
                 int courseCode = 2140;
                 boolean found = false;
                 for(int course : updatedCourses){
@@ -290,10 +285,44 @@
       </program>
     </subsection>
 
-    <!-- Instructions-->
+    <!-- Instructions for Growth Exercise -->
     <subsection>
       <title>Instructions</title>
+      <p>
+        Convert the existing program that uses an <c>int[]</c> to use an <c>ArrayList</c> of <c>Integer</c> instead.
+      </p>
+      <hint>
+        <p>
+          <c>.contains()</c> should simplify the search for a specific course.
+        </p>
+      </hint>
     </subsection>
+
+    <!-- Growth Exercise Template Code-->
+    <program xml:id="course-numbers-arraylist-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class CourseNumbersArrayList{
+          public static void main(String[] args) {
+
+          }
+        }
+      </input>
+    </program>
+
+    <!-- Growth Exercise Expected Output-->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="course-numbers-arraylist-output" interactive="no">
+      <input>
+        Originally registered for: 1010, 1020, 2080, 2140, 2150, 2160, 
+        Updated courses: 1010, 1020, 2080, 2140, 2150, 2160, 2280, 
+        You are registered for 2140
+      </input>
+    </program>
+
   </section>
 </chapter>
 
