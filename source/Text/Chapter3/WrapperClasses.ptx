@@ -7,5 +7,203 @@
     <p> Text before the first section. </p>
   </introduction>
 
+  <section xml:id="wrapper-classes-exercises">
+    <title>Check Your Understanding</title>
+    <exercises xml:id="wrapper-classes-short-exercises">
+
+      <!-- Q1: Multiple Choice, Purpose of Wrapper Classes-->
+        <exercise xml:id="wrapper-classes-purpose">
+          <title>Wrapper Classes</title>
+          <statement>
+            <p>
+              What is the primary purpose of Wrapper classes in Java?
+            </p>
+          </statement>
+          <choices randomize="yes">
+            <choice>
+              <statement>
+                <p>
+                  Wrapper classes increase the speed of programs by optimizing primitive operations.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Incorrect: Wrapper classes result in slower speeds due to the additional overhead from managing Objects instead of primitives and boxing/unboxing. 
+                </p>
+              </feedback>
+            </choice>
+            <choice correct="yes">
+              <statement>
+                <p>
+                  Wrapper classes turn primitive data types into Objects.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Correct!
+                </p>
+              </feedback>
+              </choice>
+            <choice>
+              <statement>
+                <p>
+                  Wrapper classes increase the precision of mathematical calculations.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Incorrect: Wrapper classes do not provide any increased precision in calculations. The precision of a calculation depends on the type (ex. <c>float</c> is more precise than an <c>int</c>), not by whether the data is in its primitive form or Object/Wrapper class form.
+                </p>
+              </feedback>
+            </choice>
+          </choices>
+        </exercise>
+
+      <!-- Q2: True/False, Memory Usage -->
+      <exercise xml:id="wrapper-classes-memory-usage">
+        <title>Wrapper Classes: Memory</title>
+        <statement correct="no">
+          <p>
+            Using wrapper classes in Java reduces memory usage compared to using primitive data types.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Using wrapper classes in Java increases memory usage because they are objects (which come with additional overhead).
+          </p>
+        </feedback>
+      </exercise>
+
+      <!-- Q3: Multiple Choice, Stack vs Heap -->
+      <exercise xml:id="wrapper-classes-stack-vs-heap">
+        <title>Wrapper Classes: Stack vs. Heap</title>
+        <statement>
+          <p>
+            Consider the following lines of code:
+          </p>
+          <program xml:id="wrapper-stack-heap-static" interactive="no">
+            <input>
+              int primitiveInt = 50;
+              Integer wrapperInt = new Integer(50);
+            </input>
+          </program>  
+          <p>
+            Which of the following statements describes where <c>primitiveInt</c> and <c>wrapperInt</c> are stored?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice>
+            <statement>
+              <p>
+                <c>primitiveInt</c> and <c>wrapperInt</c> are stored on the stack.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: <c>wrapperInt</c> is an Object from the Integer class and objects in Java are stored on the heap, not the stack.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>primitiveInt</c> and <c>wrapperInt</c> are stored on the heap.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: In Java, primitives are stored on the stack. 
+              </p>
+            </feedback>
+            </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>primitiveInt</c> is stored on the heap and <c>wrapperInt</c> is stored on the stack.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: Primitives in Java are stored on the stack and <c>wrapperInt</c>, which is an object of the <c>Integer</c> class, is stored on the heap.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                <c>primitiveInt</c> is stored on the stack and <c>wrapperInt</c> is stored on the heap.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct: Primitive data types are stored on the stack and objects are stored on the heap in Java.
+              </p>
+            </feedback>
+            </choice>
+        </choices>
+      </exercise>
+
+      <!-- Q4: Multiple Choice, int[] vs ArrayList<Integer> -->
+      <exercise xml:id="wrapper-classes-array-vs-arraylist">
+        <title>Wrapper Classes: int[] vs ArrayList of Integer</title>
+        <statement>
+          <p>
+            Which of the following statements best describes the tradeoff between using an <c>int[]</c> over an <c>ArrayList</c> of <c>Integer</c>?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice>
+            <statement>
+              <p>
+                Both <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> are equally preferable in all scenarios because they perform identically in terms of memory usage and speed.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: <c>int[]</c> are faster for basic operations (accessing/updating elements) and are more memory efficient. The dynamic resizing capability of an <c>ArrayList</c> contributes to additional memory overhead.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                An <c>ArrayList</c> of <c>Integer</c> is slower than an <c>int[]</c> because of its internal complexity.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct: The flexibility of an <c>ArrayList</c> of <c>Integer</c> comes with a performance cost due to its internal complexity, such as resizing and handling Objects instead of primitives.
+              </p>
+            </feedback>
+            </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>int[]</c> is slower than an <c>ArrayList</c> of <c>Integer</c> because it does not have the capability to store data efficiently.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: <c>int[]</c> is faster for operations such as accessing and setting elements because it stores values without the overhead of dynamic resizing.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The choice between using an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> is purely for style purposes.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: Depending on whether you choose between an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> is based on the needs of the program, such as performance, memory efficiency, and the required functionality.
+              </p>
+            </feedback>
+            </choice>
+        </choices>
+      </exercise>
+    </exercises>
+  </section>
 </chapter>
+
 
