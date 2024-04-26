@@ -204,6 +204,98 @@
       </exercise>
     </exercises>
   </section>
+
+  <!-- Growth Exercise-->
+  <section xml:id="wrapper-classes-growth-exercise">
+    <title>Growth Level</title>
+    <!-- Objectives-->
+    <objectives>
+      <ul>
+        <li> Compare and contrast the differences and benefits of using an <c>ArrayList</c> of <c>Integer</c> over an <c>int[]</c></li>
+      </ul>
+    </objectives>
+
+    <!-- Overview -->
+    <subsection>
+      <title>Overview</title>
+      <p>
+        The Java program CourseNumbersArray manages a list of course numbers that a student is registered in. It performs the following tasks:
+        <ol>
+          <li>
+            <p>
+              Initializes an integer array, <c>registeredCourses</c>, with a set of course numbers: 1010, 1020, 2080, 2140, 2150, 2160
+            </p>
+          </li>
+          <li>
+            <p>
+              To add a new course to <c>registeredCourses</c> it copies the elements from the current array into a new, larger array, <c>updatedCourses</c> and adds the course to this new array
+            </p>
+          </li>
+          <li>
+            <p>
+              Prints out <c>updatedCourses</c>, the array that contains the newly-added course
+            </p>
+          </li>
+          <li>
+            <p>
+              Checks if <c>updatedCourses</c> contains a specific course number
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <!-- CourseNumbersArray Class Code, Non-Interactive -->
+      <program xml:id="course-numbers-array-static" interactive="no">
+        <input>
+          public class CourseNumbersArray {
+            public static void main(String[] args) {
+        
+                int[] registeredCourses = {1010, 1020, 2080, 2140, 2150, 2160};
+        
+                // Printing all elements of the array
+                System.out.print("Originally registered for: ");
+                for(int course : registeredCourses){
+                    System.out.print(course + ", ");
+                }
+        
+                // Adding a new course to the array
+                // Since arrays have a fixed size, we will have to create a new array with a new size to be able to store an extra element
+                int[] updatedCourses = new int [registeredCourses.length + 1];
+                System.arraycopy(registeredCourses, 0, updatedCourses, 0, registeredCourses.length);
+                updatedCourses[registeredCourses.length] = 2280;
+        
+                // Printing updated array of courses 
+                System.out.print("\nUpdated courses: ");
+                for(int course : updatedCourses){
+                    System.out.print(course + ", ");
+                }
+        
+                // Checking if we are registered for a specific course
+                int courseCode = 2140;
+                boolean found = false;
+                for(int course : updatedCourses){
+                    if(course == courseCode){
+                        found = true;
+                    }
+                }
+                if(found){
+                    System.out.println("\nYou are registered for " + courseCode);
+                }
+                else{
+                    System.out.println("You are not registered for " + courseCode);
+                }
+            }    
+          }        
+        </input>
+      </program>
+    </subsection>
+
+    <!-- Instructions-->
+    <subsection>
+      <title>Instructions</title>
+    </subsection>
+  </section>
 </chapter>
+
 
 
