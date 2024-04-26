@@ -166,6 +166,7 @@
       </ul>
     </objectives>
     <subsection>
+
       <!-- Instructions-->
       <title>Instructions</title>
       <ol>
@@ -245,6 +246,7 @@
     <p>
       The expected output is:
     </p>
+    
     <program xml:id="grocery-list-exercise-output" interactive="no">
       <input>
         Size of the list: 3
@@ -266,45 +268,65 @@
         <li>Accessing data in an <c>ArrayList</c> with a for loop</li>
       </ul>
       </objectives>
+
+      <subsection>
+        <title>Overview</title>
+        <p>
+          This Java program contains a class named <c>Animal</c>, where each instance represents an individual animal that is characterized by a <c>name</c> and a <c>type</c>.
+          Each <c>Animal</c> that is created is added to a <c>static</c> <c>ArrayList</c> that you will instantiate named <c>allAnimals</c>. 
+        </p>
+        <!-- Animal Class Code, Non-Interactive -->
+        <program xml:id="animal-class-static" interactive="no">
+          <input>
+            public class Animal {
+              //**TO-DO: Initialize a static ArrayList here called allAnimals**
+              String name;
+              String type;
+
+              public Animal(String name, String type){
+                  this.name = name;
+                  this.type = type;
+                  allAnimals.add(this);
+              }
+
+              public String toString(){
+                  return name + " (" + type + ")";
+              }
+
+              //**TO-DO: Write method that checks if an animal in the list**
+              public static boolean isDuplicate(String nameToCheck){
+              
+              }
+            }
+          </input>
+        </program>
+      </subsection>
+
       <subsection>
         <!-- Instructions-->
         <title>Instructions</title>
           <p>
-            The following program requires you to write a method to locate duplicates within an <c>ArrayList</c> containing <c>Animal</c> objects.
-            A "duplicate" refers to an <c>Animal</c> with the same name as another <c>Animal</c> that is already in the list. That is, if an <c>Animal</c> 
-            with a particular name already exists in the <c>ArrayList</c>, any subsequent <c>Animal</c> with the exact same name is considered a duplicate.
+            Complete <c>isDuplicate()</c> to locate duplicates in <c>allAnimals</c> which contains <c>Animal</c> objects.
+            <ul>
+              <li>
+                <p>
+                  A "duplicate" refers to an <c>Animal</c> with the same name as another <c>Animal</c> that is already in the list. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  That is, if an <c>Animal</c> 
+                  with a particular name already exists in <c>allAnimals</c>, any subsequent <c>Animal</c> with the exact same name is considered a duplicate.
+                </p>
+              </li>
+              <li>
+                <p>
+                  You may assume that all names begin with a capital letter.
+                </p>
+              </li>
+            </ul>
           </p>
       </subsection>
-
-      <!-- Animal Class Code, Non-Interactive -->
-      <program xml:id="animal-class-static" interactive="no">
-        <input>
-          public class Animal {
-            //**TO-DO: Initialize a static ArrayList here called allAnimals**
-            String name;
-            String type;
-
-            public Animal(String name, String type){
-                this.name = name;
-                this.type = type;
-                allAnimals.add(this);
-            }
-
-            public String toString(){
-                return name + " (" + type + ")";
-            }
-
-            //**TO-DO: Write method that checks if an animal in the list**
-            public static boolean isDuplicate(String nameToCheck){
-            
-            }
-          }
-        </input>
-      </program>
-      <p>
-        The program contains a class named <c>Animal</c>, where each instance represents an individual animal that is characterized by a <c>name</c> and a <c>type</c>.
-        Each <c>Animal</c> that is created is added to a <c>static</c> <c>ArrayList</c> that you will instantiate named <c>allAnimals</c>. You may assume that all names begin with a capital letter.
-      </p>
 
       <!--  Growth Exercise Template Code -->
       <program xml:id="animal-exercise-template" interactive="activecode" language="java">
@@ -382,103 +404,107 @@
         <li> Accessing and manipulating data stored in an <c>ArrayList</c></li>
       </ul>
       </objectives>
-      <p>
-        This Java program analyzes the temperatures recorded in Winnipeg, Manitoba from April 1, 2024 to April 10, 2024 
-        and it contains methods that perform various temperature-related calculations.
-      </p>
-      
-      <!-- Descriptions For Each Class-->
-      <!-- DayTemperature Class Code, Non-Interactive-->
-      <program xml:id="day-temperature-class-static" interactive="no">
-        <input>
-          class DayTemperature{
 
-            String day;
-            double minTemp;
-            double maxTemp;
+      <subsection>
+        <title>Overview</title>
+        <p>
+          This Java program analyzes the temperatures recorded in Winnipeg, Manitoba from April 1, 2024 to April 10, 2024 
+          and it contains methods that perform various temperature-related calculations.
+        </p>
         
-            public DayTemperature(String day, double maxTemp, double minTemp){
-                this.day = day;
-                this.minTemp = minTemp;
-                this.maxTemp = maxTemp;
-            }
-        
-            public String toString(){
-        
-            }
-        
-            public double getAverageTemp(){
-        
-            }
-        }
-        </input>
-      </program>
-      <p>
-        The <c>DayTemperature</c> class represents a single day's temperature data. This includes:
-        <ul>
-          <li>
-            <p>
-              <c>day (String)</c> to store the day of the temperature record
-              <ul>
-                <li>
-                  <p>
-                    e.g., "April 1, 2024"
-                  </p>
-                </li>
-              </ul>
-            </p>
-          </li>
-          <li>
-            <p>
-              <c>minTemp (double)</c> to store the minimum temperature recorded for the day
-            </p>
-          </li>
-          <li>
-            <p>
-              <c>maxTemp (double)</c>to store the maximum temperature recorded for the day
-            </p>
-          </li>
-        </ul>
-      </p>
+        <!-- Descriptions For Each Class-->
+        <!-- DayTemperature Class Code, Non-Interactive-->
+        <program xml:id="day-temperature-class-static" interactive="no">
+          <input>
+            class DayTemperature{
 
-      <!-- TemperatureAnalysis Class Code, Non-Interactive -->
-      <program xml:id="temperature-analysis-class-static" interactive="no">
-        <input>
-          public class TemperatureAnalysis{
-            //TO-DO: Initialize static ArrayList titled weekTemp that holds instances of DayTemperature
+              String day;
+              double minTemp;
+              double maxTemp;
+          
+              public DayTemperature(String day, double maxTemp, double minTemp){
+                  this.day = day;
+                  this.minTemp = minTemp;
+                  this.maxTemp = maxTemp;
+              }
+          
+              public String toString(){
+          
+              }
+          
+              public double getAverageTemp(){
+          
+              }
+          }
+          </input>
+        </program>
+        <p>
+          The <c>DayTemperature</c> class represents a single day's temperature data. This includes:
+          <ul>
+            <li>
+              <p>
+                <c>day (String)</c> to store the day of the temperature record
+                <ul>
+                  <li>
+                    <p>
+                      e.g., "April 1, 2024"
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>minTemp (double)</c> to store the minimum temperature recorded for the day
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>maxTemp (double)</c>to store the maximum temperature recorded for the day
+              </p>
+            </li>
+          </ul>
+        </p>
 
-            public static void main(String[] args){
-                printWeekTemp();
-                printAverageWeeklyTemp();
-                printHighestTemp();
-                printLowestTemp();
-            }
-        
-            public static void printWeekTemp(){
+        <!-- TemperatureAnalysis Class Code, Non-Interactive -->
+        <program xml:id="temperature-analysis-class-static" interactive="no">
+          <input>
+            public class TemperatureAnalysis{
+              //TO-DO: Initialize static ArrayList titled weekTemp that holds instances of DayTemperature
+
+              public static void main(String[] args){
+                  printWeekTemp();
+                  printAverageWeeklyTemp();
+                  printHighestTemp();
+                  printLowestTemp();
+              }
+          
+              public static void printWeekTemp(){
+                
+              }
+          
+              public static void printMedianTemp(){
+          
+              }
+          
+              public static void printAverageWeeklyTemp(){
               
-            }
-        
-            public static void printMedianTemp(){
-        
-            }
-        
-            public static void printAverageWeeklyTemp(){
-             
-            }
-        
-            public static void printHighestTemp(){
-           
-            }
-        
-            public static void printLowestTemp(){
-        
-            }
-        </input>
-      </program>
-      <p>
-        The <c>TemperatureAnalysis</c> class manages the recorded weather data by performing calculations such as calculating averages and extreme temperatures.
-      </p>
-
+              }
+          
+              public static void printHighestTemp(){
+            
+              }
+          
+              public static void printLowestTemp(){
+          
+              }
+          </input>
+        </program>
+        <p>
+          The <c>TemperatureAnalysis</c> class manages the recorded weather data by performing calculations such as calculating averages and extreme temperatures.
+        </p>
+      </subsection>
+      
       <!-- Instructions for Growth Exercise-->
       <subsection>
           <title>Instructions</title>
