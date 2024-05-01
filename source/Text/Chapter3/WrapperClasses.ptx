@@ -324,6 +324,224 @@
     </program>
 
   </section>
+
+
+  <!-- Stretch Exercise-->
+  <section xml:id="wrapper-classes-stretch-exercise">
+    <title>Stretch Level</title>
+
+    <!-- Objectives-->
+    <objectives>
+      <ul>
+        <li>
+          <p>
+            Learn how to use Wrapper classes in practical applications, such as managing financial transactions in a bank account
+          </p>
+        </li>
+      </ul>
+    </objectives>
+    
+
+    <!-- Overview of Program -->
+    <subsection>
+      <title>Overview</title>
+      <p>
+        The following program simulates a bank account and allows users to depost, withdraw, and track the transaction history of their account.
+        <ul>
+          <li>
+            <p>
+              <c>deposit(amount)</c> 
+              <ul>
+                <li>
+                  <p>
+                    Adds money to the account
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>withdrawal(amount)</c>
+              <ul>
+                <li>
+                  <p>
+                    Takes money out of the account
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>displayTransactions()</c>
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Prints deposits and withdrawals as they were recorded in the <c>transactions</c> ArrayList.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <c>displayBalance()</c>
+              <ul>
+                <li>
+                  <p>
+                    Prints the balance of the account
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          
+        </ul>
+        
+      </p>
+    </subsection>
+
+  
+
+    <!-- Instructions for Stretch Exercise -->
+    <subsection>
+      <title>Instructions</title>   
+      <p>
+        Complete the following methods:
+        <ul>
+          <li>
+            <p>
+              <c>deposit(amount)</c> 
+              <ul>
+                <li>
+                  <p>
+                    Ensure that only valid deposits (positive numbers) are added to the account. Record the transaction as a positive value in the <c>transactions</c> ArrayList.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Print a message including the depositor's name, the deposited amount, and the new balance.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Error messages are printed for unsuccessful deposits.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>withdrawal(amount)</c>
+              <ul>
+                <li>
+                  <p>
+                    Should ensure that withdrawals are within the available balance. Valid withdrawals are recorded as a negative value in the <c>transactions</c> ArrayList.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    If the conditions are not met print an error message indicating the withdrawal was unsuccessful.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>displayTransactions()</c>
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Print all the transactions (deposits and withdrawals) recorded.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <c>displayBalance()</c>
+              <ul>
+                <li>
+                  <p>
+                    Prints the current balance of the account.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </ul>
+      </p>
+
+
+      
+    </subsection>
+
+
+    <!-- Growth Exercise Template Code-->
+    <program xml:id="bank-exercise-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class BankAccount {
+
+            String name;
+            double currentBalance;
+            //TO-DO: Initialize an ArrayList that stores Double called 'transactions' to keep track of the user's transactions
+
+            public BankAccount(String name, int startingBalance){
+                
+            }
+
+            public void deposit(double amount){
+                
+            }
+
+            public void withdraw(double amount){
+                
+            }
+
+            public void displayTransactions(){
+              
+            }
+
+            public void displayBalance(){
+              
+            }
+
+            public static void main(String[] args) {
+
+                BankAccount john = new BankAccount("John Doe", 100);
+
+                john.displayBalance();
+                john.deposit(0.25);
+                john.withdraw(100.50);
+                john.withdraw(40.90);
+                john.deposit(-90.55);
+                john.deposit(3000);
+                john.displayTransactions();
+                john.displayBalance();
+
+                BankAccount jane = new BankAccount("Jane Doe", 2000);
+
+                jane.displayBalance();
+                jane.displayTransactions();
+                
+            }
+            
+        }
+
+        
+      </input>
+    </program>
+
+
+  </section>
+
+
 </chapter>
 
 
