@@ -516,6 +516,7 @@
 
                 BankAccount john = new BankAccount("John Doe", 100);
 
+                //Testing..
                 john.displayBalance();
                 john.deposit(0.25);
                 john.withdraw(100.50);
@@ -524,11 +525,6 @@
                 john.deposit(3000);
                 john.displayTransactions();
                 john.displayBalance();
-
-                BankAccount jane = new BankAccount("Jane Doe", 2000);
-
-                jane.displayBalance();
-                jane.displayTransactions();
                 
             }
             
@@ -538,7 +534,22 @@
       </input>
     </program>
 
-
+    <!-- Growth Exercise Expected Output-->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="bank-exercise-output" interactive="no">
+      <input>
+        [John Doe] Current balance: 100.0
+        [John Doe] Deposited $0.25. (New Balance: 100.25)
+        [ERROR, John Doe] Unsuccessful withdrawal of 100.5.
+        [John Doe] Withdrew $40.9. (New Balance: 59.35)
+        [ERROR, John Doe] Unsuccessful deposit of -90.55. Minimum deposit amount is $0.01.
+        [John Doe] Deposited $3000.0. (New Balance: 3059.35)
+        [John Doe] Transaction History: 0.25, -40.9, 3000.0, 
+        [John Doe] Current balance: 3059.35
+      </input>
+    </program>
   </section>
 
 
