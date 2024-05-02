@@ -205,6 +205,113 @@
     </exercises>
   </section>
 
+  <!-- Starter Exercise-->
+  <section xml:id="wrapper-classes-starter-exercise">
+    <title>Starter Level</title>
+    <!-- Objectives-->
+    <objectives>
+      <ul>
+        <li> Use Java Wrapper classes to fix a program designed to manage dogs in a shelter</li>
+      </ul>
+    </objectives>
+
+    <!-- Overview of Program -->
+    <subsection>
+      <title>Overview</title>
+      <p>
+        The following program represents a simple management systen ti track the number of dogs in a shelter.
+        It includes functionalities such as adding, deleting and displaying the count for a breed of dogs. 
+        However, the program contains several syntax and logical errors that prevent it from functioning properly.
+      </p>
+    </subsection>
+
+    <!-- Instructions for Starter Exercise -->
+    <subsection>
+      <title>Instructions</title>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Initialize an ArrayList <c>dogCounts</c> of <c>Integer</c> that will store the number of dogs for each breed
+            </p>
+          </li>
+          <li>
+            <p>
+              Review the code and correct the errors to ensure the program operates as expected
+            </p>
+          </li>
+        </ol>
+      </p>
+    </subsection>
+
+    <!-- Starter Exercise Template Code-->
+    <program xml:id="dog-exercise-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class DogShelter {
+
+            //TO-DO: Initialize ArrayList here
+
+            public static void main(String[] args) {
+
+                // Adding counts for three types of dogs
+                dogCounts.add(new Integer(15);
+                dogCounts.add(new Integer(30));
+                dogCounts.add(new Integer(20);
+                
+                // Display initial dog counts
+                System.out.println("Initial Dog Counts:");
+                displayDogs();
+
+                // Increase count for second breed of dog
+                addBreed(1 5); 
+
+                // Remove the third breed
+                deleteBreed(2;
+
+                // Display updated dog counts
+                System.out.println("\nUpdated Dog Counts:");
+                displayCounts();
+            }
+
+            public static void addBreed(int index, int count) {
+                int updatedCount = dogCounts.get(index) + count;
+                dogCounts.set(index, new Integer(updatedCount));
+            }
+
+            public static void deleteBreed(int index) {
+                dogCounts.remove(index + 1);
+
+            }
+
+            public static void displayDogs() {
+                for (int i = 0; i dogCounts.size(); i++) {
+                    System.out.println("Breed " + (i) + " has " + dogCounts.get(i) + " dogs.");
+                }
+            }
+        }
+      </input>
+    </program>
+
+    <!-- Starter Exercise Expected Output-->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="dog-exercise-output" interactive="no">
+      <input>
+        Initial Dog Counts:
+        Breed 1 has 15 dogs.
+        Breed 2 has 30 dogs.
+        Breed 3 has 20 dogs.
+
+        Updated Dog Counts:
+        Breed 1 has 15 dogs.
+        Breed 2 has 35 dogs.
+      </input>
+    </program>
+  </section>
+
   <!-- Growth Exercise-->
   <section xml:id="wrapper-classes-growth-exercise">
     <title>Growth Level</title>
