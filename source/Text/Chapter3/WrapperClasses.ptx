@@ -219,7 +219,7 @@
     <subsection>
       <title>Overview</title>
       <p>
-        The following program represents a simple management systen ti track the number of dogs in a shelter.
+        The following program represents a simple management system to track the number of dogs in a shelter.
         It includes functionalities such as adding, deleting and displaying the count for a breed of dogs. 
         However, the program contains several syntax and logical errors that prevent it from functioning properly.
       </p>
@@ -232,7 +232,7 @@
         <ol>
           <li>
             <p>
-              Initialize an ArrayList <c>dogCounts</c> of <c>Integer</c> that will store the number of dogs for each breed
+              Initialize a <c>static</c> <c>ArrayList</c> of <c>Integer</c> called <c>dogCounts</c> that will store the number of dogs for each breed
             </p>
           </li>
           <li>
@@ -272,7 +272,7 @@
 
                 // Display updated dog counts
                 System.out.println("\nUpdated Dog Counts:");
-                displayCounts();
+                displayDogs();
             }
 
             public static void addBreed(int index, int count) {
