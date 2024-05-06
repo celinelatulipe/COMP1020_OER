@@ -211,113 +211,6 @@
     <!-- Objectives-->
     <objectives>
       <ul>
-        <li> Use Java Wrapper classes to fix a program designed to manage dogs in a shelter</li>
-      </ul>
-    </objectives>
-
-    <!-- Overview of Program -->
-    <subsection>
-      <title>Overview</title>
-      <p>
-        The following program represents a simple management system to track the number of dogs in a shelter.
-        It includes functionalities such as adding, deleting and displaying the count for a breed of dogs. 
-        However, the program contains several syntax and logical errors that prevent it from functioning properly.
-      </p>
-    </subsection>
-
-    <!-- Instructions for Starter Exercise -->
-    <subsection>
-      <title>Instructions</title>
-      <p>
-        <ol>
-          <li>
-            <p>
-              Initialize a <c>static</c> <c>ArrayList</c> of <c>Integer</c> called <c>dogCounts</c> that will store the number of dogs for each breed
-            </p>
-          </li>
-          <li>
-            <p>
-              Review the code and correct the errors to ensure the program operates as expected
-            </p>
-          </li>
-        </ol>
-      </p>
-    </subsection>
-
-    <!-- Starter Exercise Template Code-->
-    <program xml:id="dog-exercise-template" interactive="activecode" language="java">
-      <input>
-        import java.util.ArrayList;
-
-        public class DogShelter {
-
-            //TO-DO: Initialize ArrayList here
-
-            public static void main(String[] args) {
-
-                // Adding counts for three types of dogs
-                dogCounts.add(new Integer(15);
-                dogCounts.add(new Integer(30));
-                dogCounts.add(new Integer(20);
-                
-                // Display initial dog counts
-                System.out.println("Initial Dog Counts:");
-                displayDogs();
-
-                // Increase count for second breed of dog
-                addBreed(1 5); 
-
-                // Remove the third breed
-                deleteBreed(2;
-
-                // Display updated dog counts
-                System.out.println("\nUpdated Dog Counts:");
-                displayDogs();
-            }
-
-            public static void addBreed(int index, int count) {
-                int updatedCount = dogCounts.get(index) + count;
-                dogCounts.set(index, new Integer(updatedCount));
-            }
-
-            public static void deleteBreed(int index) {
-                dogCounts.remove(index + 1);
-
-            }
-
-            public static void displayDogs() {
-                for (int i = 0; i dogCounts.size(); i++) {
-                    System.out.println("Breed " + (i) + " has " + dogCounts.get(i) + " dogs.");
-                }
-            }
-        }
-      </input>
-    </program>
-
-    <!-- Starter Exercise Expected Output-->
-    <p>
-      The expected output is:
-    </p>
-    <program xml:id="dog-exercise-output" interactive="no">
-      <input>
-        Initial Dog Counts:
-        Breed 1 has 15 dogs.
-        Breed 2 has 30 dogs.
-        Breed 3 has 20 dogs.
-
-        Updated Dog Counts:
-        Breed 1 has 15 dogs.
-        Breed 2 has 35 dogs.
-      </input>
-    </program>
-  </section>
-
-  <!-- Growth Exercise-->
-  <section xml:id="wrapper-classes-growth-exercise">
-    <title>Growth Level</title>
-    <!-- Objectives-->
-    <objectives>
-      <ul>
         <li> Compare and contrast an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> </li>
       </ul>
     </objectives>
@@ -392,7 +285,7 @@
       </program>
     </subsection>
 
-    <!-- Instructions for Growth Exercise -->
+    <!-- Instructions for Starter Exercise -->
     <subsection>
       <title>Instructions</title>
       <p>
@@ -405,7 +298,7 @@
       </hint>
     </subsection>
 
-    <!-- Growth Exercise Template Code-->
+    <!-- Starter Exercise Template Code-->
     <program xml:id="course-numbers-arraylist-template" interactive="activecode" language="java">
       <input>
         import java.util.ArrayList;
@@ -413,12 +306,18 @@
         public class CourseNumbersArrayList{
           public static void main(String[] args) {
 
+            //Initialize an ArrayList and add the courses
+
+            //Print the contents of the Integer ArrayList
+
+            //Check if the ArrayList contains a specific course number
+
           }
         }
       </input>
     </program>
 
-    <!-- Growth Exercise Expected Output-->
+    <!-- Starter Exercise Expected Output-->
     <p>
       The expected output is:
     </p>
@@ -429,9 +328,114 @@
         You are registered for 2140
       </input>
     </program>
-
   </section>
 
+  <!-- Growth Exercise-->
+  <section xml:id="wrapper-classes-growth-exercise">
+    <title>Growth Level</title>
+    <!-- Objectives-->
+    <objectives>
+      <ul>
+        <li> Use Java Wrapper classes to fix a program designed to manage dogs in a shelter</li>
+      </ul>
+    </objectives>
+
+    <!-- Overview of Program -->
+    <subsection>
+      <title>Overview</title>
+      <p>
+        The following program represents a simple management system to track the number of dogs in a shelter.
+        It includes functionalities such as adding, deleting and displaying the count for a breed of dogs. 
+        However, the program contains several syntax and logical errors that prevent it from functioning properly.
+      </p>
+    </subsection>
+
+    <!-- Instructions for Growth Exercise -->
+    <subsection>
+      <title>Instructions</title>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Initialize a <c>static</c> <c>ArrayList</c> of <c>Integer</c> called <c>dogCounts</c> that will store the number of dogs for each breed
+            </p>
+          </li>
+          <li>
+            <p>
+              Review the code and correct the errors to ensure the program operates as expected
+            </p>
+          </li>
+        </ol>
+      </p>
+    </subsection>
+
+    <!-- Growth Exercise Template Code-->
+    <program xml:id="dog-exercise-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class DogShelter {
+
+            //TO-DO: Initialize ArrayList here
+
+            public static void main(String[] args) {
+
+                // Adding counts for three types of dogs
+                dogCounts.add(new Integer(15);
+                dogCounts.add(new Integer(30));
+                dogCounts.add(new Integer(20);
+                
+                // Display initial dog counts
+                System.out.println("Initial Dog Counts:");
+                displayDogs();
+
+                // Increase count for second breed of dog
+                addBreed(1 5); 
+
+                // Remove the third breed
+                deleteBreed(2;
+
+                // Display updated dog counts
+                System.out.println("\nUpdated Dog Counts:");
+                displayDogs();
+            }
+
+            public static void addBreed(int index, int count) {
+                int updatedCount = dogCounts.get(index) + count;
+                dogCounts.set(index, new Integer(updatedCount));
+            }
+
+            public static void deleteBreed(int index) {
+                dogCounts.remove(index + 1);
+
+            }
+
+            public static void displayDogs() {
+                for (int i = 0; i dogCounts.size(); i++) {
+                    System.out.println("Breed " + (i) + " has " + dogCounts.get(i) + " dogs.");
+                }
+            }
+        }
+      </input>
+    </program>
+
+    <!-- Growth Exercise Expected Output-->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="dog-exercise-output" interactive="no">
+      <input>
+        Initial Dog Counts:
+        Breed 1 has 15 dogs.
+        Breed 2 has 30 dogs.
+        Breed 3 has 20 dogs.
+
+        Updated Dog Counts:
+        Breed 1 has 15 dogs.
+        Breed 2 has 35 dogs.
+      </input>
+    </program>
+  </section>
 
   <!-- Stretch Exercise-->
   <section xml:id="wrapper-classes-stretch-exercise">
@@ -453,7 +457,7 @@
     <subsection>
       <title>Overview</title>
       <p>
-        The following program simulates a bank account and allows users to depost, withdraw, and track the transaction history of their account.
+        The following program simulates a bank account and allows users to deposit, withdraw, and track the transaction history of their account.
         <ul>
           <li>
             <p>
@@ -509,8 +513,6 @@
       </p>
     </subsection>
 
-  
-
     <!-- Instructions for Stretch Exercise -->
     <subsection>
       <title>Instructions</title>   
@@ -523,12 +525,12 @@
               <ul>
                 <li>
                   <p>
-                    Ensure that only valid deposits (positive numbers) are added to the account. Record the transaction as a positive value in the <c>transactions</c> ArrayList.
+                    Ensures that only valid deposits (positive numbers) are added to the account. Record the transaction as a positive value in the <c>transactions</c> ArrayList.
                   </p>
                 </li>
                 <li>
                   <p>
-                    Print a message including the depositor's name, the deposited amount, and the new balance.
+                    Prints a message including the depositor's name, the deposited amount, and the new balance.
                   </p>
                 </li>
                 <li>
@@ -545,12 +547,12 @@
               <ul>
                 <li>
                   <p>
-                    Should ensure that withdrawals are within the available balance. Valid withdrawals are recorded as a negative value in the <c>transactions</c> ArrayList.
+                    Ensures that withdrawals are within the available balance. Valid withdrawals are recorded as a negative value in the <c>transactions</c> ArrayList.
                   </p>
                 </li>
                 <li>
                   <p>
-                    If the conditions are not met print an error message indicating the withdrawal was unsuccessful.
+                    If the conditions are not met, print an error message indicating the withdrawal was unsuccessful.
                   </p>
                 </li>
               </ul>
@@ -563,7 +565,7 @@
             <ul>
               <li>
                 <p>
-                  Print all the transactions (deposits and withdrawals) recorded.
+                  Prints all the transactions (deposits and withdrawals) recorded.
                 </p>
               </li>
             </ul>
@@ -582,13 +584,9 @@
           </li>
         </ul>
       </p>
-
-
-      
     </subsection>
 
-
-    <!-- Growth Exercise Template Code-->
+    <!-- Stretch Exercise Template Code-->
     <program xml:id="bank-exercise-template" interactive="activecode" language="java">
       <input>
         import java.util.ArrayList;
@@ -623,6 +621,8 @@
 
                 BankAccount john = new BankAccount("John Doe", 100);
 
+                // ----- DO NOT CHANGE -----
+
                 //Testing..
                 john.displayBalance();
                 john.deposit(0.25);
@@ -632,6 +632,8 @@
                 john.deposit(3000);
                 john.displayTransactions();
                 john.displayBalance();
+
+                // ----- DO NOT CHANGE -----
                 
             }
             
@@ -641,7 +643,7 @@
       </input>
     </program>
 
-    <!-- Growth Exercise Expected Output-->
+    <!-- Stretch Exercise Expected Output-->
     <p>
       The expected output is:
     </p>
@@ -658,8 +660,6 @@
       </input>
     </program>
   </section>
-
-
 </chapter>
 
 
