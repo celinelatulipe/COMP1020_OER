@@ -38,20 +38,16 @@
     <!-- Starter Exercise Template Code-->
     <program xml:id="testing-scanner-template" interactive="activecode" language="java">
       <input>
-        import java.util.Scanner;
-        public class ScannerTest{
+        import javax.swing.JFrame;  //Importing class JFrame
+        import javax.swing.JLabel;  //Importing class JLabel
+        public class HelloWorld {
           public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);  
-            try {
-                System.out.print("Enter integer: ");
-                int num = scanner.nextInt();
-                System.out.println(num);
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
-            } finally {
-                scanner.close();
-            }
-          
+            JFrame frame = new JFrame();           //Creating frame
+            frame.setTitle("Hi!");                 //Setting title frame
+            frame.add(new JLabel("Hello, world!"));//Adding text to frame
+            frame.pack();                          //Setting size to smallest
+            frame.setLocationRelativeTo(null);     //Centering frame
+            frame.setVisible(true);                //Showing frame
           }
         }
       </input>
