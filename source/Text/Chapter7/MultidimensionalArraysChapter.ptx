@@ -34,28 +34,24 @@
     </subsection>
 
 
+
     <!-- Starter Exercise Template Code-->
     <program xml:id="testing-scanner-template" interactive="activecode" language="java">
       <input>
-        import java.util.Scanner;
-
-        public class ScannerTest{
+        import javax.swing.JFrame;  //Importing class JFrame
+        import javax.swing.JLabel;  //Importing class JLabel
+        public class HelloWorld {
           public static void main(String[] args) {
-
-            Scanner myObj = new Scanner(System.in);  
-            System.out.println("Enter something");
-
-            String input = myObj.nextLine();  
-            System.out.println("Text input: " + input);  
-          
+            JFrame frame = new JFrame();           //Creating frame
+            frame.setTitle("Hi!");                 //Setting title frame
+            frame.add(new JLabel("Hello, world!"));//Adding text to frame
+            frame.pack();                          //Setting size to smallest
+            frame.setLocationRelativeTo(null);     //Centering frame
+            frame.setVisible(true);                //Showing frame
           }
         }
       </input>
     </program>
-
-
-  
-
   </section>
 
 </chapter>
