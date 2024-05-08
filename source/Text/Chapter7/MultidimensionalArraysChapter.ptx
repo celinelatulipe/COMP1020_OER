@@ -10,4 +10,52 @@
   <!-- include sections 
   <xi:include href="sec-section-name.ptx" />-->
 
+  <!-- Starter Exercise-->
+  <section xml:id="mda-starter-exercise">
+    <title>Starter Level</title>
+
+    <!-- Objectives-->
+    <objectives>
+      <ul>
+        <li>Iterating through multi-dimensional arrays</li>
+      </ul>
+    </objectives>
+
+    <subsection>
+      <title>Overview</title>
+      <p>
+  
+      </p>
+    </subsection>
+
+    <subsection>
+      <title>Instructions</title>
+      
+    </subsection>
+
+
+    <!-- Starter Exercise Template Code-->
+    <program xml:id="testing-scanner-template" interactive="activecode" language="java">
+      <input>
+        import java.util.Scanner;
+
+        public class ScannerTest{
+          public static void main(String[] args) {
+
+            Scanner myObj = new Scanner(System.in);  
+            System.out.println("Enter something");
+
+            String input = myObj.nextLine();  
+            System.out.println("Text input: " + input);  
+          
+          }
+        }
+      </input>
+    </program>
+
+
+  
+
+  </section>
+
 </chapter>
