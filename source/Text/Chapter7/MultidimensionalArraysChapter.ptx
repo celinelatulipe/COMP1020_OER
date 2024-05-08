@@ -34,28 +34,28 @@
     </subsection>
 
 
+
     <!-- Starter Exercise Template Code-->
     <program xml:id="testing-scanner-template" interactive="activecode" language="java">
       <input>
         import java.util.Scanner;
-
         public class ScannerTest{
           public static void main(String[] args) {
-
-            Scanner myObj = new Scanner(System.in);  
-            System.out.println("Enter something");
-
-            String input = myObj.nextLine();  
-            System.out.println("Text input: " + input);  
+            Scanner scanner = new Scanner(System.in);  
+            try {
+                System.out.print("Enter integer: ");
+                int num = scanner.nextInt();
+                System.out.println(num);
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            } finally {
+                scanner.close();
+            }
           
           }
         }
       </input>
     </program>
-
-
-  
-
   </section>
 
 </chapter>
