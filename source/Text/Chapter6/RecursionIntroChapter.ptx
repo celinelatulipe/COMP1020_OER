@@ -9,5 +9,50 @@
 
   <!-- include sections 
   <xi:include href="sec-section-name.ptx" />-->
+  <section xml:id="sorting-level1-exercise">
+    <objectives>
+      <ul>
+        <li>Implement a bubblesort recursively</li>
+      </ul>
+    </objectives>
+    <program xml:id="bubblesort-recursive-exercise" interactive="activecode" language="java">
+      <input>
+   
+      import java.util.Arrays;
 
+public class Main{
+
+  public static void main(String[] args) {
+    int arr[] = {9,4,1,5,2,8};
+
+    System.out.print("Before sorting: ");
+    printArray(arr);
+
+    bubbleSort(arr, arr.length);
+
+    System.out.print("After sorting: ");
+    printArray(arr);
+  }
+
+  static void printArray(int arr[]){
+    for(int i = 0; i &lt; arr.length; i++){
+      System.out.print(arr[i] + " ");
+    }
+    System.out.println();
+  }
+
+  static void bubbleSort(int arr[], int size){
+    // base case - the recursive calls has reached the last element to be checked
+ 
+    // recursive step - a single pass of the bubblesort algorithm
+
+     // call the next step
+  }
+
+}
+        
+      </input>
+    </program>
+  
+  </section>
 </chapter>

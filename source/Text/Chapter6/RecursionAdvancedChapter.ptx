@@ -7,7 +7,34 @@
     <p> Text before the first section. </p>
   </introduction>
 
-  <!-- include sections 
-  <xi:include href="sec-section-name.ptx" />-->
+<p>Coin count problem </p>
+<program xml:id="coint-count-problem" interactive="activecode" language="java">
+  <input>
+import java.util.Arrays;
 
+public class Main{
+  // recursive function to count the number of possible solutions
+  static int coinCounter(int coins[], int size, int sum)
+  {
+
+      // if the sum is 0, increment the number of solutions
+
+      // If sum is less than 0 then this is not a valid solution
+
+      // if there are no coins and the sum is still greater than 0, there is no solution
+
+      // recursive step - return the count with the current coin + the count with the next coin minus the value of the current coin
+
+  }
+
+  public static void main(String args[])
+  {
+      int coins[] = {2, 4, 5};
+      int goal = 12;
+      int size = coins.length;
+      System.out.println(coinCounter(coins, size, goal));
+  }
+}
+  </input>
+</program>
 </chapter>

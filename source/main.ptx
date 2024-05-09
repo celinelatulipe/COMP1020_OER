@@ -19,7 +19,6 @@
     <xi:include href="./Text/Chapter2/ObjectsIntro2Chapter.ptx" />
     <xi:include href="./Text/Chapter3/ArrayListsChapter.ptx" />
     <xi:include href="./Text/Chapter3/WrapperClasses.ptx" />
-    <xi:include href="./Text/Chapter4/testing.ptx" />
     <xi:include href="./Text/Chapter4/StringsChapter.ptx" />
     <xi:include href="./Text/Chapter4/ExceptionsChapter.ptx" />
     <xi:include href="./Text/Chapter4/FileIOChapter.ptx" />

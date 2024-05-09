@@ -4,10 +4,66 @@
   <title>Sorting</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>Sorting</p>
   </introduction>
 
-  <!-- include sections 
-  <xi:include href="sec-section-name.ptx" />-->
+  <section xml:id="sorting-level1-exercise">
+    <objectives>
+      <ul>
+        <li>Implement a bubblesort algorithm</li>
+        <li>Consider bubblesort's efficiency, pros, and cons</li>
+      </ul>
+    </objectives>
+    <p> Bubblesort is a simple sorting algorithm that iterates sequentially through elements of an array
+      and compares the current item with the one behind it, and either swaps them or continues, repeating until
+      there are no more swaps needed.  This results in items "bubbling" to the top of the list.
+       </p>
+       <p> Draw a pretty picture for here </p>
+    <subsection>
+       <p> For this exercise, complete the bubblesort algorithm: </p>
+       <ol>
+          <li>Create a nested loop to iterate through each item in the array </li>
+          <li>Compare the current item with the next one, and swap the position as needed </li>
+       </ol>
+       <program xml:id="bubblesort-iterative-exercise" interactive="activecode" language="java">
+        <input>
+          public class Main {
+
+            public static void main(String[] args) {  
+              int arr[] = {9,4,1,5,2,8};
+          
+              System.out.print("Before sorting: ");
+              printArray(arr);
+          
+              bubbleSort(arr);
+          
+              System.out.print("After sorting: ");
+              printArray(arr);
+            }
+  
+            static void printArray(int arr[]){
+              for(int i = 0; i &lt; arr.length; i++){
+                System.out.print(arr[i] + " ");
+              }
+              System.out.println();
+            }
+          
+            static void bubbleSort(int arr[]){
+              // get size of array
+              int size = arr.length;
+              // placeholder variable for swapping
+              int temp = 0;
+          
+              //**TO-DO create an outer for loop based on the size of the array
+              //**To-DO create an inner loop based on the remaining elements to be sorted 
+          
+              //**TO-DO Compare and swap elements
+            }
+          }
+      </input>
+       </program>
+    </subsection>
+  </section>
+
 
 </chapter>
