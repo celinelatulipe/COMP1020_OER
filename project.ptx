@@ -6,6 +6,8 @@
     <stringparams author.tools ="yes" html.css.extra ="external/custom-styles.css"/>
     </target>
     <target name="print" format="pdf" />
-    <target name="runestone" format="html" publication="runestone.ptx" output-dir="../published/JavaActiveLearningWorkbook" />
+    <target name="runestone" format="html" publication="runestone.ptx" output-dir="../published/JavaActiveLearningWorkbook">
+      <stringparams author.tools ="yes" html.css.extra ="external/custom-styles.css"/>
+    </target>
   </targets>
 </project>
