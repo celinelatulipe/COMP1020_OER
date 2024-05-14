@@ -24,32 +24,164 @@
     <subsection>
       <title>Overview</title>
       <p>
-  
+        In this exercise, you will work with a Java program that simulates a restaurant menu. A 2D array stores multiple dishes,
+        each of which are put in 3 different categories: appetizers, entrees, and desserts. You must implement <c>displayMenu</c>
+        and <c>displayCategory</c>. These methods are responsible for displaying the entire menu and specific categories of the menu,
+        respectively. 
       </p>
     </subsection>
 
     <subsection>
-      <title>Instructions</title>
-      
+      <title>Structure of the 2D Array</title>
+      <p>
+        The <c>menu</c> 2D array is an array of <c>String</c>, where each sub-array represents a category of the menu.  
+        The first element of each sub-array is the name of the category.
+        <ul>
+          <li>
+            <p>
+              <c>menu[0][0]</c> contains "Appetizers", <c>menu[1][0]</c> contains "Entrees" and <c>menu[2][0]</c>
+              contains "Desserts "
+            </p>
+          </li>
+        </ul>
+        The subsequent elements in each sub-array are the food items that belong to that category.
+        <ul>
+          <li>
+            <p>
+              For example, in the Entrees category, <c>menu[1][1]</c> is "Steak", <c>menu[1][2]</c> is "Stir-Fry" and
+              <c>menu[1][3]</c> is "Porkchops".
+            </p>
+          </li>
+        </ul>
+        Here is a visual representation of the <c>menu</c> 2D array:
+        <table>
+          <tabular halign="center">
+            <row header="yes" bottom="minor">  
+            </row>
+            <row>
+              <cell>Appetizers <c>menu[0][0]</c></cell>
+              <cell>Deviled Eggs <c>menu[1][1]</c></cell>
+              <cell>Nachos <c>menu[1][2]</c></cell>
+              <cell>Salad <c>menu[1][3]</c></cell>
+            </row>
+            <row>
+              <cell>Entrees <c>menu[1][0]</c></cell>
+              <cell>Steak <c>menu[2][1]</c></cell>
+              <cell>Stir-Fry <c>menu[2][2]</c></cell>
+              <cell>Porkchops <c>menu[2][3]</c></cell>
+            </row>
+            <row>
+              <cell>Dessert <c>menu[2][1]</c></cell>
+              <cell>Key-Lime Pie <c>menu[3][1]</c></cell>
+              <cell>Raspberry Tarts <c>menu[3][2]</c></cell>
+              <cell>Sundae <c>menu[3][3]</c></cell>
+            </row>
+          </tabular>
+        </table>       
+      </p>
+        
     </subsection>
 
-
+    <subsection>
+      <title>Instructions</title>
+      <ol>
+        <li>
+          <p>
+            Implement the <c>displayMenu</c> method
+          </p>
+          <ul>
+            <li>
+              <p>
+                This method should iterate through the <c>menu</c> array and print all their categories along with their respective
+                dishes
+              </p>
+            </li>
+            <li>
+              <p>
+                Each dish should be printed on a new line and each category should be visually separated in the output
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            Implement the <c>displayCategory</c> method
+          </p>
+          <ul>
+            <li>
+              <p>
+                This method accepts the <c>menu</c> 2D array and an integer <c>category</c>, which represents the index of the 
+                category to be displayed (0 for Appetizers, 1 for Entrees, 2 for Desserts).
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>displayCategory</c> will display the chosen category and its dishes in the same format similar to 
+                <c>displayMenu</c>, but only for the specified category.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ol>      
+    </subsection>
 
     <!-- Starter Exercise Template Code-->
-    <program xml:id="testing-scanner-template" interactive="activecode" language="java">
+    <program xml:id="restaurant-exercise-template" interactive="activecode" language="java">
       <input>
-        import javax.swing.JFrame;  //Importing class JFrame
-        import javax.swing.JLabel;  //Importing class JLabel
-        public class HelloWorld {
+        public class RestaurantMenu {
           public static void main(String[] args) {
-            JFrame frame = new JFrame();           //Creating frame
-            frame.setTitle("Hi!");                 //Setting title frame
-            frame.add(new JLabel("Hello, world!"));//Adding text to frame
-            frame.pack();                          //Setting size to smallest
-            frame.setLocationRelativeTo(null);     //Centering frame
-            frame.setVisible(true);                //Showing frame
+              
+              String[][] menu = {
+                  {"Appetizers", "Deviled Eggs", "Nachos", "Salad"},
+                  {"Entrees", "Steak", "Stir-Fry", "Porkchops"},
+                  {"Desserts", "Key-Lime Pie", "Raspberry Tarts", "Sundae"},
+              };
+          
+              System.out.println("TEST: Printing menu...");
+              displayMenu(menu); //Printing whole menu
+              System.out.println("TEST: Printing entrees...");
+              displayCategory(menu, 1); //Printing Entrees
           }
-        }
+      
+          public static void displayMenu(String[][] menu){
+      
+          }
+      
+          //0 - Appetizers, 1 - Entrees, 2 - Dessert
+          public static void displayCategory(String[][] menu, int category){
+          
+          } 
+      }
+      </input>
+    </program>
+
+    <p>
+      The expected output is:
+    </p>
+
+    <program xml:id="restaurant-exercise-output" interactive="no">
+      <input>
+        -- Menu -- 
+        Category: Appetizers
+        Deviled Eggs
+        Nachos
+        Salad
+        
+        Category: Entrees
+        Steak
+        Stir-Fry
+        Porkchops
+        
+        Category: Desserts
+        Key-Lime Pie
+        Raspberry Tarts
+        Sundae
+        
+        TEST: Printing entrees...
+        Category: Entrees
+        Steak
+        Stir-Fry
+        Porkchops
       </input>
     </program>
   </section>
