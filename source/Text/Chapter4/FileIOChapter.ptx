@@ -27,9 +27,12 @@
 	public class ReadDF {
 		public String storage;
 		public static void main(String args[]) {
+			reader = new ReadDF();
+    	} 
+		public ReadDF() {
 			storage = "";
 			readTextFile("df1.txt");
-    	} 
+		}
 		private void readTextFile(String fileName) {
 			try {
 				BufferedReader inStream  = new BufferedReader (new FileReader(fileName));
