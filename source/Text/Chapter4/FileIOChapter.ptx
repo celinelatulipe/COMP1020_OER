@@ -1,13 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <chapter xml:id="ch-file-io" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>File I/O</title>
+	<title>File I/O</title>
+	<introduction>
+		<p>
+			Text before the first section.
+		</p>
+	</introduction>
 
-  <introduction>
-    <p> Text before the first section. </p>
-  </introduction>
+	<section xml:id="FILE_IO-starter">
+		<title>Starter Level</title>
+		<exercises xml:id="FILE_I0-starter-exercises">
+		<datafile label="df1" filename="df1.txt">
+		<pre>
+          Hello, this is my datafile.
+		</pre>
+		</datafile>
 
-  <!-- include sections 
-  <xi:include href="sec-section-name.ptx" />-->
+		<p>
+			The code below defines a Person class, with a first and last name and age as the properties.
+		</p>
 
+
+		<program xml:id="FILE_IO-read-df" label="FILE_IO-read-df" interactive="activecode" language="java" sourcefile="ReadDF.java">
+			<input>
+	import java.io.*;
+	public class ReadDF {
+		public String storage;
+		public static void main(String args[]) {
+			storage = "";
+			readTextFile("df1.txt");
+    	} 
+		private void readTextFile(String fileName) {
+			try {
+				BufferedReader inStream  = new BufferedReader (new FileReader(fileName));
+				String line = inStream.readLine(); // Read one line
+				System.out.println("the first line of the file is: " + line);
+				storage = line;
+				inStream.close();        // Close the stream
+			} catch (FileNotFoundException e) {
+				System.out.println("IOERROR: "+ fileName +" NOT found\n");
+				e.printStackTrace();
+			} catch (IOException e) {
+				System.out.println("IOERROR: " + e.getMessage() + "\n");
+				e.printStackTrace();
+			}
+		} // readTextFile
+	}
+			</input>
+			<!--<tests>
+			</tests>-->
+		</program>
+
+		<p>
+		</p>
+		</exercises>
+	</section>
 </chapter>
