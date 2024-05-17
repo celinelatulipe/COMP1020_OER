@@ -10,14 +10,14 @@
 	<section xml:id="FILE_IO-starter">
 		<title>Starter Level</title>
 		<exercises xml:id="FILE_I0-starter-exercises">
-		<datafile label="df1" filename="df1.txt">
+		<datafile xml:id="FILE_IO-df1" label="df1" filename="df1.txt">
 		<pre>
           Hello, this is my datafile.
 		</pre>
 		</datafile>
 
 		<p>
-			The code below defines a Person class, with a first and last name and age as the properties.
+			Insert exercise instructions for students here.
 		</p>
 
 
@@ -27,7 +27,7 @@
 	public class ReadDF {
 		public String storage;
 		public static void main(String args[]) {
-			reader = new ReadDF();
+			ReadDF reader = new ReadDF();
     	} 
 		public ReadDF() {
 			storage = "";
