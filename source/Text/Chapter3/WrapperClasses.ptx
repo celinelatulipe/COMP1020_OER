@@ -7,7 +7,7 @@
     <p> Text before the first section. </p>
   </introduction>
 
-  <section xml:id="wrapper-classes-exercises">
+  <section xml:id="sec-wrapper-classes-exercises">
     <title>Check Your Understanding</title>
     <exercises xml:id="wrapper-classes-short-exercises">
 
@@ -206,17 +206,21 @@
   </section>
 
   <!-- Starter Exercise-->
-  <section xml:id="wrapper-classes-starter-exercise">
+  <section xml:id="sec-wrapper-classes-starter-exercise">
     <title>Starter Level</title>
-    <!-- Objectives-->
+    <block>
+      <p>
+        <alert>Wrapper Classes</alert>
+      </p>
+    </block>
+    <!-- Objectives for Starter Exercise-->
     <objectives>
       <ul>
         <li> Compare and contrast an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> </li>
       </ul>
     </objectives>
-
-    <!-- Overview of Program -->
-    <subsection>
+    <!-- Overview for Starter Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-starter-overview">
       <title>Overview</title>
       <p>
         The Java program CourseNumbersArray manages a list of course numbers that a student is registered in. It performs the following tasks:
@@ -243,9 +247,8 @@
           </li>
         </ol>
       </p>
-
       <!-- CourseNumbersArray Class Code, Non-Interactive -->
-      <program xml:id="course-numbers-array-static" interactive="no">
+      <program xml:id="wrapper-classes-course-numbers-array-class-static" interactive="no">
         <input>
           public class CourseNumbersArray {
             public static void main(String[] args) {
@@ -284,9 +287,8 @@
         </input>
       </program>
     </subsection>
-
     <!-- Instructions for Starter Exercise -->
-    <subsection>
+    <subsection xml:id="subsec-wrapper-classes-starter-instructions">
       <title>Instructions</title>
       <p>
         Convert the existing program that uses an <c>int[]</c> to use an <c>ArrayList</c> of <c>Integer</c> instead.
@@ -297,9 +299,8 @@
         </p>
       </hint>
     </subsection>
-
-    <!-- Starter Exercise Template Code-->
-    <program xml:id="course-numbers-arraylist-template" interactive="activecode" language="java">
+    <!-- Template Code for Starter Exercise -->
+    <program xml:id="wrapper-classes-starter-template" interactive="activecode" language="java">
       <input>
         import java.util.ArrayList;
 
@@ -316,12 +317,11 @@
         }
       </input>
     </program>
-
-    <!-- Starter Exercise Expected Output-->
+    <!-- Expected Output for Starter Exercise -->
     <p>
       The expected output is:
     </p>
-    <program xml:id="course-numbers-arraylist-output" interactive="no">
+    <program xml:id="wrapper-classes-starter-output" interactive="no">
       <input>
         Originally registered for: 1010, 1020, 2080, 2140, 2150, 2160, 
         Updated courses: 1010, 1020, 2080, 2140, 2150, 2160, 2280, 
@@ -331,17 +331,21 @@
   </section>
 
   <!-- Growth Exercise-->
-  <section xml:id="wrapper-classes-growth-exercise">
+  <section xml:id="sec-wrapper-classes-growth-exercise">
     <title>Growth Level</title>
-    <!-- Objectives-->
+    <block>
+      <p>
+        <alert>Wrapper Classes</alert>
+      </p>
+    </block>
+    <!-- Objectives for Growth Exercise -->
     <objectives>
       <ul>
         <li> Use Java Wrapper classes to fix a program designed to manage dogs in a shelter</li>
       </ul>
     </objectives>
-
-    <!-- Overview of Program -->
-    <subsection>
+    <!-- Overview for Growth Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-growth-overview">
       <title>Overview</title>
       <p>
         The following program represents a simple management system to track the number of dogs in a shelter.
@@ -349,9 +353,8 @@
         However, the program contains several syntax and logical errors that prevent it from functioning properly.
       </p>
     </subsection>
-
     <!-- Instructions for Growth Exercise -->
-    <subsection>
+    <subsection xml:id="subsec-wrapper-classes-growth-instructions">
       <title>Instructions</title>
       <p>
         <ol>
@@ -368,9 +371,8 @@
         </ol>
       </p>
     </subsection>
-
-    <!-- Growth Exercise Template Code-->
-    <program xml:id="dog-exercise-template" interactive="activecode" language="java">
+    <!-- Template Code for Growth Exercise -->
+    <program xml:id="wrapper-classes-growth-template" interactive="activecode" language="java">
       <input>
         import java.util.ArrayList;
 
@@ -418,12 +420,11 @@
         }
       </input>
     </program>
-
-    <!-- Growth Exercise Expected Output-->
+    <!-- Expected Output for Growth Exercise -->
     <p>
       The expected output is:
     </p>
-    <program xml:id="dog-exercise-output" interactive="no">
+    <program xml:id="wrapper-classes-growth-output" interactive="no">
       <input>
         Initial Dog Counts:
         Breed 1 has 15 dogs.
@@ -438,10 +439,14 @@
   </section>
 
   <!-- Stretch Exercise-->
-  <section xml:id="wrapper-classes-stretch-exercise">
+  <section xml:id="sec-wrapper-classes-stretch-exercise">
     <title>Stretch Level</title>
-
-    <!-- Objectives-->
+    <block>
+      <p>
+        <alert>Wrapper Classes</alert>
+      </p>
+    </block>
+    <!-- Objectives for Stretch Exercise -->
     <objectives>
       <ul>
         <li>
@@ -451,10 +456,8 @@
         </li>
       </ul>
     </objectives>
-    
-
-    <!-- Overview of Program -->
-    <subsection>
+    <!-- Overview for Stretch Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-stretch-overview">
       <title>Overview</title>
       <p>
         The following program simulates a bank account and allows users to deposit, withdraw, and track the transaction history of their account.
@@ -507,14 +510,11 @@
               </ul>
             </p>
           </li>
-          
         </ul>
-        
       </p>
     </subsection>
-
     <!-- Instructions for Stretch Exercise -->
-    <subsection>
+    <subsection xml:id="subsec-wrapper-classes-stretch-instructions">
       <title>Instructions</title>   
       <p>
         Complete the following methods:
@@ -585,9 +585,8 @@
         </ul>
       </p>
     </subsection>
-
-    <!-- Stretch Exercise Template Code-->
-    <program xml:id="bank-exercise-template" interactive="activecode" language="java">
+    <!-- Template Code for Stretch Exercise -->
+    <program xml:id="wrapper-classes-stretch-template" interactive="activecode" language="java">
       <input>
         import java.util.ArrayList;
 
@@ -638,16 +637,13 @@
             }
             
         }
-
-        
       </input>
     </program>
-
-    <!-- Stretch Exercise Expected Output-->
+    <!-- Expected Output for Stretch Exercise -->
     <p>
       The expected output is:
     </p>
-    <program xml:id="bank-exercise-output" interactive="no">
+    <program xml:id="wrapper-classes-stretch-output" interactive="no">
       <input>
         [John Doe] Current balance: 100.0
         [John Doe] Deposited $0.25. (New Balance: 100.25)
@@ -661,6 +657,3 @@
     </program>
   </section>
 </chapter>
-
-
-
