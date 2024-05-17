@@ -10,17 +10,14 @@
 	<section xml:id="FILE_IO-starter">
 		<title>Starter Level</title>
 		<exercises xml:id="FILE_I0-starter-exercises">
-		<datafile xml:id="FILE_IO-df1" label="df1" filename="df1.txt">
-		<pre>
+			<datafile xml:id="FILE_IO-df1" label="df1" filename="df1.txt">
+				<pre>
           Hello, this is my datafile.
-		</pre>
-		</datafile>
-
-		<p>
-			Insert exercise instructions for students here.
-		</p>
-
-
+		  It has three lines.
+		  This is the last line.
+				</pre>
+			</datafile>
+	
 		<program xml:id="FILE_IO-read-df" label="FILE_IO-read-df" interactive="activecode" language="java" sourcefile="ReadDF.java">
 			<input>
 	import java.io.*;
