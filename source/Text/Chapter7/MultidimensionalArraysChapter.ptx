@@ -9,5 +9,435 @@
 
   <!-- include sections 
   <xi:include href="sec-section-name.ptx" />-->
+  
+  <!-- Starter Exercise-->
+  <section xml:id="sec-mdas-starter-exercise">
+    <title>Starter Level</title>
+    <block>
+      <p>
+        <alert>Multidimensional Arrays</alert>
+      </p>
+    </block>
+    <!-- Objectives for Starter Exercise -->
+    <objectives>
+      <ul>
+        <li>Learn to initialize and iterate through multi-dimensional arrays</li>
+      </ul>
+    </objectives>
+    <!-- Overview for Starter Exercise -->
+    <subsection xml:id="subsec-mdas-starter-overview">
+      <title>Overview</title>
+      <p>
+        In this exercise, you will work with a Java program that simulates a restaurant menu. A 2D array stores multiple dishes,
+        each of which are put in 3 different categories: appetizers, entrees, and desserts. You must implement <c>displayMenu</c>
+        and <c>displayCategory</c>. These methods are responsible for displaying the entire menu and specific categories of the menu,
+        respectively. 
+      </p>
+    </subsection>
+    <!-- 2D Array for Starter Exercise -->
+    <subsection xml:id="subsec-mdas-starter-2D-array">
+      <title>2D Array</title>
+      <p>
+        The <c>menu</c> 2D array is an array of <c>String</c>, where each sub-array represents a category of the menu.  
+        The first element of each sub-array is the name of the category.
+        <ul>
+          <li>
+            <p>
+              <c>menu[0][0]</c> contains "Appetizers", <c>menu[1][0]</c> contains "Entrees" and <c>menu[2][0]</c>
+              contains "Desserts".
+            </p>
+          </li>
+        </ul>
+        The subsequent elements in each sub-array are the food items that belong to that category.
+        <ul>
+          <li>
+            <p>
+              For example, in the Entrees category, <c>menu[1][1]</c> is "Steak", <c>menu[1][2]</c> is "Stir-Fry" and
+              <c>menu[1][3]</c> is "Porkchops".
+            </p>
+          </li>
+        </ul>
+        Here is a visual representation of the <c>menu</c> 2D array:
+        <!-- 2D Array Displayed As A Table -->
+        <table>
+          <tabular halign="center">
+            <row header="yes" bottom="minor">  
+            </row>
+            <row>
+              <cell>Appetizers <c>menu[0][0]</c></cell>
+              <cell>Deviled Eggs <c>menu[1][1]</c></cell>
+              <cell>Nachos <c>menu[1][2]</c></cell>
+              <cell>Salad <c>menu[1][3]</c></cell>
+            </row>
+            <row>
+              <cell>Entrees <c>menu[1][0]</c></cell>
+              <cell>Steak <c>menu[2][1]</c></cell>
+              <cell>Stir-Fry <c>menu[2][2]</c></cell>
+              <cell>Porkchops <c>menu[2][3]</c></cell>
+            </row>
+            <row>
+              <cell>Dessert <c>menu[2][1]</c></cell>
+              <cell>Key-Lime Pie <c>menu[3][1]</c></cell>
+              <cell>Raspberry Tarts <c>menu[3][2]</c></cell>
+              <cell>Sundae <c>menu[3][3]</c></cell>
+            </row>
+          </tabular>
+        </table>       
+      </p>
+    </subsection>
+    <!-- Instructions for Starter Exercise -->
+    <subsection xml:id="subsec-mdas-starter-instructions">
+      <title>Instructions</title>
+      <ol>
+        <li>
+          <p>
+            Implement the <c>displayMenu</c> method.
+          </p>
+          <ul>
+            <li>
+              <p>
+                This method should iterate through the <c>menu</c> array and print all their categories along with their respective
+                dishes.
+              </p>
+            </li>
+            <li>
+              <p>
+                Each dish should be printed on a new line and each category should be visually separated in the output.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            Implement the <c>displayCategory</c> method.
+          </p>
+          <ul>
+            <li>
+              <p>
+                This method accepts the <c>menu</c> 2D array and an integer <c>category</c>, which represents the index of the 
+                category to be displayed (0 for Appetizers, 1 for Entrees, 2 for Desserts).
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>displayCategory</c> will display the chosen category and its dishes in the same format similar to 
+                <c>displayMenu</c>, but only for the specified category.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ol>      
+    </subsection>
+    <!-- Template Code for Starter Exercise -->
+    <program xml:id="mdas-starter-template" interactive="activecode" language="java">
+      <input>
+        public class RestaurantMenu {
+          public static void main(String[] args) {
+              
+              String[][] menu = {
+                  {"Appetizers", "Deviled Eggs", "Nachos", "Salad"},
+                  {"Entrees", "Steak", "Stir-Fry", "Porkchops"},
+                  {"Desserts", "Key-Lime Pie", "Raspberry Tarts", "Sundae"},
+              };
+          
+              System.out.println("TEST: Printing menu...");
+              displayMenu(menu); //Printing whole menu
+              System.out.println("TEST: Printing entrees...");
+              displayCategory(menu, 1); //Printing Entrees
+          }
+      
+          public static void displayMenu(String[][] menu){
+      
+          }
+      
+          //0 - Appetizers, 1 - Entrees, 2 - Dessert
+          public static void displayCategory(String[][] menu, int category){
+          
+          } 
+      }
+      </input>
+    </program>
+    <!-- Expected Output for Starter Exercise -->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="mdas-starter-output" interactive="no">
+      <input>
+        -- Menu -- 
+        Category: Appetizers
+        Deviled Eggs
+        Nachos
+        Salad
+        
+        Category: Entrees
+        Steak
+        Stir-Fry
+        Porkchops
+        
+        Category: Desserts
+        Key-Lime Pie
+        Raspberry Tarts
+        Sundae
+        
+        TEST: Printing entrees...
+        Category: Entrees
+        Steak
+        Stir-Fry
+        Porkchops
+      </input>
+    </program>
+  </section>
 
+
+  <section xml:id="sec-mdas-growth-exercise">
+    <title>Growth Level</title>
+    <block>
+      <p>
+        <alert>Multidimensional Arrays</alert>
+      </p>
+    </block>
+
+    <!-- Objectives for Growth Exercise -->
+    <objectives>
+      <ul>
+        <li>Initialize, iterate, and manipulate elements within a 2D array</li>
+      </ul>
+    </objectives>
+
+    <!-- Overview for Growth Exercise -->
+    <subsection xml:id="subsec-mdas-growth-overview">
+      <title>Overview</title>
+      <p>
+        This Java program simulates a reservation system for movie theater seats using a multidimensional array. 
+        It is designed to manage the seats in a theater and it allows the user to check the availability of seats, 
+        reserve specific seats, and display the seating layout. 
+      </p>
+    </subsection>
+
+    <!-- 2D Array Explanation -->
+    <subsection xml:id="subsec-mdas-growth-2D-array">
+      <title>2D Array</title>
+      <p>
+        The 2D array <c>seats</c> represents the rows and columns of seats in a theater. 
+        Here is the initialization of the array:
+      </p>
+      <!-- 2D Array Code, Non-Interactive -->
+      <program xml:id="mdas-growth-2D-array-static" interactive="no">
+        <input>
+        String[][] seats = {
+            {"OCCUPIED", "AVAILABLE", "OCCUPIED", "AVAILABLE"}, 
+            {"AVAILABLE", "AVAILABLE", "OCCUPIED", "OCCUPIED"}, 
+            {"OCCUPIED", "OCCUPIED", "AVAILABLE", "AVAILABLE"}
+        };
+        </input>
+      </program>
+      <ul>
+        <li>
+          <p>
+            The array <c>seats</c> has 3 rows and 4 columns.
+          </p>
+        </li>
+        <li>
+          <p>
+            Rows are indexed from 0 to 2 and columns within each row are indexed from 0 to 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            Each element in the array is a <c>String</c> that can either be <em>"AVAILABLE"</em> or <em>"OCCUPIED"</em>.
+          </p>
+        </li>
+      </ul>
+    </subsection>
+    <!-- Instructions for Growth Exercise-->
+    <subsection xml:id="subsec-mdas-growth-instructions">
+      <title>Instructions</title>
+      <ol>
+        <li>
+          <p>
+            Implement <c>displaySeats(String[][] seats)</c>
+            <ul>
+              <li>
+                <p>
+                  The <c>displaySeats()</c> method prints out the entire seating arrangement and shows the current status of each seat.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Example output:
+                </p>
+                <!-- displaySeats Output, Non-Interactive -->
+                <program xml:id="mdas-display-seats-output-static" interactive="no">
+                  <input>
+                    Seating Arrangement:
+                    OCCUPIED        AVAILABLE       OCCUPIED        AVAILABLE
+                    AVAILABLE       AVAILABLE       OCCUPIED        OCCUPIED
+                    OCCUPIED        OCCUPIED        AVAILABLE       AVAILABLE
+                  </input>
+                </program>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            Implement <c>checkSeats(String[][] seats)</c>
+            <ul>
+              <li>
+                <p>
+                  The <c>checkSeats()</c> method checks and displays the number of available seats in each row
+                  and the total number of available seats in the entire theater.
+                </p>
+              </li>
+              <li>
+                <p>
+                  It iterates through each row and each seat within the row to count the number of <em>"AVAILABLE"</em> seats.                   
+                </p>
+              </li>
+              <li>
+                <p>
+                  Example output:
+                </p>
+                <!-- checkSeats Output, Non-Interactive -->
+                <program xml:id="mdas-check-seats-output-static" interactive="no">
+                  <input>
+                    Row 1 has 2 available seats.
+                    Row 2 has 2 available seats.
+                    Row 3 has 2 available seats.
+                    Total available seats: 6
+                  </input>
+                </program>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            Implement <c>reserveSeat(String[][] seats, int row, int seat)</c>
+            <ul>
+              <li>
+                <p>
+                  The <c>reserveSeat()</c> method allows the user to reserve a seat by specifying the row and seat index.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If the seat is available, it changes the seat status to <em>"OCCUPIED"</em> and prints a success message.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If the seat is already occupied, it prints an error message.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Example output:
+                </p>
+                <!-- reserveSeat Output, Non-Interactive -->
+                <program xml:id="mdas-reserve-seat-output-static" interactive="no">
+                  <input>
+                    [SUCCESS] Seat 0, 1 has now been reserved.
+                    [ERROR] Seat 0, 2 has already been occupied.
+                  </input>
+                </program>
+              </li>
+            </ul>
+          </p>
+        </li>
+      </ol>
+    </subsection>
+    <!-- Template Code for Growth Exercise -->
+    <program xml:id="mdas-growth-template" interactive="activecode" language="java">
+      <input>
+        public class TheaterSeats {
+
+          public static void main(String[] args) {
+              String[][] seats = {
+                  {"OCCUPIED", "AVAILABLE", "OCCUPIED", "AVAILABLE"}, 
+                  {"AVAILABLE", "AVAILABLE", "OCCUPIED", "OCCUPIED"}, 
+                  {"OCCUPIED", "OCCUPIED", "AVAILABLE", "AVAILABLE"}
+              };
+
+              /* UNCOMMENT TO TEST
+
+              // Displaying the initial seating arrangement...
+              displaySeats(seats);
+
+              // Checking available seats...
+              checkSeats(seats);
+
+              // Reserving a few seats...
+              reserveSeat(seats, 0, 1); // Available
+              reserveSeat(seats, 0, 2); // Occupied
+              reserveSeat(seats, 1, 0); // Available
+              reserveSeat(seats, 2, 3); // Available
+
+              // Displaying the seats after making reservations..
+              displaySeats(seats);
+              checkSeats(seats);
+
+              // Attempting to reserve more seats...
+              reserveSeat(seats, 1, 1); // Available
+              reserveSeat(seats, 2, 2); // Available
+
+              // Displaying final seating arrangement...
+              displaySeats(seats);
+              checkSeats(seats);
+              */
+          }
+      
+          public static void displaySeats(String[][] seats) {
+              
+          }
+          
+          public static void checkSeats(String[][] seats) {
+    
+          }
+      
+          public static void reserveSeat(String[][] seats, int row, int seat) {
+             
+          }
+      }
+      </input>
+    </program>
+    <!-- Expected Output for Growth Exercise -->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="mdas-growth-output" interactive="no">
+      <input>
+        Seating Arrangement:
+        OCCUPIED        AVAILABLE       OCCUPIED        AVAILABLE
+        AVAILABLE       AVAILABLE       OCCUPIED        OCCUPIED
+        OCCUPIED        OCCUPIED        AVAILABLE       AVAILABLE
+        Row 1 has 2 available seats.
+        Row 2 has 2 available seats.
+        Row 3 has 2 available seats.
+        Total available seats: 6
+        [SUCCESS] Seat 0, 1 has now been reserved.
+        [ERROR] Seat 0, 2 has already been occupied.
+        [SUCCESS] Seat 1, 0 has now been reserved.
+        [SUCCESS] Seat 2, 3 has now been reserved.
+        Seating Arrangement:
+        OCCUPIED        OCCUPIED        OCCUPIED        AVAILABLE
+        OCCUPIED        AVAILABLE       OCCUPIED        OCCUPIED
+        OCCUPIED        OCCUPIED        AVAILABLE       OCCUPIED
+        Row 1 has 1 available seats.
+        Row 2 has 1 available seats.
+        Row 3 has 1 available seats.
+        Total available seats: 3
+        [SUCCESS] Seat 1, 1 has now been reserved.
+        [SUCCESS] Seat 2, 2 has now been reserved.
+        Seating Arrangement:
+        OCCUPIED        OCCUPIED        OCCUPIED        AVAILABLE
+        OCCUPIED        OCCUPIED        OCCUPIED        OCCUPIED
+        OCCUPIED        OCCUPIED        OCCUPIED        OCCUPIED
+        Row 1 has 1 available seats.
+        Row 2 has 0 available seats.
+        Row 3 has 0 available seats.
+        Total available seats: 1
+      </input>
+    </program>
+  </section>
 </chapter>

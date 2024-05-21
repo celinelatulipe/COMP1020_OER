@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="ch-objects-intro-part1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="ch-OBJ_INTRO_1" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<title>Objects Intro Part 1</title>
 	<introduction>
 		<p>
@@ -7,38 +7,46 @@
 		</p>
 	</introduction>
 
-	<section xml:id="ch2-starter">
+	<section xml:id="OBJ_INTRO_1-starter">
 		<title>Starter Level</title>
-		<exercises xml:id="exercises-ch2-starter">
-			<program xml:id="ch2-starter-1-person-class" label="ch2-starter-1-person-class" interactive="activecode" language="java" sourcefile="Person.java">
+		<exercises xml:id="OBJ_INTRO_1-starter-exercises">
+			<p>
+				The code below defines a Person class, with a first and last name and age as the properties.
+			</p>
+			<program xml:id="OBJ_INTRO_1-starter-person-class" label="OBJ_INTRO_1-starter-person-class" interactive="activecode" language="java" sourcefile="Person.java">
 				<input>
 	
 	public class Person {
 		public String firstName;
 		public String lastName;
 		public int age;
+
+		public Person(String f, String l, int a) {
+			firstName = f;
+			lastName = l;
+			age = a;
+		}
+
+		// public static void main(String args[]) {} 
 	}
 	
 		
 				</input>
-				<!-- 			<tests>
-				</tests> -->
+				<!--<tests>
+				</tests>-->
 			</program>
 		<p>
-			The code below provides a very simple class.
-			Jasmine's last name, 'Singh', is missing.
-			Add a line of code to fix this.
+			Add code below to create another person, with a name and age of your choosing.
 		</p>
 		
 
-		<program xml:id="ch2-starter-1" label="ch2-starter-1" interactive="activecode" language="java" sourcefile="StarterExercise1.java" include="ch2-starter-1-person-class">
+		<program xml:id="OBJ_INTRO_1-starter-1" label="OBJ_INTRO_1-starter-1" interactive="activecode" language="java" include="OBJ_INTRO_1-starter-person-class" sourcefile="StarterExercise1.java" >
 			<input>
 public class StarterExercise1 {
 
 	public static void main(String args[]) {
-		person1 = new Person();
-		person1.firstName = "Jasmine";
-		person1.age = 27;
+		Person person1 = new Person("Jasmine", "Singh", 27);
+		Person person2 = new Person("Trey", "Letrec", 21);
 	}
 }
 			</input>
@@ -48,50 +56,89 @@ public class StarterExercise1 {
 		</exercises>
 	</section>
 
-	<section xml:id="ch2-growth">
+	<section xml:id="OBJ_INTRO_1-growth">
 		<title>Growth Level</title>
-		<exercises>
+		<exercises xml:id="OBJ_INTRO_1-growth-exercises">
 		<p>
 			Growth Exercise 1
 		</p>
 
 
-		<program label="ch2-growth-1" interactive="activecode" language="java">
+		<program label="OBJ_INTRO_1-growth-1" interactive="activecode" language="java">
 			<input>
-public class Person {
+public class Employee {
   public String name;
   public int age;
+
+  public static void main(String args[]) {
+	Employee emp1 = new Employee();
+	emp1.name = "Jasmine";
+	emp1.age = 27;
+  }
 }
-public static void main(String args[]) {
-  person1 = new Person();
-  person1.name = "Jasmine";
-  person1.age = 27;
-}
+
 			</input>
 			<!-- 			<tests>
 			</tests> -->
 		</program>
+
+		<program xml:id="OBJ_INTRO_1-growth-2" label="OBJ_INTRO_1-growth-2" interactive="activecode" language="java">
+			<input>
+public class GrowthExercise2 {
+
+	public static void main(String args[]) {
+		Person person1 = new Person("Jasmine", "Singh", 27);
+		Person person2 = new Person("Trey", "Letrec", 21);
+	}
+}
+
+class Person {
+	public String firstName;
+	public String lastName;
+	public int age;
+
+	public Person(String f, String l, int a) {
+		firstName = f;
+		lastName = l;
+		age = a;
+	}
+
+	
+}
+</input>
+<!--<tests></tests>-->
+		</program>
 		</exercises>
 	</section>
 
-	<section xml:id="ch2-stretch">
+	<section xml:id="OBJ_INTRO_1-stretch">
 		<title>Stretch Level</title>
-		<exercises xml:id="exercises-">
+		<exercises xml:id="OBJ_INTRO_1-stretch-exercises">
 		<p>
 			Stretch Exercise 1
 		</p>
 
 
-		<program label="ch3-stretch-1" interactive="activecode" language="java">
+		<program xml:id="OBJ_INTRO_1-stretch-ex1" label="OBJ_INTRO_1-stretch-ex1" interactive="activecode" language="java" sourcefile="Student.java">
 			<input>
-public class Person {
-  public String name;
-  public int age;
-}
-public static void main(String args[]) {
-  person1 = new Person();
-  person1.name = "Jasmine";
-  person1.age = 27;
+public class Student {
+  	public String name;
+  	public int age;
+	public int id;
+
+	public Student() {
+		name = "No Name";
+	} // default constructor
+
+	public static void main(String args[]) {
+  		Student student1 = new Student();
+  		student1.name = "Jasmine";
+  		student1.age = 27;
+		Student student2 = new Student();
+		student2.name = "Trey";
+		student2.age = 20;
+
+	}
 }
 			</input>
 			<!-- <tests>

@@ -1,0 +1,7 @@
+/*.pretext #ptx-sidebar { display: none; }*/
+.pretext .ptx-sidebar { display: none; }
+
+.pretext .ptx-page > .ptx-main {
+    margin: 0;
+    border-left: 0;
+}

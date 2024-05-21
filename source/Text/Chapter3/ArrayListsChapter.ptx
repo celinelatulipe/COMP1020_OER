@@ -9,16 +9,16 @@
 
   <!-- include sections 
   <xi:include href="sec-section-name.ptx" />-->
-  <section xml:id="chapter5-short-exercises">
-    <title>Short Exercises</title>
-    <exercises xml:id="short-exercises">
+  <section xml:id="sec-arraylists-exercises">
+    <title>Check Your Understanding</title>
+    <exercises xml:id="arraylists-short-exercises">
 
       <!-- Q1: True/False -->
-      <exercise xml:id="true-false-one" label="array-list-elements">
-        <title>True/False</title>
+      <exercise xml:id="array-list-elements">
+        <title>ArrayList: Elements</title>
         <statement correct="no">
           <p>
-            ArrayLists can store objects and primitives such as <c>int</c>, <c>double</c>, <c>boolean</c>.
+            An <c>ArrayList</c> can store objects and primitives such as <c>int</c>, <c>double</c>, <c>boolean</c>.
           </p>
         </statement>
         <feedback>
@@ -30,14 +30,14 @@
       </exercise>
 
       <!-- Q2: Multiple Choice -->
-      <exercise xml:id="multiple-choice-one" label="multiple-choice-not-randomized">
-        <title>Accessing Elements in an ArrayList</title>
+      <exercise xml:id="accessing-array-list-elements">
+        <title>ArrayList: Accessing Elements</title>
         <statement>
           <p>
             How would we access the first element in the ArrayList <c>list</c>?
           </p>
         </statement>
-        <choices>
+        <choices randomize="yes">
           <choice>
             <statement>
               <p>
@@ -91,14 +91,14 @@
       </exercise>
 
       <!-- Q3: Select all that apply -->
-      <exercise label="multiple-choice-multiple-answers">
-        <title>Select all that apply</title>
+      <exercise xml:id="arraylists-features">
+        <title>ArrayList: Features</title>
         <statement>
           <p>
-            Which of the following are true about ArrayLists? (Select all that apply)
+            Which of the following are true about an <c>ArrayList</c>? (Select all that apply)
           </p>
         </statement>
-        <choices>
+        <choices randomize="yes">
           <choice correct="yes">
             <statement>
               <p>
@@ -153,84 +153,543 @@
     </exercises>
   </section>
 
-  <!-- Level 1 Programming Exercise-->
-  <section xml:id="chapter-5-level-1-exercise">
-    <title>Level 1</title>
-    <!-- Objectives for Level 1 Exercise-->
-    <objectives >
+  <!-- Starter Exercise-->
+  <section xml:id="sec-arraylists-starter-exercise">
+    <title>Starter Level</title>
+    <block>
+      <p>
+        <alert>ArrayLists</alert>
+      </p>
+    </block>
+    <!-- Objectives for Starter Exercise -->
+    <objectives>
       <ul>
         <li> Instantiate an <c>ArrayList</c></li>
-        <li> Add items and iterate through the <c>ArrayList</c> </li>
+        <li> Use <c>add()</c>, <c>get()</c>, <c>set()</c>, <c>remove()</c>, and <c>size()</c></li>
+        <li> Iterate through an <c>ArrayList</c> using a for loop </li>
       </ul>
-      </objectives>
-      <p>
-       Convert this program that originally uses arrays to use ArrayLists. 
-      </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-1" interactive="activecode" language="java">
-        <input>
-          import java.util.ArrayList;
+    </objectives>
+    <!-- Instructions for Starter Exercise -->
+    <subsection xml:id="subsec-arraylists-starter-instructions">
+      <title>Instructions</title>
+      <ol>
+        <li>
+          <p>
+            Initialize an <c>ArrayList</c> and add the following elements: "Butter", "Milk", "Cookies", "Chips", "Carrots"
+          </p>
+        </li>
+        <li>
+          <p>
+            Remove the third item from the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace the second item in the list with "Pancakes"
+          </p>
+        </li>
+        <li>
+          <p>
+            Remove the last item from the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Add "Apples" to the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the size of the list
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the contents of the list using a for loop
+          </p>
+        </li>   
+      </ol>
+    </subsection>
+    <!-- Template Code for Starter Exercise -->
+    <program xml:id="arraylists-starter-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
 
-          public class BookCatalog(String[] args) {
-            public static void main(String[] args) {
-            }
+        public class GroceryList{
+          public static void main(String[] args) {
 
-          }
+            // Initialize an ArrayList
+            
 
-         
-        </input>
-      </program>
+            // Adding elements to the list
+
     
+            // Removing Cookies from the list
+    
+
+            // Replacing Chips with Pancakes
+
+
+            // Removing last item from list
+
+
+            // Displaying list size
+
+    
+            // Printing the contents of the list using a for-loop
+
+
+          }
+        }
+      </input>
+    </program>
+    <!-- Expected Output for Starter Exercise-->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="arraylists-starter-output" interactive="no">
+      <input>
+        Size of the list: 3
+        Contents of the list:
+        Butter
+        Milk
+        Chips
+        Apples
+      </input>
+    </program>
   </section>
 
-  <!-- Level 2 Programming Exercise-->
-  <section xml:id="chapter-5-level-2-exercise">
-    <title>Level 2</title>
-    <!-- Objectives for Level 2 Exercise-->
+  <!-- Growth Exercise-->
+  <section xml:id="sec-arraylists-growth-exercise">
+    <title>Growth Level</title>
+    <block>
+      <p>
+        <alert>ArrayLists</alert>
+      </p>
+    </block>
+    <!-- Objectives for Growth Exercise -->
     <objectives >
       <ul>
-        <li> Objective 1</li>
-        <li> Objective 2</li>
+        <li>Accessing data in an <c>ArrayList</c> with a for loop</li>
       </ul>
       </objectives>
-      <p>
-        [QUESTION INFO HERE]
-      </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-2" interactive="activecode" language="java">
+      <!-- Overview for Growth Exercise -->
+      <subsection xml:id="subsec-arraylists-growth-overview">
+        <title>Overview</title>
+        <p>
+          This Java program contains a class named <c>Animal</c>, where each instance represents an individual animal that is characterized by a <c>name</c> and a <c>type</c>.
+          Each <c>Animal</c> that is created is added to a <c>static</c> <c>ArrayList</c> that you will instantiate named <c>allAnimals</c>. 
+        </p>
+        <!-- Animal Class Code, Non-Interactive -->
+        <program xml:id="arraylists-growth-animal-class-static" interactive="no">
+          <input>
+            public class Animal {
+              //**TO-DO: Initialize a static ArrayList here called allAnimals**
+              String name;
+              String type;
+
+              public Animal(String name, String type){
+                  this.name = name;
+                  this.type = type;
+                  allAnimals.add(this);
+              }
+
+              public String toString(){
+                  return name + " (" + type + ")";
+              }
+
+              //**TO-DO: Write method that checks if an animal in the list**
+              public static boolean isDuplicate(String nameToCheck){
+              
+              }
+            }
+          </input>
+        </program>
+      </subsection>
+      <!-- Instructions for Growth Exercise-->
+      <subsection xml:id="subsec-arraylists-growth-instructions">
+        <title>Instructions</title>
+          <p>
+            Complete <c>isDuplicate()</c> to locate duplicates in <c>allAnimals</c> which contains <c>Animal</c> objects.
+            <ul>
+              <li>
+                <p>
+                  A "duplicate" refers to an <c>Animal</c> with the same name as another <c>Animal</c> that is already in the list. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  That is, if an <c>Animal</c> 
+                  with a particular name already exists in <c>allAnimals</c>, any subsequent <c>Animal</c> with the exact same name is considered a duplicate.
+                </p>
+              </li>
+              <li>
+                <p>
+                  You may assume that all names begin with a capital letter.
+                </p>
+              </li>
+            </ul>
+          </p>
+      </subsection>
+      <!-- Template Code for Growth Exercise -->
+      <program xml:id="arraylists-growth-template" interactive="activecode" language="java">
         <input>
           import java.util.ArrayList;
-          public class Main(String[] args) {
-            public static void main(String[] args) {
-            }
+          public class Animal {
+
+              //**TO-DO: Initialize a static ArrayList here called allAnimals**
+              String name;
+              String type;
+
+              public Animal(String name, String type){
+                  this.name = name;
+                  this.type = type;
+                  allAnimals.add(this);
+              }
+
+              public String toString(){
+                  return name + " (" + type + ")";
+              }
+
+              //**TO-DO: Write method that checks if an animal in the list**
+              public static boolean isDuplicate(String nameToCheck){
+              
+              }
+
+              public static void main(String[] args){
+
+                  // ----- DO NOT CHANGE -----
+
+                  //Creating animals..
+                  Animal greg = new Animal("Greg", "giraffe");
+                  Animal alice = new Animal("Alice", "aardvark");
+                  Animal reggie = new Animal("Reggie", "raccoon");
+                  Animal orville = new Animal("Orville", "ostrich");
+                  Animal paul = new Animal("Paul", "piranha");
+                  Animal harry = new Animal("Harry", "hippo");
+
+                  //Testing method..
+                  Animal.isDuplicate("Alice");
+                  Animal.isDuplicate("George");
+                  Animal.isDuplicate("Timothy");
+                  Animal.isDuplicate("Paul");
+                  Animal.isDuplicate("Orville");
+                  Animal.isDuplicate("Oliver");
+
+                  // ----- DO NOT CHANGE -----
+              }
           }
+        </input>
+      </program>
+      <!-- Expected Output for Growth Exercise -->
+      <p>
+        The expected output is:
+      </p>
+      <program xml:id="arraylists-growth-output" interactive="no">
+        <input>
+          DUPLICATE: There is already an animal with the name "Alice" in the list: Alice (aardvark)
+          UNIQUE: The name George is unique.
+          UNIQUE: The name Timothy is unique.
+          DUPLICATE: There is already an animal with the name "Paul" in the list: Paul (piranha)
+          DUPLICATE: There is already an animal with the name "Orville" in the list: Orville (ostrich)
+          UNIQUE: The name Oliver is unique.
         </input>
       </program>
   </section>
 
-  <!-- Level 3 Programming Exercise-->
-  <section xml:id="chapter-5-level-3-exercise">
-    <title>Level 3</title>
-    <!-- Objectives for Level 3 Exercise-->
-    <objectives >
+  <!-- Stretch Exercise -->
+  <section xml:id="sec-arraylists-stretch-exercise">
+    <title>Stretch Level</title>
+    <block>
+      <p>
+        <alert>ArrayLists</alert>
+      </p>
+    </block>
+    <!-- Objectives for Stretch Exercise -->
+    <objectives>
       <ul>
-        <li> Objective 1</li>
-        <li> Objective 2</li>
+        <li> Accessing and manipulating data stored in an <c>ArrayList</c></li>
       </ul>
       </objectives>
-      <p>
-        [QUESTION INFO HERE]
-      </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-3" interactive="activecode" language="java">
+      <!-- Overview for Stretch Exercise -->
+      <subsection xml:id="subsec-arraylists-stretch-overview">
+        <title>Overview</title>
+        <p>
+          This Java program analyzes the temperatures recorded in Winnipeg, Manitoba from April 1, 2024 to April 10, 2024 
+          and it contains methods that perform various temperature-related calculations.
+        </p>
+        <!-- Descriptions For Each Class-->
+        <!-- DayTemperature Class Code, Non-Interactive-->
+        <program xml:id="arraylists-stretch-day-temperature-class-static" interactive="no">
+          <input>
+            class DayTemperature{
+
+              String day;
+              double minTemp;
+              double maxTemp;
+          
+              public DayTemperature(String day, double maxTemp, double minTemp){
+                  this.day = day;
+                  this.minTemp = minTemp;
+                  this.maxTemp = maxTemp;
+              }
+          
+              public String toString(){
+          
+              }
+          
+              public double getAverageTemp(){
+          
+              }
+          }
+          </input>
+        </program>
+        <p>
+          The <c>DayTemperature</c> class represents a single day's temperature data. This includes:
+          <ul>
+            <li>
+              <p>
+                <c>day (String)</c> to store the day of the temperature record
+                <ul>
+                  <li>
+                    <p>
+                      e.g., "April 1, 2024"
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>minTemp (double)</c> to store the minimum temperature recorded for the day
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>maxTemp (double)</c>to store the maximum temperature recorded for the day
+              </p>
+            </li>
+          </ul>
+        </p>
+        <!-- TemperatureAnalysis Class Code, Non-Interactive -->
+        <program xml:id="arraylists-stretch-temperature-analysis-class-static" interactive="no">
+          <input>
+            public class TemperatureAnalysis{
+              //TO-DO: Initialize static ArrayList titled weekTemp that holds instances of DayTemperature
+
+              public static void main(String[] args){
+                  printWeekTemp();
+                  printAverageWeeklyTemp();
+                  printHighestTemp();
+                  printLowestTemp();
+              }
+          
+              public static void printWeekTemp(){
+                
+              }
+          
+              public static void printMedianTemp(){
+          
+              }
+          
+              public static void printAverageWeeklyTemp(){
+              
+              }
+          
+              public static void printHighestTemp(){
+            
+              }
+          
+              public static void printLowestTemp(){
+          
+              }
+          </input>
+        </program>
+        <p>
+          The <c>TemperatureAnalysis</c> class manages the recorded weather data by performing calculations such as calculating averages and extreme temperatures.
+        </p>
+      </subsection>
+      <!-- Instructions for Stretch Exercise-->
+      <subsection xml:id="subsec-arraylists-stretch-instructions">
+          <title>Instructions</title>
+          <ol>
+            <li>
+              <p>
+                Implement the <c>toString()</c> method in <c>DayTemperature</c>
+                <ul>
+                  <li>
+                    <p>
+                      Expected Output: <em>April 1, 2003 -- Min: -7.8°C, Max: 6.2°C</em> 
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Implement the <c>getAverageTemp()</c> method in <c>DayTemperature</c> which calculates and returns the average temperature for the day (average of max and min temperatures)
+              </p>
+            </li>
+            <li>
+              <p>
+                Define a <c>static</c> <c>ArrayList</c> named <c>weekTemp</c> inside the <c>TemperatureAnalysis</c> class to store instances of <c>DayTemperature</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                Implement the following methods inside <c>TemperatureAnalysis</c>:
+                <ul>
+                  <li>
+                    <p>
+                      <c>printWeekTemp()</c>method prints the temperatures recorded for each day of the week
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <c>printAverageWeeklyTemp()</c> calculates and prints the average temperature for the entire week by summing up the daily averages (Hint: use <c>getAverageTemp()</c>) and dividing by the total number of days.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <c>printHighestTemp()</c> locates and prints the day with the highest temperature recorded for the week
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <c>printLowestTemp()</c> locates and prints the day with the lowest temperature recorded for the week
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Bonus</term>: Implement a <c>printMedianTemp()</c> method that calculates and prints the median temperature of the week
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Hint: Create a new <c>ArrayList</c> that stores <c>Double</c> in the method to store all individual temperatures (both min and max from each day). This approach simplifies finding the median as you can just sort this list and then pick the middle value. Remember to handle both even and odd numbers of elements differently: 
+                    <ul>
+                      <li>
+                        <p>
+                          For even numbers, average the two middle values
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          For odd numbers, take the middle value directly
+                        </p>
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ol>
+      </subsection>
+      <!-- Template Code for Stretch Exercise -->
+      <program xml:id="arraylists-stretch-template" interactive="activecode" language="java">
         <input>
           import java.util.ArrayList;
-          public class Main(String[] args) {
-            public static void main(String[] args) {
-            }
+          //import java.util.Collections; // to sort the ArrayList if implementing printMedianTemp()
+
+          class DayTemperature{
+
+              String day;
+              double minTemp;
+              double maxTemp;
+
+              public DayTemperature(String day, double maxTemp, double minTemp){
+                  this.day = day;
+                  this.minTemp = minTemp;
+                  this.maxTemp = maxTemp;
+              }
+
+              public String toString(){
+                  return "";
+              }
+
+              public double getAverageTemp(){
+                  return 0;
+
+              }
+          }
+
+          public class TemperatureAnalysis{
+              //**TO-DO: Initialize static ArrayList here titled weekTemp that holds instances of DayTemperature
+
+              public static void main(String[] args){
+                  initializeTemp();
+                  printWeekTemp();
+                  printAverageWeeklyTemp();
+                  printHighestTemp();
+                  printLowestTemp();
+                  // printMedianTemp();
+              }
+
+              public static void initializeTemp(){
+                  // -- DO NOT CHANGE -- 
+                  weekTemp.add(new DayTemperature("April 1, 2024", 6.2, -7.8));
+                  weekTemp.add(new DayTemperature("April 2, 2024", 2.0, -2.0));
+                  weekTemp.add(new DayTemperature("April 3, 2024", 7.9, -4.3));
+                  weekTemp.add(new DayTemperature("April 4, 2024", 10.1, -3.3));
+                  weekTemp.add(new DayTemperature("April 5, 2024", 12.5, -2.1));
+                  weekTemp.add(new DayTemperature("April 6, 2024", 14.1, 3.0));
+                  weekTemp.add(new DayTemperature("April 7, 2024", 15.6, 1.6));
+                  weekTemp.add(new DayTemperature("April 8, 2024", 11.0, 0.4));
+                  weekTemp.add(new DayTemperature("April 9, 2024", 13.8, -2.1));
+                  weekTemp.add(new DayTemperature("April 10, 2024", 16.2, -0.2));
+                  // -- DO NOT CHANGE -- 
+              }
+
+              public static void printWeekTemp(){
+                
+              }
+
+              public static void printMedianTemp(){
+
+              }
+
+              public static void printAverageWeeklyTemp(){
+              
+              }
+
+              public static void printHighestTemp(){
+            
+              }
+
+              public static void printLowestTemp(){
+
+              }
           }
         </input>
       </program>
+      <!-- Expected Output for Stretch Exercise-->
+      <p>
+        The expected output is:
+      </p>
+      <program xml:id="arraylists-stretch-output" interactive="no">
+        <input>
+          Daily Temperatures for the Week:
+          April 1, 2024 -- Min: -7.8°C, Max: 6.2°C
+          April 2, 2024 -- Min: -2.0°C, Max: 2.0°C
+          April 3, 2024 -- Min: -4.3°C, Max: 7.9°C
+          April 4, 2024 -- Min: -3.3°C, Max: 10.1°C
+          April 5, 2024 -- Min: -2.1°C, Max: 12.5°C
+          April 6, 2024 -- Min: 3.0°C, Max: 14.1°C
+          April 7, 2024 -- Min: 1.6°C, Max: 15.6°C
+          April 8, 2024 -- Min: 0.4°C, Max: 11.0°C
+          April 9, 2024 -- Min: -2.1°C, Max: 13.8°C
+          April 10, 2024 -- Min: -0.2°C, Max: 16.2°C
+          Average Temperature: 4.630000000000001°C
+          The median temperature is: 2.5°C
+          The day with the highest temperature is: April 10, 2024 -- Min: -0.2°C, Max: 16.2°C
+          The day with the lowest temperature is: April 1, 2024 -- Min: -7.8°C, Max: 6.2°C
+        </input>
+      </program>
+      <note>
+        (Source for weather data: https://climate.weather.gc.ca/climate_data/daily_data_e.html?StationID=27174)
+      </note>
   </section>
 </chapter>
-

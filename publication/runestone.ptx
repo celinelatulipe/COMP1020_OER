@@ -104,14 +104,9 @@
     <!-- put <css style="oscarlevin"/>                         -->
     <!-- See also                                              -->
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-    <css 
-        style="test"
-        colors="blue_red"
-        knowls="default"
-        toc="hidden"
-        banner="default"
-        navbar="default"
-    />
+
+    <css style="oscarlevin" colors="blue_red" toc="crc" banner="default" navbar="crc" shell="crc"/>
+
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default" />
@@ -134,6 +129,7 @@
     <!-- StatCounter requires both values to be set            -->
     <!-- <analytics google-gst="UA-0123456-1" statcounter-project="0123456"
     statcounter-security="0123456"/> -->
+    <tableofcontents focused="yes"/>
   </html>
 
   <!-- To use WeBWorK, you need a server.  -->

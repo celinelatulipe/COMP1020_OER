@@ -7,230 +7,653 @@
     <p> Text before the first section. </p>
   </introduction>
 
-  <!-- include sections 
-  <xi:include href="sec-section-name.ptx" />-->
-  <section xml:id="chapter5-short-exercises">
-    <title>Short Exercises</title>
-    <exercises xml:id="short-exercises">
+  <section xml:id="sec-wrapper-classes-exercises">
+    <title>Check Your Understanding</title>
+    <exercises xml:id="wrapper-classes-short-exercises">
 
-      <!-- Q1: True/False -->
-      <exercise xml:id="true-false-one" label="array-list-elements">
-        <title>True/False</title>
+      <!-- Q1: Multiple Choice, Purpose of Wrapper Classes-->
+        <exercise xml:id="wrapper-classes-purpose">
+          <title>Wrapper Classes</title>
+          <statement>
+            <p>
+              What is the primary purpose of Wrapper classes in Java?
+            </p>
+          </statement>
+          <choices randomize="yes">
+            <choice>
+              <statement>
+                <p>
+                  Wrapper classes increase the speed of programs by optimizing primitive operations.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Incorrect: Wrapper classes result in slower speeds due to the additional overhead from managing Objects instead of primitives and boxing/unboxing. 
+                </p>
+              </feedback>
+            </choice>
+            <choice correct="yes">
+              <statement>
+                <p>
+                  Wrapper classes turn primitive data types into Objects.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Correct!
+                </p>
+              </feedback>
+              </choice>
+            <choice>
+              <statement>
+                <p>
+                  Wrapper classes increase the precision of mathematical calculations.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Incorrect: Wrapper classes do not provide any increased precision in calculations. The precision of a calculation depends on the type (ex. <c>float</c> is more precise than an <c>int</c>), not by whether the data is in its primitive form or Object/Wrapper class form.
+                </p>
+              </feedback>
+            </choice>
+          </choices>
+        </exercise>
+
+      <!-- Q2: True/False, Memory Usage -->
+      <exercise xml:id="wrapper-classes-memory-usage">
+        <title>Wrapper Classes: Memory</title>
         <statement correct="no">
           <p>
-            ArrayLists can store objects and primitives such as <c>int</c>, <c>double</c>, <c>boolean</c>.
+            Using wrapper classes in Java reduces memory usage compared to using primitive data types.
           </p>
         </statement>
         <feedback>
           <p>
-            ArrayLists cannot store the following: int, double, boolean, char, float, long, byte, short.
-            A workaround is to use Wrapper classes.
+            Using wrapper classes in Java increases memory usage because they are objects (which come with additional overhead).
           </p>
         </feedback>
       </exercise>
 
-      <!-- Q2: Multiple Choice -->
-      <exercise xml:id="multiple-choice-one" label="multiple-choice-not-randomized">
-        <title>Accessing Elements in an ArrayList</title>
+      <!-- Q3: Multiple Choice, Stack vs Heap -->
+      <exercise xml:id="wrapper-classes-stack-vs-heap">
+        <title>Wrapper Classes: Stack vs. Heap</title>
         <statement>
           <p>
-            How would we access the first element in the ArrayList <c>list</c>?
+            Consider the following lines of code:
+          </p>
+          <program xml:id="wrapper-stack-heap-static" interactive="no">
+            <input>
+              int primitiveInt = 50;
+              Integer wrapperInt = new Integer(50);
+            </input>
+          </program>  
+          <p>
+            Which of the following statements describes where <c>primitiveInt</c> and <c>wrapperInt</c> are stored?
           </p>
         </statement>
-        <choices>
+        <choices randomize="yes">
           <choice>
             <statement>
               <p>
-                <c>list.item(0)</c>
+                <c>primitiveInt</c> and <c>wrapperInt</c> are stored on the stack.
               </p>
             </statement>
             <feedback>
               <p>
-                Incorrect: ArrayList does not have a <c>.item()</c> method.
+                Incorrect: <c>wrapperInt</c> is an Object from the Integer class and objects in Java are stored on the heap, not the stack.
               </p>
             </feedback>
           </choice>
-          <choice correct="yes">
+          <choice>
             <statement>
               <p>
-                <c>list.get(0)</c>
+                <c>primitiveInt</c> and <c>wrapperInt</c> are stored on the heap.
               </p>
             </statement>
             <feedback>
               <p>
-                Correct: In ArrayLists, we use the <c>.get(i)</c> method to access the element at index <c>i</c>.
+                Incorrect: In Java, primitives are stored on the stack. 
               </p>
             </feedback>
             </choice>
           <choice>
             <statement>
               <p>
-                <c>list[0]</c>
+                <c>primitiveInt</c> is stored on the heap and <c>wrapperInt</c> is stored on the stack.
               </p>
             </statement>
             <feedback>
               <p>
-                Incorrect: Square brackets are used for accessing elements in an array, not an ArrayList.
+                Incorrect: Primitives in Java are stored on the stack and <c>wrapperInt</c>, which is an object of the <c>Integer</c> class, is stored on the heap.
               </p>
             </feedback>
           </choice>
-          <choice>
+          <choice correct="yes">
             <statement>
               <p>
-                <c>list.set(0, element)</c>
+                <c>primitiveInt</c> is stored on the stack and <c>wrapperInt</c> is stored on the heap.
               </p>
             </statement>
             <feedback>
               <p>
-                Incorrect: The <c>.set(index, element)</c> method is used to replace the element at the specified <c>index</c> 
-                with the specified <c>element</c>. It is not used for accessing elements.
+                Correct: Primitive data types are stored on the stack and objects are stored on the heap in Java.
               </p>
             </feedback>
             </choice>
         </choices>
       </exercise>
 
-      <!-- Q3: Select all that apply -->
-      <exercise label="multiple-choice-multiple-answers">
-        <title>Select all that apply</title>
+      <!-- Q4: Multiple Choice, int[] vs ArrayList<Integer> -->
+      <exercise xml:id="wrapper-classes-array-vs-arraylist">
+        <title>Wrapper Classes: int[] vs ArrayList of Integer</title>
         <statement>
           <p>
-            Which of the following are true about ArrayLists? (Select all that apply)
+            Which of the following statements best describes the tradeoff between using an <c>int[]</c> over an <c>ArrayList</c> of <c>Integer</c>?
           </p>
         </statement>
-        <choices>
-          <choice correct="yes">
-            <statement>
-              <p>
-                ArrayLists have a dynamic size.
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Correct: Unlike partially-filled arrays, ArrayLists automatically resize themselves when an element is added or removed.
-              </p>
-            </feedback>
-          </choice>
+        <choices randomize="yes">
           <choice>
             <statement>
               <p>
-                ArrayLists have a fixed size.
+                Both <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> are equally preferable in all scenarios because they perform identically in terms of memory usage and speed.
               </p>
             </statement>
             <feedback>
               <p>
-                Incorrect: ArrayLists resize automatically when an element is added or removed while 
-                partially-filled arrays require manual resizing if you have reached capacity and are trying to add an element.
-              </p>
-            </feedback>
-          </choice>
-          <choice>
-            <statement>
-              <p>
-                ArrayLists use the <c>.length()</c> method to get the number of elements in the list.
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Incorrect: ArrayLists use <c>.size()</c> while arrays use <c>.length()</c>.
+                Incorrect: <c>int[]</c> are faster for basic operations (accessing/updating elements) and are more memory efficient. The dynamic resizing capability of an <c>ArrayList</c> contributes to additional memory overhead.
               </p>
             </feedback>
           </choice>
           <choice correct="yes">
             <statement>
               <p>
-                ArrayLists cannot be instantiated without importing from the Java Library.
+                An <c>ArrayList</c> of <c>Integer</c> is slower than an <c>int[]</c> because of its internal complexity.
               </p>
             </statement>
             <feedback>
               <p>
-                Correct: To use ArrayLists, you must import the java.util.ArrayList package first.
+                Correct: The flexibility of an <c>ArrayList</c> of <c>Integer</c> comes with a performance cost due to its internal complexity, such as resizing and handling Objects instead of primitives.
+              </p>
+            </feedback>
+            </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>int[]</c> is slower than an <c>ArrayList</c> of <c>Integer</c> because it does not have the capability to store data efficiently.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: <c>int[]</c> is faster for operations such as accessing and setting elements because it stores values without the overhead of dynamic resizing.
               </p>
             </feedback>
           </choice>
+          <choice>
+            <statement>
+              <p>
+                The choice between using an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> is purely for style purposes.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect: Depending on whether you choose between an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> is based on the needs of the program, such as performance, memory efficiency, and the required functionality.
+              </p>
+            </feedback>
+            </choice>
         </choices>
       </exercise>
     </exercises>
   </section>
 
-  <!-- Level 1 Programming Exercise-->
-  <section xml:id="chapter-5-level-1-exercise">
-    <title>Level 1</title>
-    <!-- Objectives for Level 1 Exercise-->
-    <objectives >
-      <ul>
-        <li> Instantiate an <c>ArrayList</c></li>
-        <li> Add items and iterate through the <c>ArrayList</c> </li>
-      </ul>
-      </objectives>
+  <!-- Starter Exercise-->
+  <section xml:id="sec-wrapper-classes-starter-exercise">
+    <title>Starter Level</title>
+    <block>
       <p>
-       Convert this program that originally uses arrays to use ArrayLists. 
+        <alert>Wrapper Classes</alert>
       </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-1" interactive="activecode" language="java">
+    </block>
+    <!-- Objectives for Starter Exercise-->
+    <objectives>
+      <ul>
+        <li> Compare and contrast an <c>int[]</c> and an <c>ArrayList</c> of <c>Integer</c> </li>
+      </ul>
+    </objectives>
+    <!-- Overview for Starter Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-starter-overview">
+      <title>Overview</title>
+      <p>
+        The Java program CourseNumbersArray manages a list of course numbers that a student is registered in. It performs the following tasks:
+        <ol>
+          <li>
+            <p>
+              Initializes an integer array, <c>registeredCourses</c>, with a set of course numbers: 1010, 1020, 2080, 2140, 2150, 2160
+            </p>
+          </li>
+          <li>
+            <p>
+              To add a new course, it copies the elements from <c>registeredCourses</c> into a new, larger array, <c>updatedCourses</c>, and adds the course to this new array
+            </p>
+          </li>
+          <li>
+            <p>
+              Prints the contents of <c>updatedCourses</c>, the array that contains the newly-added course
+            </p>
+          </li>
+          <li>
+            <p>
+              Checks if <c>updatedCourses</c> contains a specific course number
+            </p>
+          </li>
+        </ol>
+      </p>
+      <!-- CourseNumbersArray Class Code, Non-Interactive -->
+      <program xml:id="wrapper-classes-course-numbers-array-class-static" interactive="no">
         <input>
-          import java.util.ArrayList;
-
-          public class BookCatalog(String[] args) {
+          public class CourseNumbersArray {
             public static void main(String[] args) {
-            }
-
-          }
-
-         
+        
+                int[] registeredCourses = {1010, 1020, 2080, 2140, 2150, 2160};
+        
+                System.out.print("Originally registered for: ");
+                for(int course : registeredCourses){
+                    System.out.print(course + ", ");
+                }
+        
+                int[] updatedCourses = new int [registeredCourses.length + 1];
+                System.arraycopy(registeredCourses, 0, updatedCourses, 0, registeredCourses.length);
+                updatedCourses[registeredCourses.length] = 2280;
+        
+                System.out.print("\nUpdated courses: ");
+                for(int course : updatedCourses){
+                    System.out.print(course + ", ");
+                }
+        
+                int courseCode = 2140;
+                boolean found = false;
+                for(int course : updatedCourses){
+                    if(course == courseCode){
+                        found = true;
+                    }
+                }
+                if(found){
+                    System.out.println("\nYou are registered for " + courseCode);
+                }
+                else{
+                    System.out.println("You are not registered for " + courseCode);
+                }
+            }    
+          }        
         </input>
       </program>
-    
+    </subsection>
+    <!-- Instructions for Starter Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-starter-instructions">
+      <title>Instructions</title>
+      <p>
+        Convert the existing program that uses an <c>int[]</c> to use an <c>ArrayList</c> of <c>Integer</c> instead.
+      </p>
+      <hint>
+        <p>
+          <c>.contains()</c> should simplify the search for a specific course.
+        </p>
+      </hint>
+    </subsection>
+    <!-- Template Code for Starter Exercise -->
+    <program xml:id="wrapper-classes-starter-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class CourseNumbersArrayList{
+          public static void main(String[] args) {
+
+            //Initialize an ArrayList and add the courses
+
+            //Print the contents of the Integer ArrayList
+
+            //Check if the ArrayList contains a specific course number
+
+          }
+        }
+      </input>
+    </program>
+    <!-- Expected Output for Starter Exercise -->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="wrapper-classes-starter-output" interactive="no">
+      <input>
+        Originally registered for: 1010, 1020, 2080, 2140, 2150, 2160, 
+        Updated courses: 1010, 1020, 2080, 2140, 2150, 2160, 2280, 
+        You are registered for 2140
+      </input>
+    </program>
   </section>
 
-  <!-- Level 2 Programming Exercise-->
-  <section xml:id="chapter-5-level-2-exercise">
-    <title>Level 2</title>
-    <!-- Objectives for Level 2 Exercise-->
-    <objectives >
-      <ul>
-        <li> Objective 1</li>
-        <li> Objective 2</li>
-      </ul>
-      </objectives>
+  <!-- Growth Exercise-->
+  <section xml:id="sec-wrapper-classes-growth-exercise">
+    <title>Growth Level</title>
+    <block>
       <p>
-        [QUESTION INFO HERE]
+        <alert>Wrapper Classes</alert>
       </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-2" interactive="activecode" language="java">
-        <input>
-          import java.util.ArrayList;
-          public class Main(String[] args) {
+    </block>
+    <!-- Objectives for Growth Exercise -->
+    <objectives>
+      <ul>
+        <li> Use Java Wrapper classes to fix a program designed to manage dogs in a shelter</li>
+      </ul>
+    </objectives>
+    <!-- Overview for Growth Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-growth-overview">
+      <title>Overview</title>
+      <p>
+        The following program represents a simple management system to track the number of dogs in a shelter.
+        It includes functionalities such as adding, deleting and displaying the count for a breed of dogs. 
+        However, the program contains several syntax and logical errors that prevent it from functioning properly.
+      </p>
+    </subsection>
+    <!-- Instructions for Growth Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-growth-instructions">
+      <title>Instructions</title>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Initialize a <c>static</c> <c>ArrayList</c> of <c>Integer</c> called <c>dogCounts</c> that will store the number of dogs for each breed
+            </p>
+          </li>
+          <li>
+            <p>
+              Review the code and correct the errors to ensure the program operates as expected
+            </p>
+          </li>
+        </ol>
+      </p>
+    </subsection>
+    <!-- Template Code for Growth Exercise -->
+    <program xml:id="wrapper-classes-growth-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class DogShelter {
+
+            //TO-DO: Initialize ArrayList here
+
             public static void main(String[] args) {
+
+                // Adding counts for three types of dogs
+                dogCounts.add(new Integer(15);
+                dogCounts.add(new Integer(30));
+                dogCounts.add(new Integer(20);
+                
+                // Display initial dog counts
+                System.out.println("Initial Dog Counts:");
+                displayDogs();
+
+                // Increase count for second breed of dog
+                addBreed(1 5); 
+
+                // Remove the third breed
+                deleteBreed(2;
+
+                // Display updated dog counts
+                System.out.println("\nUpdated Dog Counts:");
+                displayDogs();
             }
-          }
-        </input>
-      </program>
+
+            public static void addBreed(int index, int count) {
+                int updatedCount = dogCounts.get(index) + count;
+                dogCounts.set(index, new Integer(updatedCount));
+            }
+
+            public static void deleteBreed(int index) {
+                dogCounts.remove(index + 1);
+
+            }
+
+            public static void displayDogs() {
+                for (int i = 0; i dogCounts.size(); i++) {
+                    System.out.println("Breed " + (i) + " has " + dogCounts.get(i) + " dogs.");
+                }
+            }
+        }
+      </input>
+    </program>
+    <!-- Expected Output for Growth Exercise -->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="wrapper-classes-growth-output" interactive="no">
+      <input>
+        Initial Dog Counts:
+        Breed 1 has 15 dogs.
+        Breed 2 has 30 dogs.
+        Breed 3 has 20 dogs.
+
+        Updated Dog Counts:
+        Breed 1 has 15 dogs.
+        Breed 2 has 35 dogs.
+      </input>
+    </program>
   </section>
 
-  <!-- Level 3 Programming Exercise-->
-  <section xml:id="chapter-5-level-3-exercise">
-    <title>Level 3</title>
-    <!-- Objectives for Level 3 Exercise-->
-    <objectives >
-      <ul>
-        <li> Objective 1</li>
-        <li> Objective 2</li>
-      </ul>
-      </objectives>
+  <!-- Stretch Exercise-->
+  <section xml:id="sec-wrapper-classes-stretch-exercise">
+    <title>Stretch Level</title>
+    <block>
       <p>
-        [QUESTION INFO HERE]
+        <alert>Wrapper Classes</alert>
       </p>
-      <!-- Code-->
-      <program xml:id="chapter-5-level-3" interactive="activecode" language="java">
-        <input>
-          import java.util.ArrayList;
-          public class Main(String[] args) {
-            public static void main(String[] args) {
+    </block>
+    <!-- Objectives for Stretch Exercise -->
+    <objectives>
+      <ul>
+        <li>
+          <p>
+            Learn how to use Wrapper classes in practical applications, such as managing financial transactions in a bank account
+          </p>
+        </li>
+      </ul>
+    </objectives>
+    <!-- Overview for Stretch Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-stretch-overview">
+      <title>Overview</title>
+      <p>
+        The following program simulates a bank account and allows users to deposit, withdraw, and track the transaction history of their account.
+        <ul>
+          <li>
+            <p>
+              <c>deposit(amount)</c> 
+              <ul>
+                <li>
+                  <p>
+                    Adds money to the account
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>withdrawal(amount)</c>
+              <ul>
+                <li>
+                  <p>
+                    Takes money out of the account
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>displayTransactions()</c>
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Prints deposits and withdrawals as they were recorded in the <c>transactions</c> ArrayList.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <c>displayBalance()</c>
+              <ul>
+                <li>
+                  <p>
+                    Prints the balance of the account
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+    <!-- Instructions for Stretch Exercise -->
+    <subsection xml:id="subsec-wrapper-classes-stretch-instructions">
+      <title>Instructions</title>   
+      <p>
+        Complete the following methods:
+        <ul>
+          <li>
+            <p>
+              <c>deposit(amount)</c> 
+              <ul>
+                <li>
+                  <p>
+                    Ensures that only valid deposits (positive numbers) are added to the account. Record the transaction as a positive value in the <c>transactions</c> ArrayList.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Prints a message including the depositor's name, the deposited amount, and the new balance.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Error messages are printed for unsuccessful deposits.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>withdrawal(amount)</c>
+              <ul>
+                <li>
+                  <p>
+                    Ensures that withdrawals are within the available balance. Valid withdrawals are recorded as a negative value in the <c>transactions</c> ArrayList.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    If the conditions are not met, print an error message indicating the withdrawal was unsuccessful.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <c>displayTransactions()</c>
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Prints all the transactions (deposits and withdrawals) recorded.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <c>displayBalance()</c>
+              <ul>
+                <li>
+                  <p>
+                    Prints the current balance of the account.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+    <!-- Template Code for Stretch Exercise -->
+    <program xml:id="wrapper-classes-stretch-template" interactive="activecode" language="java">
+      <input>
+        import java.util.ArrayList;
+
+        public class BankAccount {
+
+            String name;
+            double currentBalance;
+            //TO-DO: Initialize an ArrayList that stores Double called 'transactions' to keep track of the user's transactions
+
+            public BankAccount(String name, int startingBalance){
+                
             }
-          }
-        </input>
-      </program>
+
+            public void deposit(double amount){
+                
+            }
+
+            public void withdraw(double amount){
+                
+            }
+
+            public void displayTransactions(){
+              
+            }
+
+            public void displayBalance(){
+              
+            }
+
+            public static void main(String[] args) {
+
+                BankAccount john = new BankAccount("John Doe", 100);
+
+                // ----- DO NOT CHANGE -----
+
+                //Testing..
+                john.displayBalance();
+                john.deposit(0.25);
+                john.withdraw(100.50);
+                john.withdraw(40.90);
+                john.deposit(-90.55);
+                john.deposit(3000);
+                john.displayTransactions();
+                john.displayBalance();
+
+                // ----- DO NOT CHANGE -----
+                
+            }
+            
+        }
+      </input>
+    </program>
+    <!-- Expected Output for Stretch Exercise -->
+    <p>
+      The expected output is:
+    </p>
+    <program xml:id="wrapper-classes-stretch-output" interactive="no">
+      <input>
+        [John Doe] Current balance: 100.0
+        [John Doe] Deposited $0.25. (New Balance: 100.25)
+        [ERROR, John Doe] Unsuccessful withdrawal of 100.5.
+        [John Doe] Withdrew $40.9. (New Balance: 59.35)
+        [ERROR, John Doe] Unsuccessful deposit of -90.55. Minimum deposit amount is $0.01.
+        [John Doe] Deposited $3000.0. (New Balance: 3059.35)
+        [John Doe] Transaction History: 0.25, -40.9, 3000.0, 
+        [John Doe] Current balance: 3059.35
+      </input>
+    </program>
   </section>
 </chapter>
-
