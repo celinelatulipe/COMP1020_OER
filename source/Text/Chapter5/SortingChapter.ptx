@@ -8,6 +8,10 @@
   </introduction>
 
   <section xml:id="sorting-level1-exercise">
+    <title> starter </title>
+    <block>
+      <alert> sorting </alert>
+    </block>
     <objectives>
       <ul>
         <li>Implement a bubblesort algorithm</li>
@@ -20,7 +24,7 @@
        </p>
        <p> Draw a pretty picture for here </p>
     <subsection>
-       <p> For this exercise, complete the bubblesort algorithm: </p>
+       <introduction> For this exercise, complete the bubblesort algorithm: </introduction>
        <ol>
           <li>Create a nested loop to iterate through each item in the array </li>
           <li>Compare the current item with the next one, and swap the position as needed </li>
@@ -64,6 +68,43 @@
        </program>
     </subsection>
   </section>
+     <section xml:id="sorting-level2-exercise">
+      <title> second </title>
+      <objectives> <p> Sort strings without built in method </p> </objectives>
+      <program xml:id="sort-strings-exercise" interactive="activecode" language="java">
+        <input>
+      import java.util.Arrays;
 
+      public class Main {
+      
+        public static void main(String[] args) {
+          // defining an array of type String
+          String[] words = { "Alligator", "Alpaca", "Angelfish", "Aardvark", "Ant" };
+          int size = words.length;
+      
+          // iterate through each letter of both strings
+       
+              // compare one letter from each string
+         
+                // swap array elements
+      
+          // prints the sorted array in ascending order
+          System.out.println(Arrays.toString(words));
+        }
+      }
+    </input>
+  </program>
 
+     </section>
+     <section xml:id="sorting-level3-exercise">
+      <title> third </title>
+      <objectives>
+          Sort cards based on suit and value
+      </objectives>
+      <program xml:id="string-sort-exercise" interactive="activecode" language="java">
+        <input>
+          
+      </input>
+       </program>
+      </section>
 </chapter>

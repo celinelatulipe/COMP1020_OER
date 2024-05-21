@@ -6,7 +6,8 @@
   <introduction>
     <p> Text before the first section. </p>
   </introduction>
-
+<section>
+  <title> advancedrec one </title>
 <p>Coin count problem </p>
 <program xml:id="coint-count-problem" interactive="activecode" language="java">
   <input>
@@ -35,6 +36,8 @@ public class Main{
       System.out.println(coinCounter(coins, size, goal));
   }
 }
+
   </input>
 </program>
+</section>
 </chapter>
