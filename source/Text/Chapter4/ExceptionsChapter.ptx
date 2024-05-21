@@ -7,7 +7,51 @@
     <p> Text before the first section. </p>
   </introduction>
 
-  <!-- include sections 
-  <xi:include href="sec-section-name.ptx" />-->
+  <section xml:id="exception-exercise-level1">
+    <title> exception one </title>
+    <objectives>
+      <p>
+      Add a try/catch statement for a dividing by 0 error
+      </p>
+    </objectives>
+    
+    <program xml:id="div-0-exercise" interactive="activecode" language="java">
+ 
+  <input>
+    public class Main {
+
+      public static void main(String[] args)
+       {
+           int x = 4;
+           int y = 2;
+     
+           System.out.println(x / y); 
+       }
+   }
+  </input>
+</program>
+  </section>
+  <section xml:id="exceptioin-exercise-level2">
+    <title> exception two </title>
+    <program xml:id="even-odd-exception-exercise" interactive="activecode" language="java">
+      public class Main {
+
+        public static void main(String[] args) {
+            int num = 2;
+            // add a try block before the function call
+                CheckEven(num);
+            // catch the exception and print the error using getMessage()      
+    
+        }
+    
+        public static void CheckEven(int num) {
+            // check if the number is even
+            // throw an IllegalArgumentException if the number is even
+            // else, throw an exception if the number is odd
+        }
+    }
+    </program>
+  </section>
+  
 
 </chapter>

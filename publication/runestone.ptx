@@ -104,11 +104,11 @@
     <!-- put <css style="oscarlevin"/>                         -->
     <!-- See also                                              -->
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-    <css
-        style="default"
+    <css 
+        style="test"
         colors="blue_red"
         knowls="default"
-        toc="default"
+        toc="hidden"
         banner="default"
         navbar="default"
     />
