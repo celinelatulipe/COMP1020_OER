@@ -10,11 +10,11 @@
 	<section xml:id="FILE_IO-starter">
 		<title>Starter Level</title>
 		<exercises xml:id="FILE_I0-starter-exercises">
-			<datafile xml:id="FILE_IO-df1" label="df1" filename="df1.txt">
+			<datafile xml:id="FILE_IO-df1" label="df1" filename="df1.txt" hide="yes">
 				<pre>
-          Hello, this is my datafile.
-		  It has three lines.
-		  This is the last line.
+Hello, this is my datafile.
+It has three lines.
+This is the last line.
 				</pre>
 			</datafile>
 	
