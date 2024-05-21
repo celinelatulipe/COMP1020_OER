@@ -18,7 +18,7 @@
 				</pre>
 			</datafile>
 	
-		<program xml:id="FILE_IO-read-df" label="FILE_IO-read-df" interactive="activecode" language="java" sourcefile="ReadDF.java">
+		<program xml:id="FILE_IO-read-df" label="FILE_IO-read-df" interactive="activecode" language="java" sourcefile="ReadDF.java" datafile="df1.txt">
 			<input>
 	import java.io.*;
 	public class ReadDF {
