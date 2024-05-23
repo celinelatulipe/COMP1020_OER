@@ -396,7 +396,6 @@
         </input>
       </program>
   </section>
-
   <!-- Stretch Exercise -->
   <section xml:id="sec-arraylists-stretch-exercise">
     <title>Stretch Level</title>
@@ -411,64 +410,62 @@
         <li> Accessing and manipulating data stored in an <c>ArrayList</c></li>
       </ul>
       </objectives>
-
       <datafile xml:id="arraylists-stretch-song-lyrics" label="song-lyrics" filename="song-lyrics.txt" hide="yes">
 				<pre>
-As he came into the window
-It was the sound of a crescendo
-He came into her apartment
-He left the bloodstains on the carpet
-She ran underneath the table
-He could see she was unable
-So she ran into the bedroom
-She was struck down
-It was her doom
-Annie, are you okay
-So, Annie, are you okay
-Are you okay, Annie
-Annie, are you okay
-So, Annie, are you okay
-Are you okay, Annie
-Annie, are you okay
-So, Annie, are you okay
-Are you okay, Annie
-Annie, are you okay
-So, Annie are you okay
-Are you okay, Annie
-Annie are you okay?
-Will you tell us that you're okay
-There's a sign in the window
-That he struck you - a crescendo, Annie
-He came into your apartment
-He left the bloodstains on the carpet
-Then you ran into the bedroom
-You were struck down
-It was your doom
-Annie are you okay
-So Annie are you okay
-Are you okay Annie
-You've been hit by
-You've been hit by a smooth criminal
-Ow!
-Ow!
-Aw!
-Annie are you okay (I don't know)
-Will you tell us that you're okay (I don't know)
-There's a sound at the window (I don't know)
-Then he struck you, a crescendo Annie (I don't know)
-He came into your apartment (I don't know)
-Left bloodstains on the carpet (I don't know why, baby)
-And then you ran into the bedroom (help me)
-You were struck down
-It was your doom Annie (dag gone it)
-Annie are you okay
-So, Annie are you okay
-Are you okay Annie
-You've been hit by
-You've been hit by a smooth criminal
+        As he came into the window
+        It was the sound of a crescendo
+        He came into her apartment
+        He left the bloodstains on the carpet
+        She ran underneath the table
+        He could see she was unable
+        So she ran into the bedroom
+        She was struck down
+        It was her doom
+        Annie, are you okay
+        So, Annie, are you okay
+        Are you okay, Annie
+        Annie, are you okay
+        So, Annie, are you okay
+        Are you okay, Annie
+        Annie, are you okay
+        So, Annie, are you okay
+        Are you okay, Annie
+        Annie, are you okay
+        So, Annie are you okay
+        Are you okay, Annie
+        Annie are you okay?
+        Will you tell us that you're okay
+        There's a sign in the window
+        That he struck you - a crescendo, Annie
+        He came into your apartment
+        He left the bloodstains on the carpet
+        Then you ran into the bedroom
+        You were struck down
+        It was your doom
+        Annie are you okay
+        So Annie are you okay
+        Are you okay Annie
+        You've been hit by
+        You've been hit by a smooth criminal
+        Ow!
+        Ow!
+        Aw!
+        Annie are you okay (I don't know)
+        Will you tell us that you're okay (I don't know)
+        There's a sound at the window (I don't know)
+        Then he struck you, a crescendo Annie (I don't know)
+        He came into your apartment (I don't know)
+        Left bloodstains on the carpet (I don't know why, baby)
+        And then you ran into the bedroom (help me)
+        You were struck down
+        It was your doom Annie (dag gone it)
+        Annie are you okay
+        So, Annie are you okay
+        Are you okay Annie
+        You've been hit by
+        You've been hit by a smooth criminal
 				</pre>
 			</datafile>
-
       <!-- Overview for Stretch Exercise -->
       <subsection xml:id="subsec-arraylists-stretch-overview">
         <title>Overview</title>
@@ -501,7 +498,6 @@ You've been hit by a smooth criminal
           <p>
             Your task is to implement the methods inside the <c>LyricProcessor</c>class using the provided <c>BufferedReader</c> code that reads the file. 
           </p>
-
           <ol>
             <li>
               <p>
@@ -563,19 +559,15 @@ You've been hit by a smooth criminal
               </ul>
             </li>
           </ol>
-
           <p>
             In the provided template, a <c>BufferedReader</c> is used to read the lyrics from the file.
             <alert>Since you have not yet learned about File I/O, you don't need to worry about how this part of the code works for now.</alert>
           </p>
-
           <p>
             The template also includes a <c>System.out.println()</c> statement to display the contents of the text file. 
             This is simply to help you see the lyrics that are being read in, even though the text file itself is hidden. You may comment this out when starting to write your code.  
             Try and press the <em>Save and Run</em> button to see the contents of the file!
           </p>
-
-      
           <hint>
             <p>
               The following methods may help in your implementations:
@@ -591,148 +583,144 @@ You've been hit by a smooth criminal
                   </p>
                 </li>
               </ul>
-
-
             </p>
           </hint>
-
       </subsection>
       <!-- Template Code for Stretch Exercise -->
       <program xml:id="arraylists-stretch-template" interactive="activecode" language="java" sourcefile="LyricTemplate.java" datafile="song-lyrics.txt">
         <input>
-import java.io.*;
-import java.util.ArrayList;
+        import java.io.*;
+        import java.util.ArrayList;
 
-public class LyricProcessor {
-    
-    public LyricProcessor() {
-       
-    }
-
-    //Stores each line in file into arraylist
-    public void readFile(String filename) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(filename));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                //*TO-DO* Add 'line' to your ArrayList
-                System.out.println(line);
+        public class LyricProcessor {
+            
+            public LyricProcessor() {
               
             }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            //Stores each line in file into arraylist
+            public void readFile(String filename) {
+                try {
+                    BufferedReader reader = new BufferedReader(new FileReader(filename));
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        //*TO-DO* Add 'line' to your ArrayList
+                        System.out.println(line);
+                      
+                    }
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            //*TO-DO* Prints all lines in the file
+            public void printAllLines() {
+                
+            }
+
+            //*TO-DO* Prints all the lines that contain a certain word
+            public void printLinesContainingWord(String word) {
+            
+            }
+
+            //*TO-DO* Replaces every instance of a word with a specified word
+            public void findAndReplace(String oldWord, String newWord) {
+              
+            }
+
+            //*TO-DO* Prints the total number of lines
+            public void printLineCount() {
+              
+            }
+
+            public static void main(String[] args) {
+                
+                LyricProcessor lyricProcessor = new LyricProcessor();
+                lyricProcessor.readFile("song-lyrics.txt");
+
+                System.out.println("Testing...");
+                System.out.println("\nLines containing 'okay':");
+                lyricProcessor.printLinesContainingWord("okay");
+
+                System.out.println("\nLines containing 'apartment':");
+                lyricProcessor.printLinesContainingWord("apartment");
+                
+                System.out.println("\nReplacing 'Annie' with '[YOUR NAME]':");
+                lyricProcessor.findAndReplace("Annie", "YOURNAME");
+                lyricProcessor.printLinesContainingWord("YOURNAME");
+
+                System.out.println("\nLine count:");
+                lyricProcessor.printLineCount();
+            }
         }
-    }
-
-    //*TO-DO* Prints all lines in the file
-    public void printAllLines() {
-        
-    }
-
-    //*TO-DO* Prints all the lines that contain a certain word
-    public void printLinesContainingWord(String word) {
-    
-    }
-
-    //*TO-DO* Replaces every instance of a word with a specified word
-    public void findAndReplace(String oldWord, String newWord) {
-       
-    }
-
-    //*TO-DO* Prints the total number of lines
-    public void printLineCount() {
-      
-    }
-
-    public static void main(String[] args) {
-        
-        LyricProcessor lyricProcessor = new LyricProcessor();
-        lyricProcessor.readFile("song-lyrics.txt");
-
-        System.out.println("Testing...");
-        System.out.println("\nLines containing 'okay':");
-        lyricProcessor.printLinesContainingWord("okay");
-
-        System.out.println("\nLines containing 'apartment':");
-        lyricProcessor.printLinesContainingWord("apartment");
-         
-        System.out.println("\nReplacing 'Annie' with '[YOUR NAME]':");
-        lyricProcessor.findAndReplace("Annie", "YOURNAME");
-        lyricProcessor.printLinesContainingWord("YOURNAME");
-
-        System.out.println("\nLine count:");
-        lyricProcessor.printLineCount();
-    }
-}
         </input>
       </program>
-
       <!-- Expected Output for Stretch Exercise-->
       <p>
         The expected output for the provided tests is:
       </p>
       <program xml:id="arraylists-stretch-output" interactive="no">
         <input>
-Lines containing 'okay':
-Line 10: Annie, are you okay
-Line 11: So, Annie, are you okay
-Line 12: Are you okay, Annie
-Line 13: Annie, are you okay
-Line 14: So, Annie, are you okay
-Line 15: Are you okay, Annie
-Line 16: Annie, are you okay
-Line 17: So, Annie, are you okay
-Line 18: Are you okay, Annie
-Line 19: Annie, are you okay
-Line 20: So, Annie are you okay
-Line 21: Are you okay, Annie
-Line 22: Annie are you okay?
-Line 23: Will you tell us that you're okay
-Line 31: Annie are you okay
-Line 32: So Annie are you okay
-Line 33: Are you okay Annie
-Line 39: Annie are you okay (I don't know)
-Line 40: Will you tell us that you're okay (I don't know)
-Line 48: Annie are you okay
-Line 49: So, Annie are you okay
-Line 50: Are you okay Annie
-Total occurences of okay: 22
+        Lines containing 'okay':
+        Line 10: Annie, are you okay
+        Line 11: So, Annie, are you okay
+        Line 12: Are you okay, Annie
+        Line 13: Annie, are you okay
+        Line 14: So, Annie, are you okay
+        Line 15: Are you okay, Annie
+        Line 16: Annie, are you okay
+        Line 17: So, Annie, are you okay
+        Line 18: Are you okay, Annie
+        Line 19: Annie, are you okay
+        Line 20: So, Annie are you okay
+        Line 21: Are you okay, Annie
+        Line 22: Annie are you okay?
+        Line 23: Will you tell us that you're okay
+        Line 31: Annie are you okay
+        Line 32: So Annie are you okay
+        Line 33: Are you okay Annie
+        Line 39: Annie are you okay (I don't know)
+        Line 40: Will you tell us that you're okay (I don't know)
+        Line 48: Annie are you okay
+        Line 49: So, Annie are you okay
+        Line 50: Are you okay Annie
+        Total occurences of okay: 22
 
-Lines containing 'apartment':
-Line 3: He came into her apartment
-Line 26: He came into your apartment
-Line 43: He came into your apartment (I don't know)
-Total occurences of apartment: 3
+        Lines containing 'apartment':
+        Line 3: He came into her apartment
+        Line 26: He came into your apartment
+        Line 43: He came into your apartment (I don't know)
+        Total occurences of apartment: 3
 
-Replacing 'Annie' with '[YOUR NAME]':
-Line 10: YOURNAME, are you okay
-Line 11: So, YOURNAME, are you okay
-Line 12: Are you okay, YOURNAME
-Line 13: YOURNAME, are you okay
-Line 14: So, YOURNAME, are you okay
-Line 15: Are you okay, YOURNAME
-Line 16: YOURNAME, are you okay
-Line 17: So, YOURNAME, are you okay
-Line 18: Are you okay, YOURNAME
-Line 19: YOURNAME, are you okay
-Line 20: So, YOURNAME are you okay
-Line 21: Are you okay, YOURNAME
-Line 22: YOURNAME are you okay?
-Line 25: That he struck you - a crescendo, YOURNAME
-Line 31: YOURNAME are you okay
-Line 32: So YOURNAME are you okay
-Line 33: Are you okay YOURNAME
-Line 39: YOURNAME are you okay (I don't know)
-Line 42: Then he struck you, a crescendo YOURNAME (I don't know)
-Line 47: It was your doom YOURNAME (dag gone it)
-Line 48: YOURNAME are you okay
-Line 49: So, YOURNAME are you okay
-Line 50: Are you okay YOURNAME
-Total occurences of YOURNAME: 23
+        Replacing 'Annie' with '[YOUR NAME]':
+        Line 10: YOURNAME, are you okay
+        Line 11: So, YOURNAME, are you okay
+        Line 12: Are you okay, YOURNAME
+        Line 13: YOURNAME, are you okay
+        Line 14: So, YOURNAME, are you okay
+        Line 15: Are you okay, YOURNAME
+        Line 16: YOURNAME, are you okay
+        Line 17: So, YOURNAME, are you okay
+        Line 18: Are you okay, YOURNAME
+        Line 19: YOURNAME, are you okay
+        Line 20: So, YOURNAME are you okay
+        Line 21: Are you okay, YOURNAME
+        Line 22: YOURNAME are you okay?
+        Line 25: That he struck you - a crescendo, YOURNAME
+        Line 31: YOURNAME are you okay
+        Line 32: So YOURNAME are you okay
+        Line 33: Are you okay YOURNAME
+        Line 39: YOURNAME are you okay (I don't know)
+        Line 42: Then he struck you, a crescendo YOURNAME (I don't know)
+        Line 47: It was your doom YOURNAME (dag gone it)
+        Line 48: YOURNAME are you okay
+        Line 49: So, YOURNAME are you okay
+        Line 50: Are you okay YOURNAME
+        Total occurences of YOURNAME: 23
 
-Line count:
-Total number of lines: 52
+        Line count:
+        Total number of lines: 52
         </input>
       </program>
   </section>
