@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-java-basics-methods" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Java Basics - Methods and Scope</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+  <objectives>
+	<ul>
+	  <li>Refresh on how methods work in Java, and how to specify parameters and return types. </li>
+	  <li>Refresh on local vs. global scope in Java.</li>
+	</ul>
+  </objectives>
+
+  <section xml:id="JB-methods-starter">
+		<title>Starter Level</title>
+		
+
+		
+		
+	</section>
+
+	<section xml:id="JB-methods-growth">
+		<title>Growth Level</title>
+		
+
+		<p>
+		</p>
+		
+	</section>
+
+	<section xml:id="JB-methods-stretch">
+		<title>Stretch Level</title>
+		
+
+		<p>
+		</p>
+		
+	</section>
+
+
+</chapter>
