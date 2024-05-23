@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This file, the project manifest, provides the overall configuration for your PreTeXt project. To edit the content of your document, open `source/main.ptx`. See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest. -->
 <project ptx-version="2">
+  
   <targets>
     <target name="web" format="html">
     <stringparams author.tools ="yes" html.css.extra ="external/custom-styles.css"/>
@@ -8,6 +9,7 @@
     <target name="print" format="pdf" />
     <target name="runestone" format="html" publication="runestone.ptx" output-dir="../published/JavaActiveLearningWorkbook">
       <stringparams author.tools ="yes" html.css.extra ="external/custom-styles.css"/>
+      <!-- <source>   <directories external="Figures" generated="generated"/>    </source> -->
     </target>
   </targets>
 </project>
