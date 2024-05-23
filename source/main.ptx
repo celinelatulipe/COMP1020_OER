@@ -13,8 +13,12 @@
 
 
     <!-- Include chapters -->
-    <xi:include href="./Text/Chapter1/JavaBasics1Chapter.ptx" />
-    <xi:include href="./Text/Chapter1/JavaBasics2Chapter.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics_DataTypes_Operators.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics_MethodsScope.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics_UserInput_FormattedOutput.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics_ControlStructures.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics_MathStringMethods.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics_Arrays.ptx" />
     <xi:include href="./Text/Chapter2/ObjectsIntro1Chapter.ptx" />
     <xi:include href="./Text/Chapter2/ObjectsIntro2Chapter.ptx" />
     <xi:include href="./Text/Chapter3/ArrayListsChapter.ptx" />

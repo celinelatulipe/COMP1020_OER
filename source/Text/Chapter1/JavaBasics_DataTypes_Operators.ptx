@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-java-basics-DTVO" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Java Basics - Data Types, Variables and Operators</title>
+   
+  <objectives>
+	<ul>
+	  <li>Refresh on the primitive data types in Java (boolean, char, byte, short, int, long, float, double) and Strings. </li>
+	  <li>Refresh on mathematical operators.</li>
+	</ul>
+  </objectives>
+
+  <section xml:id="JB-DTVO-starter">
+		<title>Starter Level</title>
+		<exercises xml:id="JB-DTVO-starter-exercises">
+			<p>
+				Write the single line of code necessary so that the console output looks like:
+			</p>
+		<pre>
+			Average is: 14.333333
+		</pre>
+			<program xml:id="JB-DTVO-starter-calc_average" label="JB-DTVO-starter-calc_average" interactive="activecode" language="java" sourcefile="CalcAverage.java">
+				<input>
+	
+	public class CalcAverage {
+
+		public static void main(String args[]) {
+			int num1 = 25;
+			int num2 = 14;
+			int num3 = 4;
+
+			println("Average is: " + average);
+
+		} 
+	}
+	
+		
+				</input>
+				<!--<tests>
+				</tests>-->
+			</program>
+
+		<p>
+			Add one line of code to the main method below that declares a boolean variable named valid, and sets
+			 it to true if x is divisible by 10 and y is less than 15, and false otherwise.
+		</p>
+		
+
+		<program xml:id="JB-DTVO-make-bool" label="JB-DTVO-make-bool" interactive="activecode" language="java" sourcefile="MakeBool.java" >
+			<input>
+public class MakeBool {
+
+	public static void main(String args[]) {
+		x = 50;
+		y = 13;
+		
+	}
+}
+			</input>
+			<!-- <tests>
+			</tests> -->
+		</program>
+		</exercises>
+		
+		
+	</section>
+
+	<section xml:id="JB-DTVO-growth">
+		<title>Growth Level</title>
+		
+
+		<p>
+		</p>
+		
+	</section>
+
+	<section xml:id="JB-DTVO-stretch">
+		<title>Stretch Level</title>
+		
+
+		<p>
+		</p>
+		
+	</section>
+
+</chapter>

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-java-basics-part1" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Java Basics Part 1</title>
+<chapter xml:id="ch-java-basics-UIFO" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Java Basics - User Input, Formatted Output</title>
 
   <introduction>
     <p> Text before the first section. </p>
-  </introduction>
+  </introduction>   
+  <objectives>
+	<ul>
+	  <li>Refresh on how to use scanner to get keybaord input from the user. </li>
+	  <li>Refresh on using println/printf to format console output.</li>
+	</ul>
+  </objectives>
 
-  <section xml:id="JB1-Scanner-starter">
+  <section xml:id="JB-UIFO-starter">
 		<title>Starter Level</title>
 		
 
@@ -19,7 +25,7 @@
 		
 	</section>
 
-	<section xml:id="JB1-Scanner-growth">
+	<section xml:id="JB-UIFO-growth">
 		<title>Growth Level</title>
 		
 
@@ -28,7 +34,7 @@
 		
 	</section>
 
-	<section xml:id="JB1-Scanner-stretch">
+	<section xml:id="JB-UIFO-stretch">
 		<title>Stretch Level</title>
 		
 
@@ -36,5 +42,6 @@
 		</p>
 		
 	</section>
+
 
 </chapter>
