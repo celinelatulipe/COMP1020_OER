@@ -11,11 +11,11 @@
 		<title>Starter Level</title>
 		
 
-		<p>
+		
       <!-- this line embeds the iframe defined in the html page in assets/iframe/ folder 
             which points to a replit I created -->
-      <interactive iframe="iframe/repl-scanner-test1.html" width="95%" aspect="1:1"/>
-		</p>
+    <interactive iframe="iframe/repl-scanner-test1.html" width="95%" aspect="1:1"/>
+		
 		
 	</section>
 
