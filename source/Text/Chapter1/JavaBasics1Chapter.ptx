@@ -7,7 +7,34 @@
     <p> Text before the first section. </p>
   </introduction>
 
-  <!-- include sections 
-  <xi:include href="sec-section-name.ptx" />-->
+  <section xml:id="JB1-Scanner-starter">
+		<title>Starter Level</title>
+		
+
+		<p>
+      <!-- this line embeds the iframe defined in the html page in assets/iframe/ folder 
+            which points to a replit I created -->
+      <interactive iframe="iframe/repl-scanner-test1.html" width="95%" aspect="1:1"/>
+		</p>
+		
+	</section>
+
+	<section xml:id="JB1-Scanner-growth">
+		<title>Growth Level</title>
+		
+
+		<p>
+		</p>
+		
+	</section>
+
+	<section xml:id="JB1-Scanner-stretch">
+		<title>Stretch Level</title>
+		
+
+		<p>
+		</p>
+		
+	</section>
 
 </chapter>
