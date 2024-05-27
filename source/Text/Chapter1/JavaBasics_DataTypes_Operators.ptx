@@ -31,7 +31,7 @@
 			</program>
 
 			<p>
-				The following program doesn't run. Fix the error so that the output in the console looks like this:
+				The following program doesn't run. However, the error that is generated isn't very helpful. Figure out what is wrong and fix the error so that the output in the console looks like this:
 			</p>
 		<pre>
 			35
@@ -93,8 +93,8 @@ public class AddNums {
 public class MakeBool {
 
 	public static void main(String args[]) {
-		x = 50;
-		y = 13;
+		int x = 50;
+		int y = 13;
 		
 	}
 }
