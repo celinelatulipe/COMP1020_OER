@@ -20,7 +20,7 @@
 		
       	<!-- this line embeds the iframe defined in the html page in assets/iframe/ folder 
             which points to a replit I created -->
-    	<interactive iframe="iframe/trinket-scanner-test1.html" width="95%" aspect="1:1"/>
+    	<interactive iframe="iframe/trinket-scanner-test1.html" width="100%" /> <!--aspect="1:1"-->
 		
 		
 	</section>
