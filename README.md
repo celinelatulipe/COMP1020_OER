@@ -1,19 +1,16 @@
-# PreTeXt Codespace
+# Java Programming Workbook
 
-Use this template repository to quickly start a new [PreTeXt](https://pretextbook.org) project entirely in the cloud, using GitHub Codespaces.  
+## Overview
+The Java Programming Workbook is created to complement active learning methods using a series of exercises. Unlike traditional textbooks, this workbook focuses on practice and application with little explanatory text. This workbook is designed to be used in an active learning environment where students access content through videos or other texts. Each exercise is meant to be completed within a class period, making it ideal for in-class activities.
 
-## Instructions
+## Objectives
+The goal of this workbook is to help you develop your Java programming skills through practice. Exercises are available in three levels for each topic:
+- **Starter Exercises**: Highly scaffolded exercises
+- **Growth Exercises**: Moderately scaffolded exercises
+- **Stretch Exercises**: Lightly scaffolded exercises
 
-Look for the green button at the top right of this page.  If the button says `Use this template`, then you are ready to create a new repository for your project.  Click on the button and select "Create a new repository".  On the next page, give your project a name, select public or private (this can be changed later), and click the "Create repository from template" button.
+## Expected Background
+This workbook is intended for students who have completed an introductory course in Java programming. If you are new to Java or need a refresher, the **Java Basics** chapter contains exercises to get you up to speed. However, if your introductory course was "Objects-First," you may find some of the exercises in this chapter to be less challenging.
 
-You now have a GitHub repository saved in your account.  You can come back to that page any time you want to work on your project (note the URL or else find it in the list of your repositories when you log in to GitHub).
-
-To start work on your project, go to the green button at the top of *your* repository's page, which will say `<> Code`.  
-
-1. Click on this button.
-2. Click on the tab that says "Codespaces."
-3. Click "Create codespace on main."
-
-This take a minute or two (just the first time; later this will be much faster) and then open a browser version of VS Code with everything set up to start working.  It will generate a new pretext book (and replace this README with one you can edit for your project). 
-
-Next time you want to work on your book, return to your newly created repository, go to the green `<> Code` button, and select the codespace you previously created.  If you don't see that codespace (perhaps you deleted it to save space), you can always create a new codespace.
+## Development History
+The first edition of this workbook was created in the Spring and Summer of 2024 at the University of Manitoba, by **Dr. Celine Latulipe**, PhD student **Devon Blewett** and undergraduate student **Lara De Leon**, with funding from the University of Manitoba Libraries Open Educational Resources board.
