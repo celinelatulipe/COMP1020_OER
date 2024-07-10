@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-java-basics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Java Basics</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+   
+  <section xml:id="sec-jb-basic-program-structure">
+	<title>Basic Program Structure</title>	
+  </section>
+
+  <section xml:id="sec-jb-datatypes-and-operators">
+    <title>Data Types &amp; Operators</title>	
+  </section>
+
+  <section xml:id="sec-jb-enums">
+    <title>Enumerators</title>	
+  </section>
+
+  <section xml:id="sec-jb-methods">
+    <title>Methods</title>	
+  </section>
+
+  <section xml:id="sec-jb-formatting-console-output">
+    <title>Formatting Console Output</title>	
+  </section>
+
+  <section xml:id="sec-jb-console-output-via-scanner">
+    <title>Console Output via Scanner</title>	
+  </section>
+
+  <section xml:id="sec-jb-conditionals">
+    <title>Conditionals</title>	
+  </section>
+
+  <section xml:id="sec-jb-switch-statements">
+    <title>Switch Statements</title>	
+  </section>
+
+  <section xml:id="sec-jb-loops">
+    <title>Loops</title>	
+  </section>
+
+  <section xml:id="sec-jb-math-and-string-methods">
+    <title>Math &amp; String Methods</title>	
+  </section>
+
+  <section xml:id="sec-jb-arrays">
+    <title>Arrays</title>	
+  </section>
+
+
+</chapter>

@@ -25,8 +25,51 @@
     </date>
   </titlepage>
 
-  <colophon>
+  <preface xml:id="preface">
+    <paragraphs>
+      <title>Pedagogical Intention</title>
+      <p>
+        This is a workbook and not a textbook. There is very little explanatory text, as this is designed to be used within an active 
+        learning context, where students are accessing content through videos or reading other texts. These activities are designed to 
+        be relatively short and usable within a class period.
+      </p>
+      <p>
+        Learning to program takes intentional effort and practice. The exercises in this workbook are intentionally scaffolded by level 
+        within each topic area. This means that 'Starter' exercises are highly scaffolded, 'Growth' exercises are moderately scaffolded, 
+        and 'Stretch' exercises are only lightly scaffolded. A student who is new to a particular topic should begin with Starter 
+        exercises and work their way up. A student who is refreshing on a topic may go straight to 'Stretch' and only go backwards to 
+        'Growth' or 'Starter' if they find they are struggling.
+      </p>  
+    </paragraphs>
+    <paragraphs>
+      <title>Expected Background</title>
+      <p>
+        This book is designed to accompany a second course in Java programming, and assumes that the introductory Java course was 
+        taught focusing on procedural aspects. The Java Basics chapter provides refresher exercises in case you haven't programmed 
+        in Java recently. Many of the exercises in this workbook (especially in the Objects intro chapters) would NOT be suitable 
+        for students who had already taken an 'Objects-First' introductory Java course.
+      </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Use of PythonTutor Visualizations</title>
+      <p>
+        Where appropriate, we have embedded links to identical code (or in some cases, solution code) that opens in the PythonTutor 
+        website. Despite its name, PythonTutor shows the execution of Java code (and code in many other languages). 
+        This is an excellent resource for learning, as it allows students to step through the code execution, 
+        seeing how objects and primitives are stored.
+      </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Development History</title>
+      <p>
+        The first edition of this workbook was created in Spring and Summer of 2024 at the University of Manitoba, by 
+        Dr. Celine Latulipe, PhD student Devon Blewett and undergraduate student Lara De Leon, with funding from the 
+        University of Manitoba Libraries Open Educational Resources board.
+      </p>
+    </paragraphs>
+  </preface>
 
+  <colophon>
     <website>
       <url href="https://celinelatulipe.net">Celine Latulipe</url>
     </website>

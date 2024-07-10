@@ -6,34 +6,28 @@
 
   <book xml:id="JavaWorkbook">
     <title>Java Active Learning WorkBook</title>
-    <subtitle>Scaffolded programming activities beyond the basics.</subtitle>
+    <subtitle>Scaffolded Programming Activities Beyond The Basics.</subtitle>
     
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
-
     <!-- Include chapters -->
-    <xi:include href="./Text/Chapter1/JavaBasics_DataTypes_Operators.ptx" />
-    <xi:include href="./Text/Chapter1/JavaBasics_MethodsScope.ptx" />
-    <xi:include href="./Text/Chapter1/JavaBasics_UserInput_FormattedOutput.ptx" />
-    <xi:include href="./Text/Chapter1/JavaBasics_ControlStructures.ptx" />
-    <xi:include href="./Text/Chapter1/JavaBasics_MathStringMethods.ptx" />
-    <xi:include href="./Text/Chapter1/JavaBasics_Arrays.ptx" />
-    <xi:include href="./Text/Chapter2/ObjectsIntro1Chapter.ptx" />
-    <xi:include href="./Text/Chapter2/ObjectsIntro2Chapter.ptx" />
-    <xi:include href="./Text/Chapter3/ArrayListsChapter.ptx" />
-    <xi:include href="./Text/Chapter3/WrapperClasses.ptx" />
-    <xi:include href="./Text/Chapter4/StringsChapter.ptx" />
-    <xi:include href="./Text/Chapter4/ExceptionsChapter.ptx" />
-    <xi:include href="./Text/Chapter4/FileIOChapter.ptx" />
-    <xi:include href="./Text/Chapter5/SearchingChapter.ptx" />
-    <xi:include href="./Text/Chapter5/SortingChapter.ptx" />
-    <xi:include href="./Text/Chapter6/RecursionIntroChapter.ptx" />
-    <xi:include href="./Text/Chapter6/RecursionAdvancedChapter.ptx" />
-    <xi:include href="./Text/Chapter7/MultidimensionalArraysChapter.ptx" />
-    <xi:include href="./Text/Chapter8/LinkedListsChapter.ptx" />
-    <xi:include href="./Text/Chapter9/InterfacesChapter.ptx" />
-    <xi:include href="./Text/Chapter10/ADTsChapter.ptx" />
+    <xi:include href="./Text/Chapter1/JavaBasics.ptx" />
+    <xi:include href="./Text/Chapter2/ObjectsBasics.ptx" />
+    <xi:include href="./Text/Chapter2/ObjectsIntermediate.ptx" />
+    <xi:include href="./Text/Chapter3/Strings.ptx" />
+    <xi:include href="./Text/Chapter3/FileIO.ptx" />
+    <xi:include href="./Text/Chapter3/ExceptionHandling.ptx" />
+    <xi:include href="./Text/Chapter4/ArrayLists.ptx" />
+    <xi:include href="./Text/Chapter4/WrapperClasses.ptx" />
+    <xi:include href="./Text/Chapter5/Searching.ptx" />
+    <xi:include href="./Text/Chapter5/Sorting.ptx" />
+    <xi:include href="./Text/Chapter6/RecursionIntro.ptx" />
+    <xi:include href="./Text/Chapter6/RecursionAdvanced.ptx" />
+    <xi:include href="./Text/Chapter7/MultidimensionalArrays.ptx" />
+    <xi:include href="./Text/Chapter8/LinkedLists.ptx" />
+    <xi:include href="./Text/Chapter9/Interfaces.ptx" />
+    <xi:include href="./Text/Chapter10/ADTs.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
