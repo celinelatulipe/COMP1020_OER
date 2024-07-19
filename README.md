@@ -1,7 +1,7 @@
-# Java Programming Workbook
+# Java Active Learning Workbook
 
 ## Overview
-The Java Programming Workbook is created to complement active learning methods using a series of exercises. Unlike traditional textbooks, this workbook focuses on practice and application with little explanatory text. This workbook is designed to be used in an active learning environment where students access content through videos or other texts. Each exercise is meant to be completed within a class period, making it ideal for in-class activities.
+The Java Active Learning Workbook is created to complement active learning methods using a series of exercises. Unlike traditional textbooks, this workbook focuses on practice and application with little explanatory text. This workbook is designed to be used in an active learning environment where students access content through videos or other texts. Each exercise is meant to be completed within a class period, making it ideal for in-class activities.
 
 ## Objectives
 The goal of this workbook is to help you develop your Java programming skills through practice. Exercises are available in three levels for each topic:

@@ -4,11 +4,81 @@
   <title>Java Basics</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> This section covers the fundamental aspects of programming, including core concepts such as basic program structure, 
+      data types, operators, methods, and other essential topics like conditionals, loops, and arrays. </p>
   </introduction>
-   
+  
   <section xml:id="sec-jb-basic-program-structure">
-	<title>Basic Program Structure</title>	
+    <title>Basic Program Structure</title>
+    <objectives>
+      <ol>
+        <li>
+          <p>
+            Recall the structure of a Java program and files
+          </p>
+        </li>
+        <li>
+          <p>
+            Recall the standard order of items inside a Java program
+          </p>
+        </li>
+      </ol>
+    </objectives>
+    <subsection>
+      <title>Exercise 1</title>      
+        <p>
+          Follow the commented instructions to test your recall of how to write a very basic Java program.
+          Click the Save &amp; Run button to test your program and make sure it works. 
+        </p>
+         <!-- Template Code for Exercise 1 -->
+         <program xml:id="jb-program-structure-exercise-one" interactive="activecode" language="java">
+          <input>
+//Write a program that stores 'Hello, COMP 1020!' in String variable and 
+//prints it out to the console.
+
+//Create a class and declare a String variable (this must be static)
+
+//Inside the class file, create a main method
+
+//Inside the main method:
+//Assign 'Hello, COMP 1020!' to the String variable
+//Then use System.out.println() to print the String to the console
+
+          </input>
+        </program>
+    </subsection>
+    <subsection>
+      <title>Exercise 2</title>
+      <p>
+        The following program doesn't run (you can try it!). There are lots of issues with this program. 
+        Correct the program by completing the commented instructions so that it follows standard conventions.
+      </p>
+      <!-- Template Code for Exercise 1 -->
+      <program xml:id="jb-program-structure-exercise-two" interactive="activecode" language="java">
+        <input>
+public class MyClass {
+  
+  public Main() { // this needs to be:  public static void main(String[] args)
+    System.out.println("This program sucks!");
+        my_num = 86; // this shouldn't be indented - should line up with the statement above
+  Name = "Jojo";  // this should be indented one level
+    boolean registered; // local variables should be at the top of the method
+    registered = false;
+  }
+  
+  // these class-level variables (also known as properties) should be at the top, 
+  // before the main method
+  public static int my_num; // variable names should be camelCase
+  public static string Name; // variable name should be camelCase and 'string' is not a type
+  public static final double myheight = 1.43; // constant variable should be ALL_CAPS
+  
+  // Missing header comment block at the top of the program
+  // add a header comment block saying who wrote this program and what it does
+
+}
+        </input>
+      </program>
+    </subsection>
   </section>
 
   <section xml:id="sec-jb-datatypes-and-operators">
