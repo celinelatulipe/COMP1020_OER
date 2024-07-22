@@ -7,7 +7,7 @@
     <p> This section covers the fundamental aspects of programming, including core concepts such as basic program structure, 
       data types, operators, methods, and other essential topics like conditionals, loops, and arrays. </p>
   </introduction>
-  
+  <!-- Basic Program Structure-->
   <section xml:id="sec-jb-basic-program-structure">
     <title>Basic Program Structure</title>
     <objectives>
@@ -20,18 +20,19 @@
         <li>
           <p>
             Recall the standard order of items inside a Java program
-          </p>
+          </p>s
         </li>
       </ol>
     </objectives>
-    <subsection>
+    <!-- Basic Program Structure: Exercise 1 -->
+    <subsection xml:id="subsec-jb-basic-program-structure-exercise-1">
       <title>Exercise 1</title>      
         <p>
           Follow the commented instructions to test your recall of how to write a very basic Java program.
           Click the Save &amp; Run button to test your program and make sure it works. 
         </p>
          <!-- Template Code for Exercise 1 -->
-         <program xml:id="jb-program-structure-exercise-one" interactive="activecode" language="java">
+         <program xml:id="jb-program-structure-exercise-1-template" interactive="activecode" language="java">
           <input>
 //Write a program that stores 'Hello, COMP 1020!' in String variable and 
 //prints it out to the console.
@@ -47,14 +48,14 @@
           </input>
         </program>
     </subsection>
-    <subsection>
+    <!-- Basic Program Structure: Exercise 2 -->
+    <subsection xml:id="subsec-jb-basic-program-structure-exercise-2">
       <title>Exercise 2</title>
       <p>
         The following program doesn't run (you can try it!). There are lots of issues with this program. 
         Correct the program by completing the commented instructions so that it follows standard conventions.
       </p>
-      <!-- Template Code for Exercise 1 -->
-      <program xml:id="jb-program-structure-exercise-two" interactive="activecode" language="java">
+      <program xml:id="jb-program-structure-exercise-2-template" interactive="activecode" language="java">
         <input>
 public class MyClass {
   
@@ -80,9 +81,302 @@ public class MyClass {
       </program>
     </subsection>
   </section>
-
+  <!-- Datatypes and Operators-->
   <section xml:id="sec-jb-datatypes-and-operators">
     <title>Data Types &amp; Operators</title>	
+    <objectives>
+      <ol>
+        <li>
+          <p>
+            Identify data types based on value
+          </p>
+        </li>
+        <li>
+          <p>
+            Recall how to declare and initialize various primitive datatypes in Java
+          </p>
+        </li>
+        <li>
+          <p>
+            Recall how basic mathematical operators work in Java
+          </p>
+        </li>
+      </ol>
+    </objectives>
+    <!-- Datatypes and Operators: Datatype Review-->
+    <subsection xml:id="subsec-datatypes">
+      <title>Brief Review of Data Types</title>
+      <!-- Table of Datatypes in Java-->
+      <table>
+        <title>Data Types</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Data Type</cell>
+            <cell>Can Store</cell>
+            <cell>Storage Size</cell>
+          </row>
+          <row>
+            <cell><alert>double</alert></cell>
+            <cell>Floating point numbers, with up to 8 significant digits of precision</cell>
+            <cell>8 bytes</cell>
+          </row>
+          <row>
+            <cell>float</cell>
+            <cell>Floating point numbers, with up to 7 significant digits of precision</cell>
+            <cell>4 bytes</cell>
+          </row>
+          <row>
+            <cell>long</cell>
+            <cell>Whole numbers in range [-9223372036854775807, 9223372036854775807]</cell>
+            <cell>8 bytes</cell>
+          </row>
+          <row>
+            <cell><alert>int</alert></cell>
+            <cell>Whole numbers in range [-2147483647, 2147483647]</cell>
+            <cell>4 bytes</cell>
+          </row>
+          <row>
+            <cell>short</cell>
+            <cell>Whole numbers in range [-32767, 32767]</cell>
+            <cell>2 bytes</cell>
+          </row>
+          <row>
+            <cell>byte</cell>
+            <cell>Whole numbers in range [-127, 127]</cell>
+            <cell>1 byte</cell>
+          </row>
+          <row>
+            <cell><alert>char</alert></cell>
+            <cell>Single alpha-numeric or punctuation character</cell>
+            <cell>2 bytes</cell>
+          </row>
+          <row>
+            <cell><alert>boolean</alert></cell>
+            <cell>True or False</cell>
+            <cell>1 byte</cell>
+          </row>
+        </tabular>
+      </table>
+      <note>
+        The ones that are bolded above are the ones used most commonly.
+      </note>
+      <p>
+        A <alert>String</alert> in Java is not a primitive datatype (Strings are objects), but they are a built-in datatype that is commonly used.
+      </p>
+      <cd>
+        <cline>
+// Examples of declaring and initializing each datatype
+
+double myDouble = 543.222987;
+float myFloat = 983.2f; // note that you need the 'f' here to specify it as a float
+long myLong = 456778866554433l; // note that you need the 'l' here to specify it as a long
+int myInt = 35698742;
+short myShort = -3566;
+byte myByte = 120;
+        </cline>
+      </cd>
+    </subsection>
+    <!-- Datatypes and Operators: Math Operators -->
+    <subsection xml:id="subsec-operators">
+      <title>Built-in Mathematical Operators</title>
+        <ul>
+          <li>
+            <p>Addition: <c>+</c></p>
+            <ul>
+              <li>String, Integer, and Floating-point values</li>
+            </ul>
+          </li>
+          <li>
+            <p>Subtraction: <c>-</c></p>
+            <ul>
+              <li>Integer and Floating-point values</li>
+            </ul>
+          </li>
+          <li>
+            <p>Division: <c>/</c></p>
+            <ul>
+              <li>Integer and Floating-point values</li>
+            </ul>
+          </li>
+          <li>
+            <p>Multiplication: <c>*</c></p>
+            <ul>
+              <li>Integer and Floating-point values</li>
+            </ul>
+          </li>
+          <li>
+            <p>Modulo (remainder from integer division): <c>%</c></p>
+            <ul>
+              <li>Integer and Floating-point values</li>
+            </ul>
+          </li>
+          <li>
+            <p>Increment (adds one to variable): <c>++</c></p>
+            <ul>
+              <li>Integer and Floating-point values</li>
+            </ul>
+          </li>
+          <li>
+            <p>Decrement (subtracts one from variable): <c>--</c></p>
+            <ul>
+              <li>Integer and Floating-point values</li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Division is a special case in Java. If you divide two integers, you will get an integer (whole number) result, 
+          even if the two numbers don't divide evenly.
+        </p>
+        <ul>
+          <li>
+            <m>x = 5/2</m> = <m>2</m>
+          </li>
+        </ul>
+        <p>
+          To perform floating point division, <alert>cast</alert> either the numerator or the denominator to a <c>double</c> or <c>float</c>.
+        </p>
+        <ul>
+          <li>
+            <m>x = (float)5/2</m> = <m>2.5</m>
+          </li>
+        </ul>
+        <p>
+          Ensure that <m>x</m> can store a floating point result. Otherwise, you will get an error if <m>x</m> is declared as an <c>int</c>.
+        </p>
+    </subsection>
+    <!-- Datatypes and Operators: Type Conversion -->
+    <subsection xml:id="subsec-type-conversion">
+      <title>Type Conversion</title>
+      <p>
+        You can always store a smaller numeric type in a bigger type, that conversion will happen automatically:
+      </p>
+      <cd>
+        <cline>
+int x = 3;
+double y = 55.7;
+y = x; // no problem here!
+        </cline>
+      </cd>
+      <p>
+        But you can't go the other way without an <alert>explicit cast</alert>:
+      </p>
+      <cd>
+        <cline>
+int x = 3;
+double y = 55.7;
+x = y; // this will generate an error because you would lose the .7 by doing this
+// and Java won't do it for you, unless you tell the compiler you really want to
+x = (int)y; // this works - you are telling Java that it's okay to lose the .7
+        </cline>  
+      </cd>
+    </subsection>
+    <!-- Datatypes and Operators: Exercise 1 -->
+    <subsection xml:id="subsec-jb-datatypes-and-operators-exercise-1">
+      <title>Exercise 1</title>      
+        <p>
+          Complete this exercise to make sure you understand common datatypes by replacing all the question marks with the 
+          appropriate dataype. Run the program to test it and make sure it works.
+        </p>
+         <!-- Template Code for Exercise 1 -->
+         <program xml:id="jb-datatypes-and-operators-exercise-1-template" interactive="activecode" language="java">
+          <input>
+public class MissingDatatypes {
+  public static void main(String[] args){
+    
+    // The following code is missing data types on the variable declarations.
+    // Supply appropriate data types.
+    
+    ? band = "ABBA";
+    ? songName = "Mamma Mia";
+    ? numPlays = 8576982;
+    ? royaltyRate = 0.002;
+    
+    System.out.println("The band " + band + " gets $" + royaltyRate + " every time the song `" + songName + "' plays.");
+    System.out.println("The song has been played " + numPlays + " times.");
+    System.out.println("They have earned $" + royaltyRate*numPlays + " from this song alone.");
+  }
+}
+          </input>
+        </program>
+    </subsection>
+    <!-- Datatypes and Operators: Exercise 2 -->
+    <subsection xml:id="subsec-jb-datatypes-and-operators-exercise-2">
+      <title>Exercise 2</title>
+      <p>
+        To practice a few other common datatypes, declare and initialize 3 variables so that the print statements print out sensible data.
+      </p>
+      <!-- Template Code for Exercise 2 -->
+      <program xml:id="jb-datatypes-and-operators-exercise-2-template" interactive="activecode" language="java">
+        <input>
+public class DrivingAge {
+  public static void main(String[] args) {
+    
+    // make a variable called firstInit to hold your first initial
+    
+    // make a variable called lastInit to hold your last initial
+    
+    // make a variable called canDrive that says whether or not you are legally allowed to drive (16+)
+    
+    
+    if (canDrive) {
+      System.out.println("Student " + firstInit + lastInit + " is old enough to drive.");
+    } else {
+      System.out.println("Student " + firstInit + lastInit + " is NOT old enough to drive.");
+    }
+  }
+}
+        </input>
+      </program>
+    </subsection>
+    <!-- Datatypes and Operators: Exercise 3 -->
+    <subsection xml:id="subsec-jb-datatypes-and-operators-exercise-3">
+      <title>Exercise 3</title>
+      <p>
+        Create and populate variables that will make the print statements run without error and generate sensible output. 
+        Do not edit the print statements. Test that your solution is working.
+        An example of correct output is:
+      </p>
+      <cd>
+        <cline>
+The address of the house is: 3 William St., Unit 5
+It is listed for sale at $368000
+A 10% downpayment would be $36800.0
+        </cline>
+      </cd>
+      <!-- Template Code for Exercise 3 -->
+      <program xml:id="jb-datatypes-and-operators-exercise-3-template" interactive="activecode" language="java">
+        <input>
+public class CreateVars {
+  public static void main(String[] args){
+    
+
+
+    
+    
+    System.out.println("The address of the house is: " + address);
+    System.out.println("It is listed for sale at $" + price);
+    System.out.println("A " + (int)(percentage*100) + "% downpayment would be $" + (price * percentage));
+  }
+}
+        </input>
+      </program>
+    </subsection>
+    <!-- Datatypes and Operators: Exercise 4 -->
+    <subsection xml:id="subsec-jb-datatypes-and-operators-exercise-3">
+      <title>Exercise 3</title>
+      <p>
+        Create and populate variables that will make the print statements run without error and generate sensible output. 
+        Do not edit the print statements. Test that your solution is working.
+        An example of correct output is:
+      </p>
+      <!-- Template Code for Exercise 3 -->
+      <program xml:id="jb-datatypes-and-operators-exercise-3-template" interactive="activecode" language="java">
+        <input>
+
+        </input>
+      </program>
+    </subsection>
+    
   </section>
 
   <section xml:id="sec-jb-enums">
