@@ -6,7 +6,7 @@
 
   <book xml:id="JavaWorkbook">
     <title>Java Active Learning WorkBook</title>
-    <subtitle>Scaffolded Programming Activities Beyond The Basics.</subtitle>
+    <subtitle>Scaffolded Programming Activities Beyond The Basics</subtitle>
     
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />

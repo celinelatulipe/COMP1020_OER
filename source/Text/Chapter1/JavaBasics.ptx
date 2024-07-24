@@ -109,7 +109,7 @@ public class MyClass {
       <!-- Table of Datatypes in Java-->
       <table>
         <title>Data Types</title>
-        <tabular halign="center">
+        <tabular halign="left">
           <row header="yes" bottom="minor">
             <cell>Data Type</cell>
             <cell>Can Store</cell>
@@ -157,24 +157,35 @@ public class MyClass {
           </row>
         </tabular>
       </table>
-      <note>
-        The ones that are bolded above are the ones used most commonly.
-      </note>
       <p>
-        A <alert>String</alert> in Java is not a primitive datatype (Strings are objects), but they are a built-in datatype that is commonly used.
+        The datatypes in bold are the ones used most commonly.
+      </p>
+    </subsection>
+    <subsection xml:id="subsec-initialization">
+      <title>Initialization</title>
+      <p>
+        The following code snippet demonstrates how to declare and initialize various primitive data types in Java:
       </p>
       <cd>
         <cline>
 // Examples of declaring and initializing each datatype
 
 double myDouble = 543.222987;
-float myFloat = 983.2f; // note that you need the 'f' here to specify it as a float
-long myLong = 456778866554433l; // note that you need the 'l' here to specify it as a long
+
+// note that you need the 'f' here to specify it as a float
+float myFloat = 983.2f; 
+
+// note that you need the 'l' here to specify it as a long
+long myLong = 456778866554433l;
+
 int myInt = 35698742;
 short myShort = -3566;
 byte myByte = 120;
         </cline>
       </cd>
+      <note>
+        A <alert>String</alert> in Java is not a primitive datatype (Strings are objects), but they are a built-in datatype that is commonly used.
+      </note>  
     </subsection>
     <!-- Datatypes and Operators: Math Operators -->
     <subsection xml:id="subsec-operators">
@@ -223,53 +234,59 @@ byte myByte = 120;
             </ul>
           </li>
         </ul>
+      <subsection xml:id="subsec-casting">
+        <title>Casting</title>
         <p>
           Division is a special case in Java. If you divide two integers, you will get an integer (whole number) result, 
           even if the two numbers don't divide evenly.
         </p>
-        <ul>
-          <li>
-            <m>x = 5/2</m> = <m>2</m>
-          </li>
-        </ul>
+        <cd>
+          <cline>
+x = 5/2 = 2
+          </cline>
+        </cd>
         <p>
           To perform floating point division, <alert>cast</alert> either the numerator or the denominator to a <c>double</c> or <c>float</c>.
         </p>
-        <ul>
-          <li>
-            <m>x = (float)5/2</m> = <m>2.5</m>
-          </li>
-        </ul>
+        <cd>
+          <cline>
+x = (float)5/2 = 2.5
+          </cline>
+        </cd>
         <p>
-          Ensure that <m>x</m> can store a floating point result. Otherwise, you will get an error if <m>x</m> is declared as an <c>int</c>.
+          Ensure that <c>x</c> can store a floating point result. Otherwise, you will get an error if <c>x</c> is declared as an <c>int</c>.
         </p>
-    </subsection>
-    <!-- Datatypes and Operators: Type Conversion -->
-    <subsection xml:id="subsec-type-conversion">
-      <title>Type Conversion</title>
-      <p>
-        You can always store a smaller numeric type in a bigger type, that conversion will happen automatically:
-      </p>
-      <cd>
-        <cline>
+      </subsection>
+      <!-- Datatypes and Operators: Type Conversion -->
+      <subsection xml:id="subsec-type-conversion">
+        <title>Type Conversion</title>
+        <p>
+          You can always store a smaller numeric type in a bigger type, that conversion will happen automatically:
+        </p>
+        <cd>
+          <cline>
 int x = 3;
 double y = 55.7;
 y = x; // no problem here!
-        </cline>
-      </cd>
-      <p>
-        But you can't go the other way without an <alert>explicit cast</alert>:
-      </p>
-      <cd>
-        <cline>
+          </cline>
+        </cd>
+        <p>
+          But you can't go the other way without an <alert>explicit cast</alert>:
+        </p>
+        <cd>
+          <cline>
 int x = 3;
 double y = 55.7;
-x = y; // this will generate an error because you would lose the .7 by doing this
-// and Java won't do it for you, unless you tell the compiler you really want to
-x = (int)y; // this works - you are telling Java that it's okay to lose the .7
-        </cline>  
-      </cd>
-    </subsection>
+// this will generate an error because you would lose the .7
+x = y; 
+
+// Java won't do it for you, unless you tell the compiler.
+// this works - you are telling Java that it's okay to lose the .7
+x = (int)y; 
+          </cline>  
+        </cd>
+      </subsection>
+    </subsection> 
     <!-- Datatypes and Operators: Exercise 1 -->
     <subsection xml:id="subsec-jb-datatypes-and-operators-exercise-1">
       <title>Exercise 1</title>      
@@ -362,17 +379,29 @@ public class CreateVars {
       </program>
     </subsection>
     <!-- Datatypes and Operators: Exercise 4 -->
-    <subsection xml:id="subsec-jb-datatypes-and-operators-exercise-3">
-      <title>Exercise 3</title>
+    <subsection xml:id="subsec-jb-datatypes-and-operators-exercise-4">
+      <title>Exercise 4</title>
       <p>
-        Create and populate variables that will make the print statements run without error and generate sensible output. 
-        Do not edit the print statements. Test that your solution is working.
-        An example of correct output is:
+        This exercise helps you practice using basic math operators. The volume of a triangular pyramid is <me>(1/3)bh</me> where <m>b</m> is the 
+        length of each side of the triangular base and <m>h</m> is the height of the pyramid. Finish the program to calculate and print out 
+        the volume, given the specified dimensions.
       </p>
-      <!-- Template Code for Exercise 3 -->
-      <program xml:id="jb-datatypes-and-operators-exercise-3-template" interactive="activecode" language="java">
+      <!-- Template Code for Exercise 4 -->
+      <program xml:id="jb-datatypes-and-operators-exercise-4-template" interactive="activecode" language="java">
         <input>
-
+public class TriPyramidVolume {
+  public static void main(String[] args) {
+      int baseM = 4000;
+      int heightM = 5400;
+      double volume;
+      
+      //TODO: calculate the volume (v=1/3bh)
+      
+      System.out.println("The volume of a triangular pyramid with base: " +
+              baseM + " meters and height: " + heightM + " meters is: " +
+              volume + " meters cubed.");
+  }
+}
         </input>
       </program>
     </subsection>
